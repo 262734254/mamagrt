@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*拓富会员注册*/
+/*拓富会员注册头部*/
+.head{ height:87px; background-image:url(http://img2.topfo.com/member/img/member_03.jpg); color:#555}
+.head a{ color:#555}
+.head a:link{ color:#555}
+.head a:hover{ color:#555; text-decoration:underline}
+.head1{ height:87px; width:918px; margin:0 auto}
+.logo{ float:left; width:180px; height:63px; margin-top:8px}
+.cd1{ float:right; margin:4px 0}
+.hepe{ float:right; clear:right}
+.step{width:918px; margin:20px auto; clear:both; text-align:right; color:#555}
+.step li{ float:right; margin-right:10px; display:inline; padding-left:26px; height:30px; background-repeat:no-repeat; display:inline }
+.step1{background-image:url(http://img2.topfo.com/member/img/member_11.gif)}
+.step2{background-image:url(http://img2.topfo.com/member/img/member_13.gif)}
+.step3{background-image:url(http://img2.topfo.com/member/img/member_15.gif)}
+.separated{ width:918px; margin:0 auto;height:14px; border-top:1px solid #ffddab; background-color:#fff9ef; clear:both; overflow:hidden }
+/*拓富会员注册内容*/
+/*拓富会员注册第一步内容*/
+.content{ width:918px; margin:10px auto; clear:both}
+.content h1{ font-size:14px; font-weight:bold; color:#f2650e; margin:0 0 10px 20px}
+.content-1{background:url(../img/member-01.gif) repeat-y; width:918px; overflow:hidden; }
+.jiao-top{ height:15px; width:960px; background-image:url(http://img2.topfo.com/member/img/member-bj.gif); background-position:0 89px}
+.content-1 ul{ margin:20px 20px 20px 40px}
+.content-1 li{ margin:20px 0; clear:both; float:none; width:880px; overflow:hidden; background: url(http://img2.topfo.com/member/img/member-fgx.gif) 0 bottom no-repeat; height:80px}
+.list-1{ float:left}
+.list-2{ float:left; display:block;margin:17px 6px 0 14px}
+.list-3{ float:left; font-size:14px; font-weight:bold; display:block; margin:20px 6px 0 0}
+.list-4{ float:left; display:block; margin-top:20px}
+.j1{ background-image:url(http://img2.topfo.com/member/img/j1.gif); height:10px; clear:both; overflow:hidden}
+.j2{ background-image:url(http://img2.topfo.com/member/img/j2.gif); height:10px; clear:both; overflow:hidden}
+
+/*拓富会员注册第二步内容*/
+.login{ width:918px; margin:20px auto 50px auto; overflow:hidden}
+.login p{ margin:10px 0 10px 190px}
+.zc1{ text-align:right; padding-right:10px; font-size:14px; height:30px; line-height:30px}
+.input{ border:1px solid #CCC; font-size:14px; color:#000; height:20px; line-height:20px; width:300px}
+.tishi{ color:#afafaf; height:20px; padding-bottom:6px}
+
+/*拓富会员注册底部*/
+.foot{ background:url(http://img2.topfo.com/member/img/foot-fg.gif) repeat-x 0 top; margin:30px auto 20px auto; overflow:hidden}
+.foot p { width:918px; text-align:center; color:#666; line-height:18px;  margin:20px auto 0 auto; overflow:hidden; _padding-top:20px}
+.f_lan{ color:#0727b3}
+a#f_lan,a:link#f_lan,a:visited#f_lan{ color:#0727b3;text-decoration:underline}

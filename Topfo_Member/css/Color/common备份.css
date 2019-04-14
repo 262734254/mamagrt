@@ -1,0 +1,311 @@
+/*by yanweiping*/
+/*共用链接文字等属性*/
+BODY {
+	FONT-SIZE: 12px;
+	COLOR: #555555;
+	LINE-HEIGHT: 160%;
+	FONT-FAMILY: "宋体";
+	padding: 2px 0 0 0;
+	margin: 0;
+
+}
+.td{FONT-SIZE: 12px;}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.lanlink:link, A.lanlink:visited{
+	COLOR: #08099F;
+	TEXT-DECORATION: underline
+}
+A.lanlink:hover,A.lanlink:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.chenglink:link, A.chenglink:visited{
+	COLOR: #F87120;
+	TEXT-DECORATION: underline
+}
+
+A.chenglink:hover,A.chenglink:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+} 
+A.Spaces:link,A.Spaces:visited     {
+}
+A.Spaces:active,  {
+}
+A.Spaces:hover   {
+	left: 1px;
+	top: 1px;
+	position: relative;
+}
+
+DIV,FORM,IMG,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p,dir,menu,input{
+	 PADDING: 0px; MARGIN: 0px; }
+p,h1,h2,textarea,input{font-size:12px;}
+ol,li{	list-style-type: none;}
+.clear {
+	CLEAR: both
+}
+.blank8 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+.blank0 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 10px
+}
+.blank20 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 20px
+}
+.clear{ clear:both}
+.padleft{ padding-left:10px;}
+.font12{ font-size:12px;}
+.font14{ font-size:14px;}
+.chengcu{
+	color:#F75F03;
+	font-weight: bold;
+}
+.cheng{
+	color:#F75F03;
+}
+.hong{
+	color:#FF0000
+}
+.hui{ color:#9C9C9C}
+.cu{
+	font-weight: bold;
+}
+.lansen{ color:#061E9C}
+.wrapper{width:948px;margin:0 auto;}
+
+/*头部属性*/
+#header{
+	width: 948px;
+	margin: 0 auto;
+}
+#header .shanga {
+	width: 948px;
+	height: 23px;
+
+}
+#header .shanga ul{
+	display:inline-block;
+	*display:inline;
+	width: 290px;
+	float: left;
+	color: #563B1D;
+	padding-left: 20px;
+	padding-top: 4px;
+}
+#header .shanga li{list-style:none;float:left;}
+#header .shanga .on{
+	background-image:url(/TopfoCenter/images/toponbg.gif);
+	background-repeat:no-repeat;
+	background-position: center 2px;
+}
+.thm-1,.thm-2,.thm-3,.thm-4,.thm-5,.thm-6,.thm-7{
+	width:8px;
+	height:8px;
+	border:1px solid #024D69;
+	background:#C7D4DC;
+	margin:3px 2px 0 1px;
+	overflow:hidden;
+	cursor:pointer;
+	cursor:hand;
+	_height /* */:10px;
+	_width /* */:10px;
+}
+.thm-1{
+	background-position:2px 2px;
+	background-color: #FFE649;
+}
+.thm-2{
+	background-color:#93D9FD;
+	border-color:#A5620C;
+	background-position:-18px 2px;
+}
+.thm-3{
+	background-color:#8BD861;
+	border-color:#4D3B53;
+	background-position:-38px 2px;
+}
+.thm-4{
+	background-color:#ECF8FD;
+	border-color:#688130;
+	background-position:-58px 2px;
+}
+.thm-5{
+	background-color:#F8C3D0;
+	border-color:#77724A;
+	background-position:-78px 2px;
+}
+.thm-6{
+	background-color:#BDADC7;
+	background-position:-98px 2px;
+}
+.thm-7{background-color:#CACACA;border-color:#575757;margin-right:.4em;background-position:-118px 2px;}
+#header .shanga div{
+	width: 630px;
+	float: left;
+	padding:0;
+	margin:0;
+}
+#header .shanga div span{
+	padding-left:60px;
+}
+#header .shanga div A:link,#header .shanga div A:visited {COLOR: #515151; text-decoration: underline;}
+#header .shanga div  A:hover,#header .shanga div A:active {	COLOR: #ff0000;text-decoration: underline;}
+#header .xia{
+	height: 128px;
+	width: 948px;
+	margin: 0;
+}
+#header .xia .shangtop{
+	width: 948px;
+	height: 75px;
+	padding-top: 18px;
+}
+#header .xia .shangtop .logo{
+	width: 170px;
+	height: 70px;
+	margin-left: 30px;
+	float: left;
+}
+#header .xia .shangtop .logo a{
+	width: 170px;
+	height: 70px;
+	display: block;
+}
+#header .xia .shangtop .banner{
+	width: 600px;
+	float: right;
+}
+#header .xia .xiatop{
+	padding: 6px 0 0 0;
+	width: 948px;
+}
+#header .xia .xiatop .lefttop{
+	width: 300px;
+	float: left;
+	font-size: 13px;
+	text-align: left;
+	padding-left: 50px;
+	padding-top: 4px;
+}
+#header .xia .xiatop .right{
+	width: 370px;
+	float: right;
+	background-image: url(/TopfoCenter/images/topbg2.gif);
+	background-repeat: no-repeat;
+	padding: 0 0 0 35px;
+}
+/*左边属性*/
+.leftbox{
+	width: 149px;
+	float: left;
+	border: 1px dashed #5B5F6E;
+	height:1%;
+	font-size: 14px;
+	padding: 10px 10px 130px 10px;
+}
+.leftbox img{
+	margin-right:5px;
+}
+.leftbox div{
+	background-image: url(/TopfoCenter/images/buttom_left.gif);
+	background-repeat: no-repeat;
+	height: 27px;
+	padding: 5px 0 0 10px;
+	font-weight: bold;
+}
+.leftbox ul{
+	padding: 0px 0 0 40px;
+}
+.leftbox li{
+	list-style-image: url(/TopfoCenter/images/icon_open.gif);
+}
+.leftbox textarea{
+	margin-top: 10px;
+	color: #666666;
+	width: 143px;
+	font-size: 12px;
+}
+
+.leftbox dir{
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+/*底部属性*/
+#footer{
+	width: 948px;
+	margin: 0 auto;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #563B1D;
+	text-align: center;
+	padding: 0px 0 5px 0;
+}
+#footer p{
+	padding-top:5px;
+}
+.hottel{
+	background-color: #F7F6F6;
+	text-align: center;
+	padding: 4px;
+	margin-bottom: 5px;
+}
+.hottel img{
+	margin-left:25px;
+}
+/*右边框架属性*/
+#mainconbox{
+	float: right;
+	width: 760px;
+}
+/*内页颜色属性*/
+.handtop{height: 30px;}
+.handtop ul{
+
+}
+.handtop .liwai{background-image: url(/TopfoCenter/images/PayManage/lichengbg.gif);	border: 1px solid #FFAF4B;
+	height: 24px;
+	margin-top: 0px;
+	padding-top: 3px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.handtop li{background-image: url(/TopfoCenter/images/PayManage/lihuibg.gif);border: 1px solid #CCCCCC;	
+	width: 131px;
+	float: left;
+	color: #563B1D;
+	font-size: 14px;
+	text-align: center;
+	background-position: bottom;
+	height: 24px;
+	margin-top: 3px;
+	line-height: 170%;
+	text-decoration: underline;
+}
+.handtop li a{
+	color: #563B1D;
+	text-decoration: underline;
+}
+.handtop .linone{	background-image: none;border:none;}
+.cshibiank{border: 1px solid #FFAF4B;height:1%;}
+.cyibank{border-bottom-width: 1px;	border-bottom-style: solid;	border-bottom-color: #FFAF4B;color: #563B1D;}
+.lightc{
+	background-color: #FFF7EE;
+}

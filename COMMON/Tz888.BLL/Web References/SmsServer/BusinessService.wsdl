@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://service.nineorange.com" xmlns:impl="http://service.nineorange.com" targetNamespace="http://service.nineorange.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://service.nineorange.com">
+      <xsd:element name="validateUser">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validateUserResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="validateUserReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyPassword">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="oldPassword" type="xsd:string" />
+            <xsd:element name="newPassword" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="modifyPasswordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="modifyPasswordReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendBatchMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="destmobile" type="xsd:string" />
+            <xsd:element name="msgText" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendBatchMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendBatchMessageReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReceivedMsg">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="param" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReceivedMsgResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getReceivedMsgReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReceipt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="taskID" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getReceiptResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getReceiptReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendTimelyMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="sendDateTime" type="xsd:string" />
+            <xsd:element name="destmobile" type="xsd:string" />
+            <xsd:element name="msgText" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendTimelyMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendTimelyMessageReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTimelySendStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="datetime_from" type="xsd:string" />
+            <xsd:element name="datetime_to" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getTimelySendStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getTimelySendStatusReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="getUserInfoReturn" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="account" type="xsd:string" />
+            <xsd:element name="password" type="xsd:string" />
+            <xsd:element name="destmobile" type="xsd:string" />
+            <xsd:element name="msgText" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendMessageReturn" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getReceivedMsgRequest">
+    <wsdl:part name="parameters" element="impl:getReceivedMsg" />
+  </wsdl:message>
+  <wsdl:message name="modifyPasswordRequest">
+    <wsdl:part name="parameters" element="impl:modifyPassword" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageResponse">
+    <wsdl:part name="parameters" element="impl:sendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReceiptRequest">
+    <wsdl:part name="parameters" element="impl:getReceipt" />
+  </wsdl:message>
+  <wsdl:message name="getUserInfoResponse">
+    <wsdl:part name="parameters" element="impl:getUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateUserRequest">
+    <wsdl:part name="parameters" element="impl:validateUser" />
+  </wsdl:message>
+  <wsdl:message name="getUserInfoRequest">
+    <wsdl:part name="parameters" element="impl:getUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="sendTimelyMessageResponse">
+    <wsdl:part name="parameters" element="impl:sendTimelyMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendBatchMessageRequest">
+    <wsdl:part name="parameters" element="impl:sendBatchMessage" />
+  </wsdl:message>
+  <wsdl:message name="modifyPasswordResponse">
+    <wsdl:part name="parameters" element="impl:modifyPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendTimelyMessageRequest">
+    <wsdl:part name="parameters" element="impl:sendTimelyMessage" />
+  </wsdl:message>
+  <wsdl:message name="getReceivedMsgResponse">
+    <wsdl:part name="parameters" element="impl:getReceivedMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMessageRequest">
+    <wsdl:part name="parameters" element="impl:sendMessage" />
+  </wsdl:message>
+  <wsdl:message name="validateUserResponse">
+    <wsdl:part name="parameters" element="impl:validateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReceiptResponse">
+    <wsdl:part name="parameters" element="impl:getReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTimelySendStatusResponse">
+    <wsdl:part name="parameters" element="impl:getTimelySendStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTimelySendStatusRequest">
+    <wsdl:part name="parameters" element="impl:getTimelySendStatus" />
+  </wsdl:message>
+  <wsdl:message name="sendBatchMessageResponse">
+    <wsdl:part name="parameters" element="impl:sendBatchMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BusinessService">
+    <wsdl:operation name="validateUser">
+      <wsdl:input name="validateUserRequest" message="impl:validateUserRequest" />
+      <wsdl:output name="validateUserResponse" message="impl:validateUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyPassword">
+      <wsdl:input name="modifyPasswordRequest" message="impl:modifyPasswordRequest" />
+      <wsdl:output name="modifyPasswordResponse" message="impl:modifyPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendBatchMessage">
+      <wsdl:input name="sendBatchMessageRequest" message="impl:sendBatchMessageRequest" />
+      <wsdl:output name="sendBatchMessageResponse" message="impl:sendBatchMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReceivedMsg">
+      <wsdl:input name="getReceivedMsgRequest" message="impl:getReceivedMsgRequest" />
+      <wsdl:output name="getReceivedMsgResponse" message="impl:getReceivedMsgResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getReceipt">
+      <wsdl:input name="getReceiptRequest" message="impl:getReceiptRequest" />
+      <wsdl:output name="getReceiptResponse" message="impl:getReceiptResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendTimelyMessage">
+      <wsdl:input name="sendTimelyMessageRequest" message="impl:sendTimelyMessageRequest" />
+      <wsdl:output name="sendTimelyMessageResponse" message="impl:sendTimelyMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTimelySendStatus">
+      <wsdl:input name="getTimelySendStatusRequest" message="impl:getTimelySendStatusRequest" />
+      <wsdl:output name="getTimelySendStatusResponse" message="impl:getTimelySendStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <wsdl:input name="getUserInfoRequest" message="impl:getUserInfoRequest" />
+      <wsdl:output name="getUserInfoResponse" message="impl:getUserInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <wsdl:input name="sendMessageRequest" message="impl:sendMessageRequest" />
+      <wsdl:output name="sendMessageResponse" message="impl:sendMessageResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BusinessServiceSoapBinding" type="impl:BusinessService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateUser">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="validateUserRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateUserResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPassword">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="modifyPasswordRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyPasswordResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendBatchMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendBatchMessageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendBatchMessageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReceivedMsg">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getReceivedMsgRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getReceivedMsgResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReceipt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getReceiptRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getReceiptResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendTimelyMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendTimelyMessageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendTimelyMessageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTimelySendStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getTimelySendStatusRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTimelySendStatusResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUserInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="sendMessageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="sendMessageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusinessServiceService">
+    <wsdl:port name="BusinessService" binding="impl:BusinessServiceSoapBinding">
+      <wsdlsoap:address location="http://webservice.dodoca.com:8080/NOSmsPlatform/services/BusinessService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

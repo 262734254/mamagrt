@@ -1,0 +1,9 @@
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.DALFactory.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.DALFactory.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.IDAL.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.Model.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.IDAL.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\bin\Debug\Tz888.Model.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\obj\Debug\ResolveAssemblyReference.cache
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\obj\Debug\Tz888.DALFactory.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DALFactory\obj\Debug\Tz888.DALFactory.pdb

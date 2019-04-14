@@ -1,0 +1,130 @@
+/*by yanweiping*/
+/*推广我的需求 */
+
+.demandbox{
+	padding: 5px;
+}
+.demandbox td{padding-left:10px;}
+.demandbox .ggzi{
+	padding: 15px 0 15px 5px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #563B1D;
+}
+.demandbox h1{
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	font-weight: normal;
+	font-size: 12px;
+}
+.demandbox p{
+	text-align: center;
+	padding: 0px 0 20px 0;
+}
+.pagebox{
+	padding: 20px 15px 20px 5px;
+}
+.pagebox .left{
+	width: 250px;
+	float: left;
+}
+.pagebox .right{
+	width: 480px;
+	float: right;
+	text-align: right;
+}
+.server{
+	padding: 10px;
+	line-height: 25px;
+}
+.server span{
+	padding: 0 0 0 25px;
+}
+/*推广设置 */
+.setbox{
+	width: 700px;
+	margin: 0 auto;
+	border: 4px double #FF9900;
+}
+.setbox h1{
+	color: #F75F03;
+	font-size: 16px;
+	padding: 25px 0 10px 15px;
+}
+.setbox table{
+	border:#cccccc solid;
+	border-width:0;
+}
+.setbox td{
+	border:#E3E3E3 solid;
+	border-width:0 0 1px 0;
+
+}
+.setbox p{
+	padding: 15px 0 35px 0;
+	text-align: center;
+}
+.local{}
+.local .left{
+	width:310px;
+	float:left;
+	line-height:180%;
+}
+.local .left span{
+	display: block;
+	padding-top: 10px;
+}
+.local .zhong{
+	width:60px;
+	float:left;
+	text-align:left
+}
+.local .right{
+	width:150px;
+	float:left;
+	text-align: right;
+}
+.industry{}
+.industry .left{
+	width:200px;
+	float:left;
+	line-height:180%
+}
+.industry .zhong{
+	width:80px;
+	float:left;
+	padding:20px 0 0 0
+}
+.industry .right{width:200px; float:left}
+.industryb{width:500px;padding:10px 0 0 0}
+.psetbox{
+	padding: 5px;
+}
+.psetbox table{
+	border:0 solid #cccccc;
+}
+.psetbox td{
+	border:#E3E3E3 solid;
+	border-width:0 0 1px 0;
+
+}
+.psetbox h1{
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	font-weight: normal;
+	font-size: 12px;
+}
+.psetbox p{	padding: 15px 0 15px 0;
+	text-align: center;}
+	
+.buybox{
+	padding: 5px;
+}
+.buybox td{padding-left:10px; font-size:14px}
+
+.buybox h1{
+	text-align: left;
+	padding: 5px 5px 5px 10px;
+	font-weight: normal;
+	font-size: 12px;
+}

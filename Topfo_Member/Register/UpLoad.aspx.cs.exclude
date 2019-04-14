@@ -1,0 +1,70 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class UpLoad : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    private string GetFiles()
+    {
+        string Info = "";
+        
+        //遍历File表单元素
+        HttpFileCollection files = HttpContext.Current.Request.Files;
+
+        //状态信息
+        System.Text.StringBuilder strMsg = new System.Text.StringBuilder();
+        
+        strMsg.Append("上传的文件分别是：<hr color=red>");
+        
+        try
+        {
+            for (int iFile = 0; iFile < files.Count; iFile++)
+            {
+                ///'检查文件扩展名字
+                HttpPostedFile postedFile = files[iFile];
+                
+                string fileName, fileExtension;
+                
+                fileName = System.IO.Path.GetFileName(postedFile.FileName);
+                
+                if (fileName != "")
+                {
+                    fileExtension = System.IO.Path.GetExtension(fileName);
+      
+                    strMsg.Append("上传的文件类型：" + postedFile.ContentType.ToString() + "<br>");
+                    
+                    strMsg.Append("客户端文件地址：" + postedFile.FileName + "<br>");
+                    
+                    strMsg.Append("上传文件的文件名：" + fileName + "<br>");
+      
+                    strMsg.Append("上传文件的扩展名：" + fileExtension + "<br><hr>");
+                }
+            }
+            Info = strMsg.ToString();
+        }
+        catch (System.Exception Ex)
+        {
+            Info = Ex.Message;
+        }
+
+        return Info;
+    }
+
+
+    protected void UploadButton_Click(object sender, EventArgs e)
+    {
+        this.strStatus.Text = this.GetFiles();
+    }
+}

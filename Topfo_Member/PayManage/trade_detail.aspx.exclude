@@ -1,0 +1,80 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" ResponseEncoding="GB2312"
+    Title="已完成交易-拓富中心-中国招商投资网" AutoEventWireup="true" CodeFile="trade_detail.aspx.cs"
+    Inherits="PayManage_trade_detail" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <link href="/css/paymanage.css" rel="stylesheet" type="text/css" />
+    <!--已完成交易 -->
+    <div class="mainconbox">
+        <div class="topzi">
+            <div class="left">
+                订单明细</div>
+            <div class="clear">
+            </div>
+        </div><div class="suggestbox allxian">
+            <p>
+                · 您现在查看的是订单号为
+                <asp:Literal ID="lblORDER" runat="server"></asp:Literal>
+                的订单明细情况。如果您有任何疑问，请拨打我们的客服电话：<strong><!--#include virtual="../Common/custel.html" --></strong><br />
+            </p>
+        </div>
+        
+        <!--充值订单信息 -->
+        <div class="blank20">
+        </div>
+        <div class="creditsbox">
+            <h1 class="cyibank">
+                交易订单信息</h1>
+            <ul>
+                <li>
+                    <asp:Label ID="lblTitle" runat="server"></asp:Label></li>
+                <div class="clear">
+                </div>
+            </ul>
+            <ul>
+             <asp:Literal runat="server" ID="cardList"></asp:Literal>
+            </ul>
+            <ul>
+                <li>订单号：<span class="chengcu"></span>
+                    <asp:Label ID="lblOrderNo" runat="server"></asp:Label>
+                </li>
+                <li>交易时间：<asp:Label ID="lblOrderDate" runat="server"></asp:Label></li><div class="clear">
+                </div>
+            </ul>
+            <ul>
+                <li>应付金额：<asp:Label ID="lblAmount" runat="server"></asp:Label>元</li><li>状态：<asp:Label
+                    ID="lblStatus" runat="server"></asp:Label></li><li>支付方式：<asp:Label ID="lblPayType"
+                        runat="server"></asp:Label></li><div class="clear">
+                        </div>
+            </ul>
+        </div>
+        <div class="blank20">
+        </div>
+        <div class="creditsbox" style="display: none">
+            <h1 class="cyibank">
+                购买用户信息</h1>
+            <ul>
+                <li>用户昵称：vince1125 <a href="#"></a></li>
+                <li>姓名：刘晓飞<br />
+                </li>
+                <div class="clear">
+                </div>
+            </ul>
+            <ul>
+                <li>固定电话：0755-88599899 <span class="chengcu"></span></li>
+                <li>手机：</li><div class="clear">
+                </div>
+            </ul>
+            <ul>
+                <li>电子邮箱：lxfei@tz888.cn</li><div class="clear">
+                </div>
+            </ul>
+        </div>
+        <div class="closebox">
+            <input type="button" value="关闭" class="buttomal"  onclick="javascript:history.go(-1)" />
+            <p>
+                <img src="../images/PayManage/biao_print.gif" />
+                <a href="javascript:;" onclick="window.print()">打印该页</a></p>
+        </div>
+    </div>
+</asp:Content>

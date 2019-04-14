@@ -1,0 +1,51 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px; COLOR: #0c0c0c; LINE-HEIGHT: 180%; FONT-FAMILY: "ËÎÌו"
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.Spaces:link    {
+}
+A.Spaces:visited {
+}
+A.Spaces:active  {
+}
+A.Spaces:hover   {
+	left: 1px;
+	top: 1px;
+	position: relative;
+}
+DIV,FORM,IMG,ul,ol,li,p {
+	 PADDING: 0px; MARGIN: 0px; 
+}
+
+.clear {
+	CLEAR: both
+}
+.blank8 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+.blank20 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 20px
+}
+.wrapper {
+	width: 948px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}

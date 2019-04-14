@@ -1,0 +1,160 @@
+/*by yanweiping*/
+/*修改会员资料*/
+body{ word-wrap: break-word; word-break: break-all}
+
+.tabbiank{
+	border:#cccccc solid;
+	border-width:1px 1px 0px 1px;
+}
+.tabbiank td{
+	border:#cccccc solid;
+	border-width:0 0 1px 0;
+	padding: 12px 5px 12px 5px;
+}
+.tabbiank strong{}
+.tabbiank ul{}
+.tabbiank li{
+	width: 80px;
+	float: left;
+}
+.tabbiank .liwai{
+	float: left;
+	width: 45px!important;width:60px;
+}
+.suggestbox{
+	padding: 10px 10px 10px 15px;
+	height:1%;
+	font-weight: normal;
+	font-size: 12px;
+}
+.suggestbox h1{
+	color: #F87120;
+	font-size: 14px;
+	font-weight: normal;
+	padding-bottom: 10px 10px 5px 10px;
+}
+.suggestbox p{
+	padding: 5px 0 0 00;
+}
+.namefill{
+	width: 300px;
+	float: left;
+}
+.namepic{
+	width: 100px;
+	float: left;
+	text-align: center;
+}
+.mbbuttom{
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+.mbbuttom p{
+	margin-top: 15px;
+}
+/*企业会员资料*/
+.mtopbox{
+	width: 948px;
+	margin: 0 auto;
+	background-image: url(../images/MemberData/toprbg.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	height: 100px;
+}
+.mtopbox .left{
+	width: 250px;
+	text-align: center;
+	padding-top: 5px;
+	float: left;
+}
+.mtopbox .right{
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding: 12px 15px 0 0;
+}
+.mtopbox .right .rzi{
+	text-align: left;
+	padding: 15px 10px 0 0;
+	width: 170px;
+	float: right;
+}
+.topbg{
+	background-image: url(../images/MemberData/topdbg.gif);
+	clear: both;
+	height: 4px;
+	overflow: hidden;
+	width: 948px;
+	margin-top: 1px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.mainbox{
+	width: 938px;
+	margin: 0 auto;
+	padding: 0 5px 0 5px;
+}
+.mainbox .titletop{
+	background-image: url(../images/MemberData/topbg2.gif);
+	color: #F47A2E;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 24px 0 10px 10px;
+}
+.mainbox .left{
+	width: 300px;
+	float: left;
+	border: 1px solid #CDCDCD;
+	text-align: center;
+	padding: 10px 0 0 0;
+	height: 630px;
+}
+.mainbox .left p{
+	text-align: left;
+	padding: 15px 0 35px 36px;
+}
+.mainbox .left p b{
+	font-size: 14px;
+}
+.mainbox .left h1{
+	background-image: url(../images/MemberData/lefttbg.gif);
+	color: #F47A2E;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	padding: 6px 0 4px 15px;
+}
+.mainbox .left .buttom{
+	padding: 25px 0 15px 0;
+}
+.mainbox .left .buttom img{
+	margin: 7px 3px 0 3px;
+}
+.mainbox .right{
+	float: left;
+	width: 636px;
+}
+.mainbox .right h1{
+	background-color: #EFEFEF;
+	color: #F47A2E;
+	padding: 4px 0 4px 20px;
+	font-size: 14px;
+} 
+.mainbox .right ul{
+	padding: 0px 15px 0 15px;
+	margin-top: 10px;
+}
+.mainbox .right li{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EFEFEF;
+	width: 303px;
+	float: left;
+	padding: 7px 0 4px 0;
+	text-align: left;
+}
+.mainbox .right p{
+	padding: 16px 0 16px 20px;
+	line-height: 26px;
+}

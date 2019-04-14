@@ -1,0 +1,255 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Page20110314.master" AutoEventWireup="true" CodeFile="Passaspx.aspx.cs" Inherits="Manage_Passaspx" Title="Untitled Page" %>
+
+<%@ Register Assembly="Tz888.Common" Namespace="Tz888.Common.Pager" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+  <script language="javascript" type="text/javascript">
+function SelectAll()
+{
+    if(!document.getElementById("cbxSelect"))
+        return;
+    var obj = document.getElementById("cbxSelect");
+    elem=obj.form.elements;
+    for(i=0;i<elem.length;i++)
+    {          
+		if(elem[i].type=="checkbox" && elem[i].id=="cbxSelect")
+		{
+		    if(elem[i].checked!=true)			
+			    elem[i].click();
+		}
+    }
+}
+
+function ReSelect()
+{
+    if(!document.getElementById("cbxSelect"))
+        return;
+    var obj = document.getElementById("cbxSelect");
+    elem=obj.form.elements;
+    for(i=0;i<elem.length;i++)
+    {          2
+		if(elem[i].type=="checkbox" && elem[i].id=="cbxSelect")
+		{
+			    elem[i].click();
+		}
+    }
+}
+
+function checkSelect()
+{
+    if(!document.getElementById("cbxSelect"))
+        return 0;
+    var num = 0;
+    var obj = document.getElementById("cbxSelect");
+    elem=obj.form.elements;
+    for(i=0;i<elem.length;i++)
+    {          
+		if(elem[i].type=="checkbox" && elem[i].id=="cbxSelect")
+		{
+		    if(elem[i].checked==true)			
+			    num++;
+		}
+    }
+    return num;
+}
+
+function delmore()
+{
+    if(checkSelect() == 0){
+        alert("请选择要删除的记录!");
+        return false;
+    }
+    return confirm('这将不可恢复，真的要删除吗？');
+}
+
+function overduemore()
+{
+    var count = checkSelect();
+    if(count == 0){
+        alert("请选择要放入过期的记录!");
+        return false;
+    }
+    return confirm('你真的要将这' + count + '条资源设置为过期吗？');
+}
+
+function refreshmore()
+{
+    var count = checkSelect();
+    if(count == 0){
+        alert("请选择要刷新的资源!");
+        return false;
+    }
+    return true;
+}
+
+function TabNavigate(url)
+{
+    window.location.href = url;
+}
+
+function modifyNavigate(id,type,CraveOutType,grade)
+{
+    if(grade != 1002)
+    {
+        if(!confirm('如果您对发布的内容进行修改，需要经过再次审核，您已经通过审核的需求将暂时不在网上展示!'))
+        {
+            return;
+        }
+    }
+    var url="";
+    switch(type)
+    {
+        case "Capital":
+            url = "/offer/ModifyCapital.aspx?id="+id+"&type="+type;
+            break;
+        case "Project":
+            url = "./ModifyProject.aspx?id="+id+"&type="+type;
+            break;
+        case "Merchant":
+            url = "./ModifyMerchant.aspx?id="+id+"&type="+type;
+            break;
+        case "CarveOut":
+             url = "/Publish/ModifyCarveOut.aspx?id="+id+"&type="+CraveOutType;
+            break;
+        case "Oppor":
+            url = "http://www.topfo.com/member/Info/ModifyOppor.aspx?InfoID="+id+"&type="+type;
+            break;
+        default:
+            break;
+    }
+    window.location.href = url;
+}
+function del()
+{
+   msg='这将不可恢复,真的要删除吗？'
+   if(!window.confirm(msg))
+    {
+        return false;
+    }
+}
+    </script>
+
+<div class="member-right">
+    <div class="publication">
+      <h1><span class="fl"><span class="f_14px strong f_cen">管理资源</span></span><span class="fr"><img src="http://img2.topfo.com/member/images/biao_01.gif" align="absmiddle"/> <a href="#" class="publica-fbxq">需求发布规则</a></span></h1>
+   <div class="search-1">需求筛选：<asp:TextBox ID="txtConditions" runat="server"></asp:TextBox>
+   <asp:DropDownList ID="ddlInfoType" runat="server">
+                    </asp:DropDownList>
+<asp:Button ID="btnSearch" runat="server" CssClass="btn-002"  Text="查 询" />
+</div>
+        <h2>
+        <ul><%--btn_on--%>
+         <li class="btn_on" style="cursor: pointer">通过审核(<%=this.GetCount(Tz888.BLL.Common.AuditStatus.Pass) %>)</li><li
+                    onclick="JavaScript:TabNavigate('ResourceManage_Audit.aspx');" style="cursor: pointer">
+                    审核中(<%=this.GetCount(Tz888.BLL.Common.AuditStatus.Auditing)%>)</li><li onclick="JavaScript:TabNavigate('ResourceManage_NoPass.aspx');"
+                        style="cursor: pointer">未通过审核(<%=this.GetCount(Tz888.BLL.Common.AuditStatus.NoPass)%>)</li><li
+                            onclick="JavaScript:TabNavigate('ResourceManage_Overdue.aspx');" style="cursor: pointer">
+                            已过期(<%=this.GetCount(Tz888.BLL.Common.AuditStatus.Overdue)%>)</li>
+         </ul>
+        </h2>
+     <div class="manage" id="sh_con_1">
+     <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+     <thead>
+                <tr>
+                    <td align="center"  width="9%">
+                        <a href="Javascript:SelectAll();"><span style="color: #000000">全选</span></a>|<a href="Javascript:ReSelect();"><span
+                            style="color: #000000">反选</span></a></td>
+                    <td align="center"  style="color: #000000" width="10%">
+                        类别
+                    </td>
+                    <td align="center"  width="18%">
+                       标题
+                    </td>
+                    <td align="center"  width="9%">
+                        发布时间</td>
+                    <td align="center"  width="20%">
+                        需求管理
+                    </td>
+                    <td align="center"  width="17%">
+                        管理
+                    </td>
+                </tr>
+                 </thead>
+                <asp:Repeater ID="RfList" runat="server" OnItemCommand="RfList_ItemCommand">
+                    <ItemTemplate>
+                        <tr>
+                            <td align="center" class="taba" style="height: 5px">
+                                <label>
+                                    <input id="cbxSelect" name="cbxSelect" type="checkbox" value="<%#Eval("InfoID") %>" />
+                                </label>
+                            </td>
+                            <td align="left" class="taba" style="height: 5px">
+                                <%#Eval("InfoTypeName") %>
+                            </td>
+                            <td align="left" class="taba" style="height: 5px">
+                                <a href="<%#this.wwwdomain + @"/" + Eval("HtmlFile") %>" target="_blank">
+                                    <%#GetTitle(Eval("Title")) %>
+                                </a><a href="#"></a>
+                            </td>
+                            <td align="center" class="taba" style="height: 5px">
+                                <label title="<%#this.GetValiditeInfo(Eval("InfoOverdueTime")) %>">
+                                    <%#Convert.ToDateTime(Eval("PublishT")).ToString("yyyy-MM-dd") %>
+                                </label>
+                            </td>
+                            <td align="center" class="taba" style="height: 5px">
+                                <a target="_blank" href="../helper/Promotionset.aspx?InfoID=<%#Eval("InfoID") %>&type=<%#Eval("InfoTypeID").ToString().Trim() %>">
+                                    定向推广</a> <a href="./PertinentLink.aspx?id=<%#Eval("InfoID") %>&type=<%#Eval("InfoTypeID").ToString().Trim() %>">
+                                        智能匹配</a> &nbsp;<a href="./MemberFollow.aspx?id=<%#Eval("InfoID") %>&type=<%#Eval("InfoTypeID").ToString().Trim() %>">关注</a>
+                            </td>
+                            <td align="center" class="taba" style="height: 5px">
+                                <a href="<%#this.wwwdomain + @"/" + Eval("HtmlFile") %>" target="_blank">查看</a>
+                                &nbsp;<a href='JavaScript:modifyNavigate("<%#Eval("InfoID") %>","<%#Eval("InfoTypeID").ToString().Trim() %>","<%#Eval("CarveOutInfoType").ToString().Trim() %>","<%#Eval("MemberGradeID").ToString().Trim() %>");'>修改</a>
+                                &nbsp;<asp:LinkButton ID="lbtnDel" runat="server" CommandArgument='<%#Eval("InfoID") %>'
+                                    CommandName="Delete" OnClientClick="return del()" Text="删除"></asp:LinkButton>
+                                &nbsp;<asp:LinkButton ID="lbtnRefresh" runat="server" CommandArgument='<%#Eval("InfoID") %>'
+                                    CommandName="Refresh" Text="刷新"></asp:LinkButton>
+                                </a>
+                            </td>
+                        </tr>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <tfoot>
+          <tr>
+            <td colspan="6">
+              <span class="fl bianji">
+             <asp:Button ID="btnDelete" runat="server" CssClass="btn-002" Text="删除选中" /> 
+             <asp:Button ID="btnRefresh" runat="server" CssClass="btn-002" Text="刷新选中" />
+             <asp:Button ID="btnSetOverdue" runat="server" CssClass="btn-003"  Text="放入已过期需求" />
+              </span>
+              <span class="fr">
+               <%--<cc1:Pager ID="Pager1" PagingMode="NonCached" runat="server" BackColor="Transparent"
+                            BorderStyle="None" ContentPlaceHolder="ContentPlaceHolder1" ControlToPaginate="RfList"
+                            PagerStyle="CustomAndNumeric" ShowCount="False" UseCustomDataSource="False" SortColumn="PublishT"
+                            SortType="DESC" TableViewName="MainInfoVIW" KeyColumn="InfoID" ShowPageCount="False">
+                        </cc1:Pager>--%></span></td>
+            </tr>
+        </tfoot>
+     </table>
+            
+<div class="shenhe">
+<ul>
+<li class="f_cen">您共有 <span class="strong">0</span> 条通过审核的需求
+<%-- <%=this.GetRemind()%>--%>
+</li>
+<li>每页显示：<asp:LinkButton ID="lbtn10" runat="server" CssClass="publica-fbxq">10</asp:LinkButton>条 <asp:LinkButton ID="lbtn20" runat="server" CssClass="publica-fbxq">20</asp:LinkButton>条 <asp:LinkButton ID="lbtn30" runat="server" CssClass="publica-fbxq">30</asp:LinkButton>条</li>
+</ul>
+</div>
+    </div>
+
+    
+   
+    <div class="zhuyi">
+     <h3><span class="fl" style="margin:2px 10px 0 0"><img src="http://img2.topfo.com/member/images/manage_23.jpg"  /></span> <span class="fl" >注意事项</span></h3>
+   <p>
+                · 您可以修改您发布的需求，但修改后的内容需要经过我们的审核才能出现在网上。
+                <br>
+                · 经常刷新您发布的需求，可以让需求尽量排在同类信息的前面！刷新功能为拓富通会员专享。1元钱体验拓富通会员服务 <a href="/Register/VIPMemberRegister.aspx" target="_blank" class="publica-fbxq">申请拓富通</a>
+                <br>
+                · 您可以通过设置，指示系统将匹配的资源通过邮件或站内短信的形式发送给您！<a href="/helper/Notice.aspx" class="publica-fbxq">点此立即设置 </a>
+                <br>
+
+            </p>
+    </div>
+      </div>
+</div>
+</asp:Content>
+

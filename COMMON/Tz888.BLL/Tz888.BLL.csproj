@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1887657-99AF-41D3-A597-95D96596D469}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tz888.BLL</RootNamespace>
+    <AssemblyName>Tz888.BLL</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=9.2.17.1, Culture=neutral, PublicKeyToken=4735ae9824c7d3ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInfo.cs" />
+    <Compile Include="advertise\ADlaunchInfoBLL.cs" />
+    <Compile Include="AgentCommonDetailRule.cs" />
+    <Compile Include="Alliance\AuditMail.cs" />
+    <Compile Include="Alliance\ConsumeInfos.cs" />
+    <Compile Include="Alliance\ConsumeRepay.cs" />
+    <Compile Include="Alliance\Notice.cs" />
+    <Compile Include="Alliance\RegisterMail.cs" />
+    <Compile Include="Alliance\ResourcesNotice.cs" />
+    <Compile Include="Alliance\UserInfo.cs" />
+    <Compile Include="AreaImg.cs" />
+    <Compile Include="AreaText.cs" />
+    <Compile Include="AutoSendMsg.cs" />
+    <Compile Include="BusinesProcess.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CollectionBLL.cs" />
+    <Compile Include="CommendBLL.cs" />
+    <Compile Include="Common\CommonFunction.cs" />
+    <Compile Include="Common\DictionaryInfoBLL.cs" />
+    <Compile Include="Common\IndustryBLL.cs" />
+    <Compile Include="Common\InquiryBLL.cs" />
+    <Compile Include="Common\ParameterBLL.cs" />
+    <Compile Include="Common\PublicEnum.cs" />
+    <Compile Include="Common\SetCapitalBLL.cs" />
+    <Compile Include="Common\SetCurrencyBLL.cs" />
+    <Compile Include="Common\SetMerchantAttribute.cs" />
+    <Compile Include="Common\ZoneSelectBLL.cs" />
+    <Compile Include="Company\CompanyBLL.cs" />
+    <Compile Include="Company\CompanyMadeBLL.cs" />
+    <Compile Include="Company\CompanyShowBLL.cs" />
+    <Compile Include="Company\NarrowAdInfoBLL.cs" />
+    <Compile Include="Conn.cs" />
+    <Compile Include="Controls\MTCPager\Methods.cs" />
+    <Compile Include="Controls\MTCPager\MTCPager.cs" />
+    <Compile Include="Controls\MTCPager\PageIndexType.cs" />
+    <Compile Include="Controls\PagerSetting\Enum.cs" />
+    <Compile Include="Controls\PagerSetting\PageJump.cs" />
+    <Compile Include="Controls\PagerSetting\Properties.cs" />
+    <Compile Include="CustomInfoBLL.cs" />
+    <Compile Include="Email\EmailBLL.cs" />
+    <Compile Include="ErrowTabBLL.cs" />
+    <Compile Include="Finance.cs" />
+    <Compile Include="GetDataList.cs" />
+    <Compile Include="Index_Edit.cs" />
+    <Compile Include="Info\CarveOutInformationBLL.cs" />
+    <Compile Include="Info\Filters.cs" />
+    <Compile Include="GoodFriend.cs" />
+    <Compile Include="InfoStatic\InfoStaticQueueTab.cs" />
+    <Compile Include="InfoStatic\SetInfoPageStaticTab.cs" />
+    <Compile Include="Info\CapitalInfoBLL.cs" />
+    <Compile Include="Info\Common.cs" />
+    <Compile Include="Info\InfoAuditMailBLL.cs" />
+    <Compile Include="Info\InfoContact.cs" />
+    <Compile Include="Info\InfoDefaultCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Info\InfoDefaultDEFRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Info\InfoResourceBLL.cs" />
+    <Compile Include="Info\InfoViewCollectionBLL.cs" />
+    <Compile Include="Info\MainInfoBLL.cs" />
+    <Compile Include="Info\MarchantInfoBLL.cs" />
+    <Compile Include="Info\MatchInfoBLL.cs" />
+    <Compile Include="Info\OpportunityInfoBLL.cs" />
+    <Compile Include="Info\ProjectInfoBLL.cs" />
+    <Compile Include="Info\ReleaseInsertBLL.cs" />
+    <Compile Include="Info\SetDefaultValue.cs" />
+    <Compile Include="Info\SetInfoTypeRef.cs" />
+    <Compile Include="Info\SetSubDefaultValueRule.cs" />
+    <Compile Include="Info\V124\CapitalInfoBLL.cs" />
+    <Compile Include="Info\V124\MerchantZoneBLL.cs" />
+    <Compile Include="InnerInfo.cs" />
+    <Compile Include="InnerInfoBLL.cs" />
+    <Compile Include="Koubei\JoinKoubeiBLL.cs" />
+    <Compile Include="LeaveMsg.cs" />
+    <Compile Include="loanscontactsTab.cs" />
+    <Compile Include="LoansInfo.cs" />
+    <Compile Include="loansInfoTab.cs" />
+    <Compile Include="LogBLL.cs" />
+    <Compile Include="LoginInfoIMBLL.cs" />
+    <Compile Include="Login\Common.cs" />
+    <Compile Include="Login\LoginInfoBLL.cs" />
+    <Compile Include="Login\MemberBLL.cs" />
+    <Compile Include="Manage\MenuPermissionBLL.cs" />
+    <Compile Include="Manage\PermissionBLL.cs" />
+    <Compile Include="MeberLogin\Access.cs" />
+    <Compile Include="MeberLogin\AccessBLL.cs" />
+    <Compile Include="MeberLogin\BuyList.cs" />
+    <Compile Include="MeberLogin\InfoView.cs" />
+    <Compile Include="MeberLogin\MemberIndex.cs" />
+    <Compile Include="MeberLogin\MemberIndexBLL.cs" />
+    <Compile Include="MeberLogin\PayManage.cs" />
+    <Compile Include="MeberLogin\PertinentLink.cs" />
+    <Compile Include="MeberLogin\PertinentLinkBLL.cs" />
+    <Compile Include="MeberLogin\Promotion.cs" />
+    <Compile Include="MeberLogin\PromotionBLL.cs" />
+    <Compile Include="MeberLogin\Receive.cs" />
+    <Compile Include="MeberLogin\WaitList.cs" />
+    <Compile Include="MemberManageInfoBll.cs" />
+    <Compile Include="MemberResourceBLL.cs" />
+    <Compile Include="MerchantChanel.cs" />
+    <Compile Include="MerchantOppor.cs" />
+    <Compile Include="MerchantSite.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="MyHome\HomeLinkManager.cs" />
+    <Compile Include="MyHome\HomeTypeManager.cs" />
+    <Compile Include="news\NewsTabBLL.cs" />
+    <Compile Include="news\NewsTypeTabBLL.cs" />
+    <Compile Include="news\NewsViewTabBLL.cs" />
+    <Compile Include="OrderManage.cs" />
+    <Compile Include="Order\BusStrikeRecBLL.cs" />
+    <Compile Include="Order\IndustryReportBLL.cs" />
+    <Compile Include="Order\OrderLinkBLL.cs" />
+    <Compile Include="Order\OrderMainBLL.cs" />
+    <Compile Include="PageIniControl.cs" />
+    <Compile Include="PageStatic\CapitalPageStatic.cs" />
+    <Compile Include="PageStatic\Common.cs" />
+    <Compile Include="PageStatic\MerchantPageStatic.cs" />
+    <Compile Include="PageStatic\NewsPageStatic.cs" />
+    <Compile Include="PageStatic\ProjectPageStatic.cs" />
+    <Compile Include="PageStatic\V124\CapitalPageStatic.cs" />
+    <Compile Include="PageStatic\VideoPageStatic.cs" />
+    <Compile Include="Pay.cs" />
+    <Compile Include="Pay1\PayOrder.cs" />
+    <Compile Include="PayPwd.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="Professional\OrganizationTypeBLL.cs" />
+    <Compile Include="Professional\OrganizationTypetbl.cs" />
+    <Compile Include="Professional\ProfessionalinfoBLL.cs" />
+    <Compile Include="Professional\ProfessionalLinkBLL.cs" />
+    <Compile Include="Professional\ProfessionalPleaseBLL.cs" />
+    <Compile Include="Professional\ProfessionaltalentsBLL.cs" />
+    <Compile Include="Professional\ProfessionalTalentsType.cs" />
+    <Compile Include="Professional\ProfessionalTypeBLL.cs" />
+    <Compile Include="Professional\ProfessionalviewBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Register\common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register\EnterpriseRegisterBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register\GovernmentRegisterBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register\LoginInfoBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register\MemberInfoBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Register\RegisterMail.cs" />
+    <Compile Include="Register\SEOLoginTabBLL.cs" />
+    <Compile Include="Register\SS_Agency_ServicesBLL.cs" />
+    <Compile Include="Register\SS_ProfessionalServices.cs" />
+    <Compile Include="Register\VIPMemberRegister.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportTabBLL.cs" />
+    <Compile Include="Search\SearchCommonBLL.cs" />
+    <Compile Include="Search\SearchInfo.cs" />
+    <Compile Include="SendNotice.cs" />
+    <Compile Include="StrikeOrder.cs" />
+    <Compile Include="Subject\SubjectExtendBLL.cs" />
+    <Compile Include="SubscribeSet.cs" />
+    <Compile Include="TFZS\Common.cs" />
+    <Compile Include="TFZS\ExpressTarget.cs" />
+    <Compile Include="TFZS\MainTarget.cs" />
+    <Compile Include="TFZS\MeasureStandard.cs" />
+    <Compile Include="TFZS\TFZS_ProjectDetaiSubBLL.cs" />
+    <Compile Include="TPMerchant.cs" />
+    <Compile Include="TPPicture.cs" />
+    <Compile Include="TPVideo.cs" />
+    <Compile Include="Union.cs" />
+    <Compile Include="UserInfoH.cs" />
+    <Compile Include="UserParameters.cs" />
+    <Compile Include="VipMsg.cs" />
+    <Compile Include="VoucherConvert.cs" />
+    <Compile Include="Web References\SmsServer\Reference.cs" />
+    <Compile Include="WebUnion\WebUnion_UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tz888.DALFactory\Tz888.DALFactory.csproj">
+      <Project>{79B3C1D5-872C-4303-AD69-5440A18FFB1B}</Project>
+      <Name>Tz888.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.DBUtility\Tz888.DBUtility.csproj">
+      <Project>{EE61DF29-35DB-408D-ACF8-1AC2E0A13090}</Project>
+      <Name>Tz888.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.IDAL\Tz888.IDAL.csproj">
+      <Project>{8EC654D9-ACA8-47E2-B201-59781959A5CD}</Project>
+      <Name>Tz888.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.Model\Tz888.Model.csproj">
+      <Project>{059992ED-C5FF-4E37-A3F1-BC4FA6854304}</Project>
+      <Name>Tz888.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.Pager\Tz888.Pager.csproj">
+      <Project>{5910F289-0C92-484C-9C9E-1CDD067071BF}</Project>
+      <Name>Tz888.Pager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.SQLServerDAL\Tz888.SQLServerDAL.csproj">
+      <Project>{C3DCFFD2-81A4-4969-9049-4CBF5978F3AD}</Project>
+      <Name>Tz888.SQLServerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SmsServer\BusinessService.wsdl" />
+    <None Include="Web References\SmsServer\Reference.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

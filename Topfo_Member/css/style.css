@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0px; margin:0px;}body {font-family: "宋体";margin: 0px;padding: 0px;font-size: 12px;background-color: #FFFFFF; color:#333333;}
+body,tr,td,ul,li {list-style-type: none;font-family: "宋体";}a {cursor:pointer;}img {border:0;line-height:0;}
+a:link {text-decoration: none;color:#333333;font-family: "宋体";}
+a:visited {text-decoration: none;color:#333333;font-family: "宋体";}
+a:hover {text-decoration:underline;color:#FF6600;font-family: "宋体";}a:active {text-decoration:blink;font-family: "宋体";}h1,h2,h3,h4 {text-decoration: none; margin:0px; padding:0px;}
+.zc{ width:445px; float:left; line-height:25px; padding-left:20px;}
+.zc ul{}
+.zc li{ float:left; width:100px;}
+.size{width:760px; margin-left:auto; margin-right:auto; line-height:25px;}
+.sizea{width:758px;border: 1px solid #CCCCCC; padding:5px;}
+.sizeb{width:500px; margin-top:10px; height:90px;border: 1px solid #CCCCCC; padding:5px; margin-left:auto; margin-right:auto;}
+.foot1 {color: #f75f03;font-size: 16px;}
+.foot2 {font-size: 14px;font-weight: bold;}
+.STYLE1 {font-size: 24px;font-weight: bold;}
+.STYLE2 {font-size: 16px;font-weight: bold; color:#ff9900;}
+.STYLE3 {color: #FF0000}
+
+.btnsubmit {background-image:url(../images/w_zc_an.gif); border:none;}
+

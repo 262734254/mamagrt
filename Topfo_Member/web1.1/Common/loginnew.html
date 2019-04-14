@@ -1,0 +1,162 @@
+<style type="text/css">
+<!--
+.loginbox {
+	float: right;
+	width: 290px;
+}
+.loginbox .header {
+	background-image: url(/web2.0/img/NewsImg/logintop.gif);
+	background-repeat: no-repeat;
+	height: 31px;
+}
+.loginbox .content {
+	background-image: url(/web2.0/img/NewsImg/logincdi.gif);
+	background-repeat: repeat;
+	width: 290px;
+}
+.loginbox .lbottom {
+	font-size: 1px;
+	background-image: url(/web2.0/img/NewsImg/loginbottom.gif);
+	height: 7px;
+	overflow: hidden;
+}
+.loginbox .content img {
+	margin-right: 5px;
+}
+
+-->
+</style>
+<div class="loginbox" id="member_logout" style="display:none">
+	<div class="header"></div>
+	<div class="content">
+		<form id="form_mini" method="post">
+			<table width="89%" height="158" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="17" colspan="2"></td>
+				</tr>
+				<tr>
+					<td align="right">登陆选择：</td>
+					<td>
+						<select name="RoleName" id="RoleName">
+							<option value="0">会员登陆</option>
+							<option value="2">会员卡登陆</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="26%" height="24" align="right">用户名：</td>
+					<td width="74%"><input name="txtLoginName" id="txtLoginName" type="text" value="" size="15" />
+						<a href="/Register/RetrieveMemberLoginName.aspx" target="_blank">忘记用户名? </a>
+				  </td>
+				</tr>
+				<tr>
+					<td align="right">密 码：</td>
+					<td><input name="txtPassword" id="txtPassword" onkeydown="javascript:LoginSubmit_mini(event);"
+							type="password" value="" size="15" /> <a href="/Register/RetrieveMemberPassword.aspx" target="_blank">
+							忘记密码?</a></td>
+				</tr>
+				<tr>
+					<td height="30">&nbsp;</td>
+					<td><input type="checkbox" id="isAutoLogin" value="checkbox"  checked /> 自动登录&nbsp; <a href="/Rookie/RookieGuide.aspx" target="_blank" style="color:#3505D0">
+							新手入门</a></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><a href="javascript:void(0)" class="Spaces"><img src="/web2.0/img/NewsImg/login.gif" id="btn_mini_submit" onclick="CheckLogin_mini();return false;"
+								width="61" height="27" border="0" /></a> <a href="/Register/MemberRegister.aspx" target="_blank" class="Spaces"><img src="/web2.0/img/NewsImg/register.gif" width="78" height="27" border="0" /></a></td>
+				</tr>
+		  </table>
+		</form>
+  </div>
+	<div class="lbottom"></div>
+</div>
+<div class="loginbox" id="member_login" style="display:none">
+  <div class="header"></div>
+  <div class="content">
+    <table width="86%" height="158" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="8" colspan="4"></td>
+			</tr>
+			<tr>
+				<td height="30" colspan="3">欢迎您，尊敬的<a href="#" id="loginNickname" style="color:#FF720A">昵称</a>
+				</td>
+				<td>[<a href="javascript:void(0)" onclick="Logout()">退出</a>]</td>
+			</tr>
+			<tr>
+				<td width="28%" height="24">会员等级：</td>
+				<td width="17%"><a href="/member/InfoCenter/InfoCenter.aspx" style="color:#FF720A" id="loginLevel">★</a></td>
+				<td width="28%">会员类别：</td>
+				<td width="27%"><a href="/Service/VIPproject.shtml" style="color:#0349C7" id="loginClass">普通会员</a></td>
+			</tr>
+			<tr>
+				<td height="25">已发信息：</td>
+				<td><a href="/member/InfoCenter/InfoCenter.aspx" style="color:#FF720A" id="loginSended">0</a>条</td>
+				<td>我的短信：</td>
+				<td>(<a href="/Member/InnerInfo/inbox.aspx" style="color:#FF720A" id="loginRecieved">新0/0</a>)
+					<a href="/Member/InnerInfo/inbox.aspx" style="color:#FF720A" id="A1"><img src="/web2.0/img/email.gif" width="17" height="11" align="absmiddle" /></a></td>
+			</tr>
+			<tr>
+				<td height="27">点数余额：</td>
+				<td><a href="/Member/Manage/PointsInquiries.aspx" style="color:#FF720A" id="loginPoint">0</a>点</td>
+				<td>累积积分：</td>
+				<td><span class="logincheng"><a href="/Member/Manage/IntegralInquiries.aspx" style="color:#FF720A" id="loginIntegral">0</a></span>分</td>
+			</tr>
+			<tr>
+				<td height="50" colspan="4" align="center"><a href="/Member/Manage/index.aspx" target="_blank" class="Spaces"><img src="/web2.0/img/bottom_hyzx.gif" width="80" height="27" /></a>
+					<a href="/Member/MyCallingCard/shoppingCar.aspx" target="_blank" class="Spaces"><img src="/web2.0/img/bottom_gwc.gif" width="80" height="27" /></a></td>
+			</tr>
+    </table>
+	</div>
+<div class="lbottom"></div>
+</div>
+<div class="rtop_wai" id="member_login_loading" style="DISPLAY:block">
+	<div class="r_top"></div>
+	<div class="r_c">
+		<table width="262" height="160" border="0" align="center" cellpadding="0" cellspacing="0" ID="Table1">
+			<tr>
+				<td width="262" align="center"><img src="/web2.0/img/down.gif"> 加载中....</td>
+			</tr>
+		</table>
+	</div>
+	<div class="r_b"></div>
+</div>
+<script language="javascript">
+
+var serviceUrl = "/WebService/userData.asmx/GetUserData";
+function GetLoginInfo(transport)
+{
+ 
+   var nodes = transport.responseXML;
+    var str = "";
+   try
+   {
+		str = nodes.getElementsByTagName("string")[0].firstChild.data;
+   }
+   catch(e)
+   {
+		str="";
+   }
+   if(str&&str.trim()!="")
+   {
+		str = str.trim();
+   }
+   else
+   {
+		
+		$("member_logout").style.display = "block";
+		$("member_login").style.display = "none";
+		$("member_login_loading").style.display = "none";
+		return;
+   }
+   var arr = str.split('_');
+   $("loginLevel").innerHTML = getUserGrade(arr[0]);
+   $("loginClass").innerHTML = getUserClass(arr[1]);
+   $("loginSended").innerHTML = arr[2];
+   $("loginRecieved").innerHTML = arr[3]+"/"+arr[4];
+   $("loginRecieved").title = "您有"+arr[3]+"条新短信";
+   $("loginIntegral").innerHTML = arr[5];
+   $("loginPoint").innerHTML = arr[6];
+	$("member_login").style.display = "block";
+	$("member_login_loading").style.display = "none";
+}
+</script>
+<script language="javascript" src="/web2.0/Javascript/login_common.js"></script>

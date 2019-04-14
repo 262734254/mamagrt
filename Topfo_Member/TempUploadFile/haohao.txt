@@ -1,0 +1,9 @@
+分级载入
+
+var url="gethint.asp?sid="+Math.random()+"&q="+str
+xmlHttp=GetXmlHttpObject(stateChanged) 
+xmlHttp.open("GET", url , true) 
+xmlHttp.send(null) 
+
+最主要是异步时的callback
+CountryArr

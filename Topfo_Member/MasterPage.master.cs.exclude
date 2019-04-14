@@ -1,0 +1,189 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Text;
+using Tz888.BLL.Login;
+using Tz888.BLL;
+public partial class MasterPage : System.Web.UI.MasterPage
+{
+    public string domain = "";
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        //Page.User.IsInRole("MT1001");//个人
+        //Page.User.IsInRole("MT1003");//企业
+        //Page.User.IsInRole("MT1004");//政府
+        // Page.User.IsInRole("GT1002");//VIP
+        
+        //if (Page.User.Identity.Name == "")
+        //{
+        //    Response.Redirect("Login.aspx");
+        //}
+        if (!Page.IsPostBack)
+        {
+            ltMenu.Text = GenMenu();
+            SetTopInfo();
+
+            //Tz888.BLL.Conn obj = new Tz888.BLL.Conn();
+            //DataTable dt = obj.GetWebSiteList("SelfCreateWebInfo", "Domain", "Domain", 1, 1, 0, 1, "LoginName='" + Page.User.Identity.Name + "'");
+            //if (dt.Rows.Count > 0)
+            //{
+            //    domain = dt.Rows[0]["Domain"].ToString();
+            //}
+        }
+    }
+    private void SetTopInfo()
+    {
+        string LoginName = Page.User.Identity.Name.Trim();
+        Tz888.BLL.Conn dal = new Conn();
+        DataTable dtUser = dal.GetList("LoginInfoTab", "NickName", "LoginId", 1, 1, 0, 1, "LoginName='" + LoginName + "'");
+        if (!string.IsNullOrEmpty(dtUser.Rows[0]["NickName"].ToString()))
+        {
+            lblUserName.Text = dtUser.Rows[0]["NickName"].ToString();
+        }
+        else { lblUserName.Text = LoginName.Trim(); }
+        //try
+        //{
+        //    lblUserName.Text = dtUser.Rows[0]["NickName"].ToString();
+        //}
+        //catch { lblUserName.Text = LoginName.Trim(); }
+        //读取公司登记
+        DataTable dt = new DataTable();
+        Tz888.BLL.Login.LoginInfoBLL bllLoginInfo = new Tz888.BLL.Login.LoginInfoBLL();
+        dt = bllLoginInfo.GetLoginInfoByLoginName(LoginName);
+        try
+        {
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                lblInfoCount.Text = "(" + dt.Rows[0]["TodayInfoCount"].ToString().Trim() + ")";
+                lblMemberCount.Text = "(" + dt.Rows[0]["TodayMemberCount"].ToString().Trim() + ")";
+            }
+        }
+        catch { }
+    }
+    private string GenMenu()
+    {
+        StringBuilder strb = new StringBuilder();
+        Tz888.BLL.Permission ps = new Tz888.BLL.Permission();
+        Tz888.BLL.Conn dal = new Conn();
+        Tz888.BLL.Register.LoginInfoBLL dal1 = new Tz888.BLL.Register.LoginInfoBLL();
+        string propertyid = dal1.GetPropertyID(Page.User.Identity.Name.Trim());
+        string strWhere = "remark='no'";
+        //if (Page.User.IsInRole("MT1001"))//个人
+        //{
+        //    strWhere = "ParentCode='top' and remark like '%1%'";
+        //}
+        //if (Page.User.IsInRole("MT1003"))//企业
+        //{
+        //    strWhere = "ParentCode='top' and remark like '%2%'";
+        //}
+        //if (Page.User.IsInRole("MT1004"))//政府
+        //{
+        //    strWhere = "ParentCode='top' and remark like '%3%'";
+        //}
+        string rolestring = "";
+        if (Page.User.IsInRole("MT2001"))//招
+
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%1%'";
+            rolestring = "1";
+        }
+        if (Page.User.IsInRole("MT2002"))//投
+
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%2%'";
+            rolestring = "2";
+        }
+        if (Page.User.IsInRole("MT2003"))//融
+
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%3%'";
+            rolestring = "3";
+        }
+        if (Page.User.IsInRole("MT2004"))//中介
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%4%'";
+            rolestring = "4";
+        }
+        if (Page.User.IsInRole("MT2007"))//专业机构
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%7%'";
+            rolestring = "7";
+        }
+        if (Page.User.IsInRole("MT2006"))//专业人才
+        {
+            strWhere = "ParentCode='top' and isActive=1 and remark like '%6%'";
+            rolestring = "6";
+        }
+        if (propertyid == "1")
+        {
+            strWhere += " and remark not like '%@%'";
+        }
+
+        DataTable dt = dal.GetList("MemberMenuTab", "*", "sequence", 30, 1, 0, 0, strWhere);
+        //DataRow[] drs = ps.GetMenu("top", "sequence");
+        DataRow[] drs = dt.Select("ParentCode='top'");
+        if (drs != null)
+        {
+            int count = drs.GetLength(0);
+
+            DataRow[] subDrs = null;
+            for (int i = 0; i < count; i++)
+            {
+                // 添加子菜单
+
+
+                subDrs = ps.GetMenu(drs[i]["MemberMenuCode"].ToString().Trim(), "sequence",rolestring);
+                if (subDrs != null && subDrs.Length > 1)
+                {
+
+                    strb.Append(@"<div class='mainli'  style='cursor:pointer' onclick=""SetVisible1('Menu" + drs[i]["MemberMenuCode"].ToString().Trim() + "','changeimage" + drs[i]["MemberMenuCode"].ToString().Trim() + "');\"><img id='changeimage" + drs[i]["MemberMenuCode"].ToString().Trim() + "' src='/images_fhy/collapse.gif' align='absmiddle' />");
+                    strb.Append(drs[i]["Name"].ToString().Trim());
+                    strb.Append("</div>");
+                    //添加二级菜单
+                    strb.Append("<div class='menulist' id='Menu" + drs[i]["MemberMenuCode"].ToString().Trim() + "'>");
+                    strb.Append(@"<ul>");
+                    strb.Append(GenSubMenu(subDrs));
+                    strb.Append(@"</ul>");
+                    strb.Append("</div>");
+                    strb.Append(@"<script>VisibleCheckFHY('Menu" + drs[i]["MemberMenuCode"].ToString().Trim() + "','changeimage" + drs[i]["MemberMenuCode"].ToString().Trim() + "');</script>");
+                }
+                else //no
+                {
+
+
+                    strb.Append(@"<div class='mainli' style='   :pointer'><img src='/images_fhy/collapse.gif' align='absmiddle' />");
+                    strb.Append("<a target='" + drs[i]["target"].ToString().Trim() + "' href='" + drs[i]["Url"].ToString().Trim() + "'><font color='#ffffff'>" + drs[i]["Name"].ToString().Trim() + "</font></a>");
+                    strb.Append("</div>");
+
+
+                }
+
+            }
+        }
+        return strb.ToString();
+    }
+    private string GenSubMenu(DataRow[] drs)
+    {
+
+        StringBuilder strb = new StringBuilder();
+
+        int count = drs.GetLength(0);
+        for (int i = 0; i < count; i++)
+        {
+            strb.Append(@"<li>");
+            strb.Append("<a target='" + drs[i]["target"].ToString().Trim() + "' href='" + drs[i]["Url"].ToString().Trim() + "'>" + drs[i]["Name"].ToString() + "</a>");
+            strb.Append(@"</li>");
+        }
+
+        return strb.ToString();
+
+    }
+}

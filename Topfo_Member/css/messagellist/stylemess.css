@@ -1,0 +1,65 @@
+.tophr{	line-height: 1%;height: 1px;border-top: 2px solid ;border-bottom: 1px solid ;overflow: hidden;}
+.messwarp{width: 948px;margin: 0 auto;}
+.messwarp A:link, .messwarp A:visited{COLOR: #08099F;	text-decoration: underline;}
+.messwarp A:hover,.messwarp A:active {COLOR: #ff0000;text-decoration: underline;}
+.mestitel{font-size: 26px;padding: 30px 0 30px 0;font-weight: bold;text-align: center;line-height:180%;}
+.mestopbox{
+	padding: 0 0 3px 0;
+}
+.mestopbox .left{
+	width: 300px;
+	float: left;
+	padding: 0 0 0 20px;
+}
+.mestopbox .right{
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding: 0 15px 0 0;
+}
+.meslistbox{
+	border-left: 1px solid;
+	border-top: 1px solid;
+	border-right: 1px solid;
+	height: 1%;
+}
+.meslistbox dl{
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+}
+.meslistbox dt{	padding: 5px 25px 5px 30px;}
+.meslistbox dt span{padding:0 15px 0 0;}
+.meslistbox dt span.data{color: #767676;padding: 0 0 0 50px;}
+.meslistbox dd{padding: 5px 25px 10px 30px;}
+.meslistbox dd b{padding: 10px 0 0 20px;display: block;}
+.meslistbox dd.res{	padding:7px 7px 7px 15px;border: 1px dashed #858585;margin: 0 25px 5px 25px;}
+.meslistbox dd.res span{color: #767676;padding: 0 0 0 10px;}
+.meslistbox dd.textr{ text-align:right;}
+.mespage{text-align:right;padding: 2px 15px 0 0;}
+.mesinputbox{}
+.mesinputbox h1{
+	font-size: 14px;
+	padding: 3px 0 1px 35px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+.mesinputbox p{padding: 3px 0 3px 20px;}
+.mesinputbox p.padtb{padding:10px 0 10px 20px;}
+.mesinputbox p.padl{padding:5px 0 0px 10px;}
+.mesinputbox .mbluek{
+	padding: 6px 0 6px 20px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}

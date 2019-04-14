@@ -1,0 +1,30 @@
+/* CSS Document */
+
+
+.footer{ background:#7F664F;}
+.footer a,.footer a:visited,.footer li a:hover,.info_cont_ll a,.info_cont_ll a:visited,.info_cont_ll a:hover{color:#ffffff;}
+
+.info_cont{background-color:#755231;}
+
+
+/* left menu style start */
+.left{background:#D9B698; border:1px solid #BE9571;}
+#menu{color:#10257E;}
+#menu li,#menu li#nolist{border-top:1px solid #907762;border-bottom:2px solid #CCB39E;}
+#menu li ul{ background:#FAEEE2;}
+#menu a,#menu a:hover,#menu a:visited{color:#502906;}
+#menu a.l_red,#menu a.l_red:hover,#menu a.l_red:visited{color:#502906;}
+
+#menu li ul li a,#menu li ul li a:visited{color:#0000000;}
+
+a.red:link,a.red:visited{text-decoration:none;color:#000000;}
+a.red:hover{ text-decoration:underline;color:#000000;}
+/* left menu style end */
+
+
+.note{border:1px solid #FCD9B8; background:#F6EADF;}
+.s_block{border:1px solid #CDDCDF;}
+.s_title{ background-color:#C9A789;}
+.s_title_ll span{color:#000000;}
+
+.all_box_title{ background:#BFA185;}

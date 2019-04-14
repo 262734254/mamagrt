@@ -1,0 +1,259 @@
+/*ÓÒ±ß¿ò¼ÜÊôÐÔ*/
+
+
+.lrbox{	float:right;width:766px;}
+
+.lrbox_cont{width:766px;margin:0 auto}
+
+.zhongbox {	width: 520px !important;width:520px;float: left; text-align:left;padding-left:5px; text-align:left}
+
+.ztopbox dl{
+	padding: 7px 15px 7px 15px;
+}
+.ztopbox dt{
+	font-weight: bold;
+}
+.ztopbox dd{
+	text-indent: 25px;
+}
+.ztopbox p{
+	text-align: right;
+}
+
+.ztopbg{
+	background-image: url(../images/Buletopxk.gif);
+	background-repeat: no-repeat;
+	margin-bottom:10px;
+}
+
+
+
+
+
+.rightbox{
+	width: 224px;
+	float: right;
+	text-align:left;
+}
+
+.rtopbox{ margin-bottom:10px;clear:both;border: 1px solid #FFCB68;}
+
+.title{
+	font-size: 14px;
+	font-weight: bold;
+	background:#DBF2FE;
+}
+
+
+.ztitlebk{
+	background:#FFF698;
+	width:100%;
+	font-size:14px;
+}
+
+.ztitlebk2{
+	border-bottom: 1px solid #FFCB68;
+	background:#F5F4F4;
+	font-size:14px;
+}
+
+
+.ztitlebk3{
+	border-bottom: 1px solid #FFCB68;
+	background:#FFF698;
+	width:100%;
+	font-size:14px;
+}
+
+.up_line{_height:1%;line-height:22px;}
+html>body .up_line{ background:url(../images/line_bai2.png) repeat-x top left;height:22px;width:100%;}
+*html body .up_line{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src="images/line_bai2.png",);height:22px;dipslay:block;}
+
+.ll_title{float:left;padding-left:10px;font-weight:bold;font-size:10pt;margin-top:1px !important;margin-top:5px;}
+.ll_title2{float:left;padding-left:27px;font-weight:bold;font-size:10pt; background:url(../images/icon_yuan.gif) no-repeat 9px 4px;margin-top:1px !important;margin-top:5px;}
+.rr_more{float:right;padding-right:8px;font-size:9pt;margin-top:1px !important;;margin-top:5px;}
+.rr_more span{display:none;}
+.rr_more a{text-decoration:none;font-size:9pt}
+
+.ztitle{
+	color: #563B1D;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 6px 0 4px 12px;
+	background-color: #F5F4F4;
+}
+
+
+
+
+
+.ztishicon{
+	padding: 10px 10px 20px 10px;
+}
+.ztishicon img{}
+.ztishicon h1{
+	font-size: 14px;
+}
+.ztishicon p{line-height: 200%;}
+
+.zhelpbox{padding: 25px 0 20px  0;clear:both;}
+
+
+.note_tip {clear:both;width:100%;}	
+.note_tip li{width:134px !important;width:136px;float:left;}
+
+.btn_1,.btn_2{float:left;border:1px solid #2AB8FD; border-right-color:#5C737E;border-bottom-color:#5C737E;background:#ffffff;border-width:1px 2px 2px 1px;font-weight:bold;color:#2AB8FD; text-align:center;cursor:hand;}
+
+.btn_1{padding:12px 0;margin-right:10px;border-bottom:0;line-height:18px;}
+
+.btn_2{padding:4px 0;margin-right:10px;margin-top:4px;}
+
+
+.btn_list{margin-top:4px;position:relative;}
+
+.btn_list li{width:138px !important;width:141px;float:left;height:30px !important;height:40px;padding-top:10px;padding-bottom:4px;}
+.btn_list li{border:1px solid #2AB8FD; border-right-color:#5C737E;border-bottom-color:#5C737E;background:#ffffff;border-width:1px 2px 2px 1px;font-weight:bold;color:#2AB8FD; text-align:center;cursor:hand;}
+.btn_list li,.btn_1,.btn_2{ background:url(../images/line_1.gif) repeat-x 0 0;}
+
+.btn_list li.blank_rl{margin:0 10px; text-decoration:underline}
+.btn_list li a,.btn_list li a:visited,.note_tip li a,.note_tip li a:visited{color:#000000;}
+
+
+.bd{padding:.84em 0;zoom:1;}
+
+.pa_tabs_a ul{position:relative;zoom:1;}
+.pa_tabs_a li{position:relative;margin:0 5px}
+.pa_tabs_a li{width:134px !important;width:136px;float:left;height:24px !important;height:40px;padding-top:10px;padding-bottom:4px;}
+.pa_tabs_a li{border:1px solid #2AB8FD; border-right-color:#1D9CDA;border-bottom-color:#1D9CDA;background:#ffffff;border-width:1px 2px 2px 1px;font-weight:bold;color:#2AB8FD; text-align:center;cursor:hand;}
+
+.pa_tabs_a li.onli{position:absolute;padding-bottom:8px;}
+
+
+.f_pic{float:left;padding:0 8px;}
+.f_table_l{float:right;width:340px;}
+
+.conzhelpsanb{clear:both;padding:16px 5px 6px 5px;border:1px solid #2AB8FD;margin-bottom:10px;_height:1%;}
+
+.rtopbox table{
+	clear: both;
+	margin: 10px 13px 10px 13px;
+	line-height: 200%;
+}
+.rsuggestbox{padding:10px 14px;}
+
+.rsuggestbox .title2{
+	color: #F87120;
+	font-size: 14px;
+	font-weight: bold;
+}
+.rsuggestbox ul{
+	padding: 0px 10px 0px 13px;
+	margin: 1px;
+}
+.rsuggestbox li{
+	list-style-type: none;
+	padding-bottom: 0px;
+	padding-top: 10px;
+	height: 67px;
+}
+
+
+.rtopbox p{
+	line-height: 200%;
+	padding: 15px 10px 15px 15px;
+}
+
+
+.list_news{padding:10px 8px;line-height:22px;}
+
+
+.rxuxianb{
+	border-bottom:1px dashed #FFCB68;
+}
+
+
+.zhelpbox{
+	padding: 25px 38px 20px 38px;
+}
+.zhelpbox ul{
+	height: 37px;
+}
+.zhelpbox li{
+	list-style-type: none;
+	width: 143px;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 6px;
+	height: 30px;
+	font-size: 13px;
+	margin-right: 7px;
+}
+.zhelpbox li A:link,.zhelpbox li A:visited {
+	color: #563B1D;
+	text-decoration: underline;
+}
+.zhelpbox li span{
+	color: #F87120;
+}
+.zhelpbox li img{
+	margin-right:3px;
+}
+.zhelpbox .liwai{
+	list-style-type: none;
+	height: 29px;
+	padding-top: 8px;
+}
+.zhelpbox .linone{
+	list-style-type: none;
+	width: 143px;
+	margin-right: 0px;
+}
+.zhelpbox .con{
+	background-color: #FFFFFF;
+	background-image: url(../images/icon_helpbg.gif);
+	background-repeat: no-repeat;
+	background-position: 25px 20px;
+	padding: 10px 20px 10px 0;
+	text-align: right;
+	width: 422px !important;
+	width:422px;
+}
+.zhelpbox .con table{
+	line-height: 180%;
+	text-align:left;
+	margin: 0;
+	float: right;
+}
+.zhelpbox .xaili{
+	height: 25px;
+	margin-top: 10px;
+	background-image:none
+}
+.zhelpbox ul{
+	background-image: url(../images/Yellowlibg.gif);
+}
+.zhelpbox li{
+	background-image: url(../images/Yellowlibuttombg.gif);
+	background-repeat: no-repeat;
+
+}
+.zhelpbox .liwai{
+	background-image: url(../images/Yellowliwaibuttombg.gif);
+	background-repeat: no-repeat;
+}
+
+
+.zhelpsanb{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFCF74;
+	border-bottom-color: #FFCF74;
+	border-left-color: #FFCF74;
+	width:96%;
+}
+.rtopbox,.ztitlebk,.ztitlebk2,.ztitlebk3,.rxuxianb,.conzhelpsanb{border-color: #FFCB68;}

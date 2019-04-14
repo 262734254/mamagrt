@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/all_base.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/right_style.css" rel="stylesheet" type="text/css">
+<title>首页-拓富中心-中国招商投资网</title>
+<script type="text/javascript" src="js/png.js"></script>
+
+<script type="text/javascript">
+	var cssPath = "css/change_color";
+	var styleID=1;
+	document.write('<link rel="stylesheet" type="text\/css" id="cssLink" href="'+cssPath+styleID+'.css" \/>');
+	function styleChange(n) {
+		var mcs = document.getElementById("cssLink");
+		mcs.href = cssPath + n + ".css";
+	}
+	</script>
+</head>
+<body>
+<div id="header">
+<div class="shanga" >
+<ul>
+<li>选择模板颜色：</li>
+<li class="thm-1 on"><a href="javascript:styleChange(1);">&nbsp;</a></li>
+<li class="thm-7"><a href="javascript:styleChange(7);">&nbsp;</a></li>
+<li class="thm-2"><a href="javascript:styleChange(2);">&nbsp;</a></li>
+<li class="thm-3"><a href="javascript:styleChange(3);">&nbsp;</a></li>
+<li class="thm-4"><a href="javascript:styleChange(4);">&nbsp;</a></li>
+<li class="thm-5"><a href="javascript:styleChange(5);">&nbsp;</a></li>
+<li class="thm-6"><a href="javascript:styleChange(6);">&nbsp;</a></li>
+</ul>
+
+<div>
+<select name="select" id="select" style="color:#999999;width:60px;height:16px;font-size:12px;">
+<option>招商</option>
+</select>
+<input name="textarea" type="text" id="textarea" value="请输入关键字" style="color:#999999;width:180px;">
+<img src="images/buttom_search.gif" width="64" height="18" align="absmiddle">
+<a href="#">高级搜索</a>
+<span><a href="http://www.tz888.cn" target="_blank">网站首页</a>
+<img src="images/icon_topsj.gif" width="10" height="5" align="texttop">
+<a href="#">个人助理</a><img src="images/icon_topsj.gif" width="10" height="5" align="texttop">
+<a href="#"><strong>退出</strong></a></span>
+</div>
+
+</div>
+
+<div class="page_top">
+   <div class="footer_up_bg">
+   
+   <div class="long_layer">    
+   </div>
+   <div class="shangtop">
+           <div class="logo"><a href="http://www.tz888.cn/" target="_blank" alt="网站首页" class="Spaces"><img src="images/logo.png" /></a></div>
+           <div class="banner" ><img src="images/topgg.gif" ></div>
+		   <div class="clear"></div>
+   </div>
+   
+   <div class="down_infor">
+       <div class="lefttop">欢迎拓富通会员<a href="#"><font class="chengcu">Vince727</font></a> 光临拓富中心</div> 	   
+	   <div class="right">今天共发布了 <a href="#"><font class="chengcu">300</font></a> 条新的需求，新加入会员 <a href="#"><font class="chengcu">268</font></a> 人</div>  
+   </div>
+   
+   </div>   
+</div>
+
+</div>
+
+<div class="wrapper">
+
+<div class="wrapper_left">
+   <div style="position:relative;height:100%;">
+   
+   <div class="menu_list">     
+	 
+<div class="cheng"><div ><img src="images/icon_open.gif" width="9" height="9" />拓富中心首页</div></div>
+
+<div>
+<div><img src="images/icon_openA.gif" width="9" height="9" />登记公司</div>
+<ul>
+<li>登记公司信息</li>
+<li class="cheng">拓富通档案</li>
+</ul>
+</div>
+
+<div>
+<div ><img src="images/icon_openA.gif" width="9" height="9" />需求发布与管理</div>
+<ul><li>需求发布</li><li>需求管理</li>
+<li class="cheng">刷新设置</li>
+</ul>
+</div>
+
+
+<div>
+<div ><img src="images/icon_open.gif" width="9" height="9" />我的网上展厅</div>
+<div ><img src="images/icon_openA.gif" width="9" height="9" />拓富助手</div>
+<ul><li>我的短信息</li><li>留言管理</li><li>我的好友</li><li>我的订阅</li><li>定向推广</li><li>我的收藏夹</li><li>在线洽谈工具</li>
+</ul>
+</div>
+
+<div>
+<div ><img src="images/icon_openA.gif" width="9" height="9" />交易管理</div>
+<ul><li>资源交易管理</li><li>产品交易管理</li><li>其它交易管理</li><li>我的购物券</li>
+</ul>
+</div>
+
+
+<div><div><span class="cheng"><img src="images/icon_open.gif" width="9" height="9" /></span>专业服务</div></div>
+
+
+<div ><div><img src="images/icon_openb.gif" width="9" height="9" />账户充值</div></div>
+
+
+<div ><div><span class="cheng"><img src="images/icon_open.gif" width="9" height="9" /></span>广告留言管理</div></div>
+
+<div><div ><img src="images/icon_openb.gif" width="9" height="9" />社区</div></div>
+
+<div ><div><img src="images/icon_openb.gif" width="9" height="9" />联系人资料</div></div>
+
+<div><div><span class="cheng"><img src="images/icon_open.gif" width="9" height="9" /></span>帮助中心</div></div>
+
+<div>
+<textarea name="textarea" rows="4" class="area_1">如果你对拓富中心有意见或建议，请在此填写！</textarea>
+<dir><p class="sent_bg"><a href="" class="Spaces"><img src="images/btn_2.png"/  ></a></p></dir>
+</div>
+	 
+   
+</div>
+   
+   <div class="xs_bg"></div>
+   
+  
+   <div class="clear"></div>
+   </div>
+</div>
+
+<div class="wrapper_right">
+<!--#include virtual="/TopfoCenter/home/right_main.html" -->
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div id="footer">
+<div class="hottel"><img src="images/icon_tel.gif" width="21" height="24" align="absmiddle" />拓富热线：0755-89805588   89805589 <img src="images/liuyanbg.gif" width="100" height="22" align="absmiddle" /> <span> <img src="images/jibaobg.gif" width="118" height="22" align="absmiddle" /></span> </div>
+<A href="/aboutus/index.aspx" target="_blank">关于我们</A> | <A href="/ContactUs.shtml" target="_blank">联系我们</A> | <A href="/ADbusiness/ad/ad_first.htm" target="_blank">广告服务</A> | <A href="/ADbusiness/ad/ad_pay.htm" target="_blank">支付方式</A> | <A href="/ServiceItem/ServiceItem.shtml" target="_blank">服务条款</A><A href="/ServiceItem/cft.aspx" target="_blank"></A> | <A href="/Map.shtml" target="_blank">网站地图</A> | <A href="/zhaoping/index.shtml" target="_blank">诚聘英才 </A>| <A href="/Sys/Message.aspx" target="_blank">留言反馈 </A>
+<p>中国招商投资网有限公司  1998-2007 版权所有</p>
+
+</div>
+
+</body>
+</html>

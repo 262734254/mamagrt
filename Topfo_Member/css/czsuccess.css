@@ -1,0 +1,44 @@
+/*²Ù×÷³É¹¦*/
+#contentcz{
+	border: 1px solid #FF9304;
+	font-size: 14px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+#contentcz .top{
+	background-image: url(/images/czSuccessimg/topbg.gif);
+	background-repeat: no-repeat;
+	height: 140px;
+	background-position: 80px 55px;
+	background-color: #FFFFEE;
+}
+#contentcz .top h1{
+	background-color: #FFD672;
+	height: 20px;
+	border: 1px solid #FFFFFF;
+	overflow: hidden;
+}
+#contentcz .top p{
+	width: 800px;
+	text-align: right;
+	padding-top: 60px;
+}
+#contentcz .top p span{
+	padding-left: 20px;
+}
+#contentcz .xia{
+	background-image: url(/images/czSuccessimg/xuxian.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 250px;
+	text-align: center;
+	padding-top: 50px;
+}
+.huikuang{
+	border: 1px solid #CCCCCC;
+}
+.baikuang{
+	border: 1px solid #FFFFFF;
+}

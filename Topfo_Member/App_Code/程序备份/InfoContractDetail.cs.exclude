@@ -1,0 +1,522 @@
+﻿using System;
+using System.Web;
+using System.Collections;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.ComponentModel;
+using System.IO;
+using System.Data;
+using System.Text;
+using Tz888.BLL.Login;
+
+/// <summary>
+/// InfoContractDetail 的摘要说明
+
+/// </summary>
+[WebService(Namespace = "http://www.topfo.com/")]
+[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+[ToolboxItem(false)]
+public class InfoContractDetail : System.Web.Services.WebService
+{
+
+	public InfoContractDetail()
+	{
+
+		//如果使用设计的组件，请取消注释以下行 
+		//InitializeComponent(); 
+	}
+
+	[WebMethod]
+	public string HelloWorld()
+	{
+		return "Hello World";
+	}
+
+	#region 获取页面联系方式信息
+	[WebMethod]
+	public string GetAllOtherInfoByInfoIDForStaticPage(string InfoID, string LoginName)
+    {
+        ///------------------------------
+        ///--design by AdSystem_20090620
+        ///------------------------------
+        string sitekey = "";
+        AdSystem.Logic loc = new AdSystem.Logic();
+        if (HttpContext.Current.Request.Cookies["S"] != null && HttpContext.Current.Request.Cookies["S"].Value.Trim()!="")
+        {
+            sitekey = HttpContext.Current.Request.Cookies["S"].Value.Trim();
+            HttpContext.Current.Request.Cookies["S"].Expires = DateTime.Now.AddDays(-1);
+            bool flag = loc.setCookie(sitekey,InfoID);
+            if (flag)
+            {
+                loc.Hits_Add();
+            }
+        }
+        //跟踪浏览的用户
+        if (LoginName.Trim() != "")
+        {
+            loc.View_Add(InfoID, LoginName);
+        }
+
+		long lgCurrentPage = 1;
+		long lgPageSize = 0;
+		long lgPageCount = 0;
+
+		decimal MainPointCount = 0;
+
+		StringBuilder sOut = new StringBuilder();
+
+		string CurrentUserName = "";
+		CurrentUserName = LoginName;
+
+		//用户会员资料展示页面
+		string MemberURL = "";
+
+		//用户是否是拓富通会员
+
+
+		bool bIsTofMember = false;
+		if (User.IsInRole("GT1002"))
+		{
+			//拓富通会员
+
+
+			if (CurrentUserName.Trim() != "")
+			{
+				bIsTofMember = true;
+			}
+		}
+
+		#region 用户的联系方式信息
+
+
+        string PublishMan = "";
+		string NickName = "";
+        string SelfWebDomain = "";//网上展厅域名
+		string InfoTypeName = "";
+		int FixPriceID = 0;
+		string InfoOriginRoleName = "0";
+        string ManageTypeID = "";
+		Tz888.BLL.Common.CommonFunction cf = new Tz888.BLL.Common.CommonFunction();
+		DataTable dt = cf.GetDTFromTableOrView("MainInfoViw", "infoid", "*", " infoid=" + InfoID, "InfoID", ref lgCurrentPage, lgPageSize, ref lgPageCount);
+		if (dt != null && dt.Rows.Count > 0)
+		{
+			FixPriceID = Convert.ToInt32(dt.Rows[0]["FixPriceID"].ToString().Trim());
+			MainPointCount = Convert.ToDecimal(dt.Rows[0]["MainPointCount"].ToString().Trim());
+            InfoOriginRoleName = dt.Rows[0]["InfoOriginRoleName"].ToString().Trim();
+            PublishMan = dt.Rows[0]["LoginName"].ToString().Trim();
+            ManageTypeID = dt.Rows[0]["ManageTypeID"].ToString().Trim();
+            Tz888.BLL.Conn con = new Tz888.BLL.Conn();
+            DataTable domain = con.GetWebSiteList("SelfCreateWebInfo", "Domain", "LoginName", 1, 1, 0, 1, "LoginName='" + PublishMan + "'");
+            if (domain.Rows.Count > 0)
+            {
+                SelfWebDomain = domain.Rows[0]["Domain"].ToString();
+            }
+		}
+
+		string sContract = "";
+        string ToSelfWebDomain = "";
+        string href = "";
+        if (SelfWebDomain != "")
+        {
+            if (ManageTypeID == "2004")
+            {
+                href = "http://" + SelfWebDomain + ".gov.topfo.com";
+            }
+            else
+            {
+                href = "http://" + SelfWebDomain + ".co.topfo.com";
+            }
+            ToSelfWebDomain = "<a href='" + href + "' target='_blank'><img src='/images/huiy_23.jpg' width='206' height='30' /></a>";
+
+        }
+		//总站发布的信息
+
+
+        string sManage = "<a href='#88' onclick=\"javascript:GetContactDetail(" + InfoID + ");\" class='spaces' ><img src='/web13/images/project/button_cklxfs.gif' width='150' height='30' align='absmiddle' /></a>&nbsp;&nbsp;" + ToSelfWebDomain + "|1";
+
+		//免费的信息的内容
+        string sFree = "<a href='#88' onclick=\"javascript:GetContactDetail(" + InfoID + ");\" class='spaces' ><img src='/web13/images/project/button_cklxfs.gif' width='150' height='30' align='absmiddle' /></a>&nbsp;&nbsp;" + ToSelfWebDomain + "|1";
+
+		//收费的信息内容（需要购买才能看）
+
+        string payDomain = System.Configuration.ConfigurationManager.AppSettings["payDomain"];
+        string sChange = "<a href=\"" + payDomain + "/order_item.aspx?InfoID=" + InfoID
+            + "\" class=\"spaces\"><img src='/web13/images/project/button_ljgm.gif' width=\"130\" height=\"30\" border=\"0\" align=\"absmiddle\" /></a>&nbsp;<a href=\"http://member.topfo.com/PayManage/shopcar.aspx?InfoID=" + InfoID
+            + "\" class=\"spaces\" target=\"_blank\"><img src=\"/web13/images/project/button_flgwc.gif\" width=\"150\" height=\"30\" border=\"0\" align=\"absmiddle\" /></a><br /><font color='#CCCCCC'>支持多种支付方式，资源若无效经中国招商投资网确认后可全额返还所付款项，请放心购买</font><br>" + ToSelfWebDomain + "|2";
+		//当前用户名
+
+		if (MainPointCount > 0 && FixPriceID > 1)
+		{
+			//这是一条收费信息                
+			bool bIsBuy = false;
+			Tz888.BLL.Info.CapitalInfoBLL ciBll = new Tz888.BLL.Info.CapitalInfoBLL();
+			bIsBuy = ciBll.bIsBuyInfoOfUser(CurrentUserName, InfoID);
+			if (bIsBuy)
+			{
+				if (InfoOriginRoleName == "0")
+					sContract = sFree;
+				else
+					sContract = sManage;
+			}
+			else
+			{
+				if (bIsTofMember)
+				{
+					//拓富通会员购买了此信息
+
+					if (InfoOriginRoleName == "0")
+						sContract = sFree;
+					else
+						sContract = sManage;
+				}
+				else
+				{
+					//拓富通会员没有购买了此信息
+
+					sContract = sChange;
+				}
+			}
+		}
+		else
+		{
+			//这是一条免费信息
+
+			if (InfoOriginRoleName == "0")
+				sContract = sFree;
+			else
+				sContract = sManage;
+		}
+
+		#endregion
+
+		sOut.Append(sContract);
+
+		sOut.Append("|");
+
+		//多少人关注
+
+
+		string Hits = "0";
+		//if (dv != null && dv.Table.Rows.Count > 0)
+		if (dt != null && dt.Rows.Count > 0)
+		{
+			Hits = dt.Rows[0]["hit"].ToString().Trim();
+		}
+
+		sOut.Append("|");
+		sOut.Append(Hits.Trim());
+
+		//多少人收藏,同时更新浏览次数
+		string ViewCollection = "0";
+		if (MainPointCount > 0 && FixPriceID > 1)
+		{
+			Tz888.BLL.Info.MatchInfoBLL miBLL = new Tz888.BLL.Info.MatchInfoBLL();
+			miBLL.dvViewCollectionCount(InfoID);//更新浏览次数
+			Tz888.BLL.Info.MainInfoBLL mainBLL = new Tz888.BLL.Info.MainInfoBLL();
+			ViewCollection = mainBLL.GetInfoBuyersCount(Convert.ToInt64(InfoID)).ToString();
+		}
+		else
+		{
+			Tz888.BLL.Info.MatchInfoBLL miBLL = new Tz888.BLL.Info.MatchInfoBLL();
+            miBLL.dvViewCollectionCount(InfoID);//更新浏览次数
+			DataView dvViewCollection = miBLL.dvViewCollectionCount(InfoID);
+			if (dvViewCollection != null && dvViewCollection.Table.Rows.Count > 0)
+			{
+				ViewCollection = Convert.ToInt32(dvViewCollection.Table.Rows[0][0]).ToString();
+			}
+		}
+		sOut.Append("|");
+		sOut.Append(ViewCollection.Trim());
+
+        /////------------------------------------------
+        /////--design by ww_20090601 ------------------
+        /////------------------------------------------
+        //Tz888.BLL.CommendBLL com = new Tz888.BLL.CommendBLL();
+        //long currpage=1;
+        //long pagecount = 1;
+        //int count = com.GetListCount("*", "InfoID=" + InfoID.ToString(), "", ref currpage, 1, ref pagecount);
+
+        //sOut.Append("|");
+        //sOut.Append(count.ToString().Trim());
+
+
+		return sOut.ToString().Trim();
+	}
+	#endregion
+
+	#region 获取用户发布的其他信息
+
+
+	/// <summary>
+	/// 用户发布的其他资源
+
+	/// </summary>
+	/// <param name="InfoID"></param>
+	/// <returns></returns>
+	[WebMethod]
+	public string GetOtherResource(string InfoID)
+	{
+		StringBuilder sOut = new StringBuilder();
+		string doMainUrl = Tz888.Common.Common.GetWWWDomain();
+
+		Tz888.BLL.Info.MatchInfoBLL miBll = new Tz888.BLL.Info.MatchInfoBLL();
+		DataView dv = miBll.dvGetOtherInfoOfUser(InfoID);
+		if (dv != null && dv.Table.Rows.Count > 0)
+		{
+			sOut.Append("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"listtab\"><tr><td width=\"7%\" class=\"title\">&nbsp;</td><td width=\"15%\" class=\"title\" align=\"center\">资源类型</td><td width=\"50%\" class=\"title\" align=\"center\">标题</td><td width=\"28%\" align=\"center\" class=\"title\">发布时间</td></tr>");
+
+			for (int i = 0; i < dv.Table.Rows.Count; i++)
+			{
+				sOut.Append("<tr><td class=\"font14\"><label><input type=\"checkbox\" name=\"checkbox\" value=\"" + dv.Table.Rows[i]["InfoID"].ToString().Trim() + "\" /></label></td>");
+				sOut.Append("<td align=\"center\">" + dv.Table.Rows[i]["InfoTypeName"] + "</td>");
+				sOut.Append("<td align=\"left\"><a href=\"" + doMainUrl + @"/" + dv.Table.Rows[i]["HtmlFile"].ToString().Trim() + "\">" + dv.Table.Rows[i]["title"].ToString().Trim() + "</a></td>");
+				sOut.Append("<td align=\"center\">" + dv.Table.Rows[i]["PublishT"].ToString().Trim() + "</td>");
+				sOut.Append("</tr>");
+			}
+			sOut.Append("</table>");
+		}
+		else
+		{
+			sOut.Append("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"listtab\"><tr><td align=\"center\" class=\"title\">该会员未发布其它资源</td></tr></table>");
+		}
+		return sOut.ToString().Trim();
+	}
+
+	#endregion
+
+	#region 获取匹配资源列表
+
+	/// <summary>
+	/// 类似的资源
+
+	/// </summary>
+	/// <param name="InfoID"></param>
+	/// <returns></returns>
+	[WebMethod]
+	public string GetMatchInfoByInfoID(string InfoID)
+	{
+		long lgPageCount = 5;
+		long lgPage = 1;
+		int lgPageSize = 5;
+
+		string doMainUrl = Tz888.Common.Common.GetWWWDomain();
+
+		Tz888.BLL.Info.MainInfoBLL bll = new Tz888.BLL.Info.MainInfoBLL();
+		string InfoTypeID = bll.GetInfoTypeID(Convert.ToInt64(InfoID.Trim())).Trim();
+		string MatchType = "";
+
+		switch (InfoTypeID.ToLower())
+		{
+			case "merchant":
+				MatchType = "MM";
+				break;
+			case "project":
+				MatchType = "PP";
+				break;
+			case "capital":
+				MatchType = "CC";
+				break;
+			default:
+				break;
+		}
+
+		Tz888.BLL.Info.MatchInfoBLL miBll = new Tz888.BLL.Info.MatchInfoBLL();
+		DataView dv = miBll.GetMatchList(MatchType, long.Parse(InfoID), "*", "", "FrontDisplayTime DESC", ref lgPage, lgPageSize, ref lgPageCount);
+		StringBuilder sOut = new StringBuilder();
+
+		if (dv != null && dv.Table.Rows.Count > 0)
+		{
+			sOut.Append("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"listtab\"><tr><td width=\"7%\" class=\"title\">&nbsp;</td><td width=\"15%\" class=\"title\" align=\"left\">发布者</td><td width=\"50%\" class=\"title\" align=\"center\">标题</td><td width=\"28%\" align=\"center\" class=\"title\">刷新时间</td></tr>");
+
+			for (int i = 0; i < dv.Table.Rows.Count; i++)
+			{
+				sOut.Append("<tr><td class=\"font14\"><label><input type=\"checkbox\" name=\"checkbox\" value=\"" + dv.Table.Rows[i]["InfoID"].ToString().Trim() + "\" /></label></td>");
+				sOut.Append("<td align=\"left\">" + dv.Table.Rows[i]["LoginName"] + "</td>");
+				sOut.Append("<td align=\"left\"><a href=\"" + doMainUrl + @"/" + dv.Table.Rows[i]["HtmlFile"].ToString().Trim() + "\">" + dv.Table.Rows[i]["title"].ToString().Trim() + "</a></td>");
+				sOut.Append("<td align=\"center\">" + dv.Table.Rows[i]["FrontDisplayTime"].ToString().Trim() + "</td>");
+				sOut.Append("</tr>");
+			}
+			sOut.Append("</table>");
+			sOut.Append("<div class=\"sbuttom\">" +
+				    "<div class=\"left\">" +
+					"<img src=\"/Web13/images/project/icon_04.gif\" />" +
+					"点击复选框<i></i><img src=\"/Web13/images/project/button_dbxzzy.gif\"" +
+					    "align=\"absmiddle\" style=\"cursor:pointer;\" onclick=\"javascrpit:compare('" + InfoTypeID.ToLower().Trim() + "')\" /></div>" +
+				    "<div class=\"right\">" +
+					"<a href=\"http://member.topfo.com/helper/MatchingInfo.aspx\" target=\"_blank\">点此订阅相关资源&gt;&gt;</a></div>" +
+				    "<div class=\"clear\"></div></div>");
+		}
+		else
+		{
+			sOut.Append("<table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"listtab\"><tr><td align=\"center\" class=\"title\">对不起，没有查到类似的资源</td></tr></table>");
+		}
+		return sOut.ToString().Trim();
+	}
+	#endregion
+
+	#region 获取资源的联系方式
+
+
+	/// <summary>
+	/// 根据InfoID,显示信息的联系方式
+
+	/// </summary>
+	/// <param name="InfoID"></param>
+	/// <returns></returns>
+	[WebMethod]
+	public string GetInfoContractDetail(string InfoID)
+	{
+		//最终显示的信息
+		string sOut = "";
+		//免费的信息的内容
+		string sFree = "<a href='#88' onclick=\"javascript:GetContactDetail(" + InfoID + ");\" class='spaces' ><img src='/Web13/images/project/button_cklxfs.gif' width='150' height='30' align='absmiddle' /></a> <i></i>我的MSN在线，联系我：<img src='/web13/images/project/icon_msn.gif' width='29' height='26' align='absmiddle' /><i></i>或<i></i><a href=\"Javascript:alert('系统升级中。。。');\"> 给项目方留言&gt;</a><p>发布者：<a href='#'>1234</a><i></i><img src='/web13/images/project/icon_05.gif' width='15' height='12' /> <i></i> <a href=\"javascript:alert('系统升级中。。。');\">加为好友</a></p>|1";
+		//收费的信息内容
+
+		string sChange = "<a href=\"http://pay.topfo.com/order_item.aspx?InfoID=" + InfoID + "\" class=\"spaces\"><img src=\"/web13/images/project/button_ljgm.gif\" width=\"130\" height=\"30\" border=\"0\" align=\"absmiddle\" /></a><i></i><a href=\"http://member.topfo.com/PayManage/shopcar.aspx?InfoID=" + InfoID + "\" class=\"spaces\"><img src=\"/web13/images/project/button_flgwc.gif\" width=\"150\" height=\"30\" border=\"0\" align=\"absmiddle\" /></a><p color='#CCCCCC'>支持多种支付方式，资源若无效经中国招商投资网确认后可全额返还所付款项，请放心购买。</p>|2";
+
+		//当前用户名
+
+		string CurrentUserName = "";
+		CurrentUserName = User.Identity.Name.Trim();
+
+		//用户是否是拓富通会员
+
+		bool bIsTofMember = false;
+		if (User.IsInRole("GT1002"))
+		{
+			if (CurrentUserName.Trim() != "")
+			{
+				bIsTofMember = true;
+			}
+		}
+		Tz888.Model.Info.CapitalSetModel objCSM = new Tz888.Model.Info.CapitalSetModel();
+		Tz888.BLL.Info.CapitalInfoBLL ciBll = new Tz888.BLL.Info.CapitalInfoBLL();
+		objCSM = ciBll.GetIntegrityModel(long.Parse(InfoID));
+
+		if (objCSM.MainInfoModel.MainPointCount > 0)
+		{
+			//这是一条收费信息                
+			if (bIsTofMember)
+			{
+				//是拓富通会员
+
+				bool bIsBuy = false;
+				bIsBuy = ciBll.bIsBuyInfoOfUser(CurrentUserName, InfoID);
+
+				if (bIsBuy)
+				{
+					//拓富通会员购买了此信息
+
+					sOut = sFree;
+				}
+				else
+				{
+					//拓富通会员没有购买了此信息
+
+					sOut = sChange;
+				}
+			}
+			else
+			{
+				//非拓富通会员
+
+				sOut = sChange;
+			}
+		}
+		else
+		{
+			//这是一条免费信息
+
+			sOut = sFree;
+		}
+		return sOut;
+	}
+
+	#endregion
+
+	#region 通过InfoID获取所有联系人信息
+
+	/// <summary>
+	/// 通过InfoID获取所有联系人信息
+	/// </summary>
+	/// <param name="InfoID"></param>
+	/// <returns></returns>
+	[WebMethod]
+	 public string GetContactDetail(string InfoID)
+    {
+        Tz888.Model.Info.InfoContactModel model = new Tz888.Model.Info.InfoContactModel();
+        Tz888.BLL.Info.InfoContact dal = new Tz888.BLL.Info.InfoContact();
+        model=dal.GetModel(Convert.ToInt64(InfoID));
+        StringBuilder sbContact = new StringBuilder();
+        sbContact.Append("<table width='98%' class='tabContact' border='0' cellpadding='0' cellspacing='0'>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>项目建设单位：</td>");
+        sbContact.Append("<td align='left'>&nbsp;"+model.OrganizationName.Trim()+"</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>联系人：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.Name.Trim() + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>职位：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.Career.Trim() + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>固定电话：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.TelStateCode + "-" + model.TelNum.Trim() + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>手机：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.Mobile.Trim() + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>电子邮箱：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.Email + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>项目单位详细地址：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.Address + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append("<tr>");
+        sbContact.Append("<td class='T' align='right'>项目单位网址：</td>");
+        sbContact.Append("<td align='left'>&nbsp;" + model.WebSite + "</td>");
+        sbContact.Append("</tr>");
+        sbContact.Append(" </table>");
+        return sbContact.ToString().Trim();
+
+    }
+    [WebMethod]
+    public string GetContactDetail_New(string InfoID,string LoginName)
+    {
+        //是否收费信息
+        Tz888.BLL.Conn dal = new Tz888.BLL.Conn();
+        bool b = false;
+        int FixPriceID=0;
+        decimal  MainPointCount=0;
+        DataTable dt = dal.GetList("MainInfoTab", "InfoID,FixPriceID,MainPointCount", "InfoID", 1, 1, 0, 1, "InfoID=" + Convert.ToInt64(InfoID));
+        if (dt.Rows.Count > 0)
+        {
+            FixPriceID = Convert.ToInt32(dt.Rows[0]["FixPriceID"].ToString().Trim());
+            MainPointCount = Convert.ToDecimal(dt.Rows[0]["MainPointCount"].ToString().Trim());
+        }
+        if (MainPointCount > 0 && FixPriceID > 1)
+        {
+            Tz888.BLL.Info.CapitalInfoBLL ciBll = new Tz888.BLL.Info.CapitalInfoBLL();
+            b = ciBll.bIsBuyInfoOfUser(LoginName, InfoID);
+            if (b)
+                return GetContactDetail(InfoID);
+            else
+                return "您需要购买此信息才能查看联系方式";
+        }
+        else
+        {
+            return GetContactDetail(InfoID);//免费
+        }
+       
+    }
+	#endregion
+
+   
+}
+ 
+

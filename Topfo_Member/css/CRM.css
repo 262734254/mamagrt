@@ -1,0 +1,33 @@
+@charset "utf-8";
+/*全局*/
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif; font-size:12px;color:#000;background:#fff;}
+div,form,input,select,p,table,h1,h2,h3,h4,h5,h6,ul,ol,li,th,td,dl,dt,dd,span{margin:0;padding:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:bold;}
+ol,ul{list-style:none;}
+a{text-decoration:none;color:#003366;}
+a:hover{text-decoration:underline;color:#cf0000;}
+table{border-collapse:separate;border-spacing:0;}
+img{border:none;}
+
+#right_bar{margin-left:147px;padding-top:10px;}
+
+.title{height:28px;border-bottom:solid 1px #5d7170;overflow:hidden;padding-left:20px;}
+.title h2{line-height:28px;font-size:14px;background:url(../image/crm_dh_04.gif) repeat-x 0 0;float:left;}
+.title h2 p{display:block;background:url(../image/crm_dh_03.gif) no-repeat left top;float:left;}
+.title h2 span{display:block;color:#000;background:url(../image/crm_dh_05.gif) no-repeat right top;font-weight:normal;}
+.title h2 span b{padding:2px 30px 0 40px;background:url(../image/dot-dot.jpg) no-repeat 18px center;font-weight:normal;}
+.one_table{border:solid 1px #678897;border-right:none;border-bottom:none;width:99%;margin-top:10px;}
+.one_table th{background:#e9f2fb;font-weight:bold;}
+.two_table th{background:#bcd9e7;}
+.two_table th,.two_table td{text-align:center;}
+.one_table th,.one_table td{border-right:solid 1px #678897;border-bottom:solid 1px #678897;padding:3px 8px;}
+.text{padding:1px 3px;margin:0 8px;}
+.btn{width:65px;height:23px;background:url(../image/40.gif) no-repeat left top;border:none;cursor:pointer;}
+.three_table td{text-align:left;}
+#luckytab {width:120px;}
+.RootMenu {padding:0;margin:5px 0 0; text-align:left;}
+        .RMDESC {background-image:url(images/navtitle1.gif);cursor:pointer;font-weight:bold; height:20px;padding:5px 0 0 10px;color:#000000;}
+        .RootMenu ul {background-color:#D6DFF7; width:118px;margin:0;padding:5px 0 5px 0;border-left:1px solid #B0C0D0;border-right:1px solid #B0C0D0;font-size:12px;}
+        .RootMenu ul li{ height:10px;padding:5px 0 5px 10px;list-style:none;}
+        .RootMenu ul li a {color:black;text-decoration:none;}
+        .RootMenu table tbody tr td img {height:5px;width:120px;}

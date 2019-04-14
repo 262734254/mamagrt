@@ -1,0 +1,496 @@
+/*by yanweiping*/
+/*发布需求首页*/
+.titlesbox{
+	background-image: url(../images/publish/huibg.gif);
+	height: 27px;
+	padding: 5px 0 0 15px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.titlepub{
+	position: absolute;
+	margin: 10px 0 0 45px;
+	background-color: #FFFFFF;
+	padding: 0 5px 0 5px;
+	font-size: 14px;
+	color: #1C2C81;
+	font-weight: bold;
+}
+.publisha{
+	border: 1px solid #CCCCCC;
+	padding: 20px 15px 20px 25px;
+	height: 1%;
+}
+.publisha p{
+	padding: 20px 0 0 0;
+}
+.publisha p img{
+	margin: 0 0 0 50px;
+}
+.publisha .incdiv{
+	font-size: 14px;
+	padding-top: 5px;
+}
+.publisha .incdiv .left{width: 520px;float: left;}
+.publisha .incdiv .left2{width: 520px;float: left; padding-top:10px;}
+.publisha .incdiv .right{
+	float: left;
+	font-weight: bold;
+}
+/*融资发布1*/
+.stepsbox{
+	font-size: 14px;
+	font-weight: bold;
+}
+.stepsbox ul{}
+.stepsbox li{
+	background-image: url(../images/publish/projectbgh2.gif);
+	background-repeat: no-repeat;
+	width: 210px;
+	float: left;
+	text-align: center;
+	padding-top: 7px;
+	padding-bottom: 6px;
+	font-weight: normal;
+}
+.stepsbox .lishort{
+	background-image: url(../images/publish/projectbgh3.gif);
+	background-repeat: no-repeat;
+	width: 130px;
+}
+.stepsbox .lishortc{
+	background-image: url(../images/publish/projectbgc3.gif);
+	background-repeat: no-repeat;
+	width: 130px;
+	height: 24px;
+}
+.stepsbox .liwai{
+	background-image: url(../images/publish/projectbgc1.gif);
+	background-repeat: no-repeat;
+	font-weight: bold;
+}
+.stepsbox .liimg{
+	background-image: none;
+	width:20px;
+	text-align: center;
+	padding: 0 7px 0 7px;
+}
+.stepsbox img{
+
+}
+.infozi{
+	font-size: 14px;
+	font-weight: bold;
+	color: #FD3A00;
+	padding: 5px 0 3px 5px;
+}
+.tabbiank{
+	border:#cccccc solid;
+	border-width:1px 1px 0 1px;
+}
+.tabbiank td{
+	border:#cccccc solid;
+	border-width:0 0 1px 0;
+	padding: 10px;
+}
+.tabbiank td.nonepad{padding: 0 0 10px 10px;}
+.repeattab{	margin: 15px 0 0 0;border:#cccccc solid;border-width:1px 0 0 1px;}
+.repeattab td{ padding:4px;border:#cccccc solid;border-width:0 1px 1px 0;	}
+.repeattab tr.toptt{
+	background-color:#F5F5F5;
+	font-weight: bold;
+} 
+.industry{}
+.industry .left{
+	width:200px;
+	float:left;
+	line-height:180%
+}
+.industry .zhong{
+	width:100px;
+	float:left;
+	padding:15px 0 0 0
+}
+.industry .right{width:200px; float:left}
+.industryb{width:500px;padding:10px 0 0 0}
+.tabbiank menu{
+	width: 80px;
+	float: left;
+}
+.tabbiank .menulw{
+	float: left;
+	width: 45px!important;width:60px;
+}
+.tabbiank .menulw01{
+	float: left;
+	width: 35px;margin-right:10px; text-align:center;
+}
+.tabbiank .menulw02{
+	float: left;
+	width: 53px;margin-right:10px;text-align:center;
+}
+
+.tabbiank .menulw03{
+	float: left;
+	width: 117px;text-align:center;
+}
+
+
+.tabbiank strong{
+	color: #333333;
+}
+.tabbiank td.ltitles{ background-color:#F7F7F7; }
+
+.ftpimg{}
+.ftpimg ul{
+	padding: 0 0 0 0;
+}
+.ftpimg li{
+	width: 110px;
+	float: left;
+}
+.ftpimg li div{
+	text-align: center;
+	padding: 2px 15px 7px 0;
+}
+.addinfobox{
+	border: 1px solid #CCCCCC;
+	padding-bottom: 20px;
+}
+.addinfobox h1{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	font-weight: normal;
+	background-color: #F5F5F5;
+	padding: 5px 10px 5px 10px;
+}
+.addinfobox ul{
+	width: 600px;
+	margin: 0 auto;
+	padding: 15px 0 5px 0;
+}
+.addinfobox li{
+	width: 150px;
+	float: left;
+	font-weight: bold;
+	color: #10247D;
+	height: 30px;
+}
+.addinfobox .liwai{
+	color:#FD3A00;
+	background-image: url(../images/publish/biao_04.gif);
+	background-repeat: no-repeat;
+	background-position: 50px bottom;
+}
+.addinfobox table{
+	background-color: #F5F5F5;
+	border: 1px dashed #CCCCCC;
+	margin: 0 auto;
+	float:left!important;float:none;
+} 
+/*融资发布2*/
+.suggestbox{
+	padding: 10px 10px 10px 15px;
+	height:1%;
+	font-weight: normal;
+	font-size: 12px;
+}
+.suggestbox h1{
+	color: #F87120;
+	font-size: 14px;
+	font-weight: normal;
+	padding-bottom: 10px 10px 5px 10px;
+}
+.suggestbox p{
+	padding: 5px 0 0 00;
+}
+.advantabox{
+	padding: 15px 0 0 0;
+}
+.advantabox h1{
+	color: #FF6501;
+	font-size: 14px;
+	display: block;
+}
+.advantabox h1 i{
+	font-size: 24px;
+	color: #000000;
+	padding: 0 3px 0 2px;
+}
+.advantabox ul{
+	padding: 15px 0 15px 0;
+	display: block;
+}
+.advantabox li{
+	font-size: 14px;
+	height: 30px;
+	font-weight: bold;
+}
+.advantabox p{
+	width: 300px;
+	text-align: center;
+}
+.advantabox p img{
+	padding-left: 25px;
+}
+/*融资发布3*/
+.suggestboxc{
+	padding: 10px 10px 7px 15px;
+	height:1%;
+	line-height: 28px;
+	font-weight: normal;
+}
+.suggestboxc img{
+	margin: 3px 20px 0 15px;
+}
+.suggestboxc strong{
+	color: #FF6501;
+	font-size: 14px;
+}
+
+.viewbox{
+	padding: 4px 10px 4px 15px;
+}
+.viewbox span{
+	color: #FF0000;
+}
+.threebox{
+	padding: 10px 0 0 0;
+}
+.threebox ui{}
+.threebox li{
+	padding: 15px 0 15px 0;
+	line-height: 26px;
+	font-size: 14px;
+}
+.threebox li img{
+	margin-right: 10px;
+}
+.threebox li img.a{
+	margin-top: 7px;
+}
+/*拓富通会员发布成功*/
+.nextbox{
+	border: 1px solid #E0E0E0;
+	padding: 0 0 5px 0;
+}
+.nextbox h1{background-color: #F7F7F7;
+	padding: 4px 10px 4px 15px;}
+
+.nextbox p{
+	padding: 10px 10px 10px 15px;
+}
+.nextbox table{
+	border:#cccccc solid;
+	border-width:1px 0 1px 1px;
+	margin: 5px 0 0 15px;
+	}
+.nextbox td{
+	border:#cccccc solid;
+	border-width:0 1px 0 0;
+	padding: 5px;
+}
+/*招商发布第一步*/
+/*表格属性共用融资发布第一步*/
+.mbbuttom{
+	text-align: center;
+	padding: 25px 0 25px 0;
+}
+.mbbuttom p{
+	padding: 0 0 10px 0;
+}
+.mbbuttom img{
+	margin-top: 10px;
+}
+/*招商发布第二步*/
+/*表格属性共用招商发布/融资发布第一步*/
+.mbbuttom span{padding-left:30px}
+
+/*招商发布第三步*/
+/*表格属性共用融资发布第三步*/
+.suggestboxs{
+	padding: 10px 10px 7px 15px;
+	height:1%;
+	line-height: 24px;
+	font-weight: normal;
+}
+.suggestboxs img{
+	margin: 10px 20px 5px 15px;
+}
+.suggestboxs strong{
+	color: #FF6501;
+	font-size: 14px;
+}
+/*投资发布第一步*/
+/*表格属性共用融资发布第一步*/
+.infozi span{
+	font-weight: normal;
+	color: #555555;
+	font-size: 12px;
+
+}
+.local{}
+.local .left{
+	width:330px;
+	float:left;
+	line-height:180%;
+	padding-top: 15px;
+}
+.local .left span{
+	display: block;
+	padding-top: 10px;
+}
+.local .zhong{
+	width:60px;
+	float:left;
+	text-align:left;
+	padding:15px 0 0 0
+}
+.local .right{
+	width:200px;
+	float:left;
+	text-align: center;
+}
+/*评估部份*/
+
+.assessbox{}
+.assessbox h1{
+	padding: 5px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #555555;
+}
+.assessbox table{}
+.assessbox td{
+	line-height: 22px;
+	padding: 5px;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 1px;
+	border-left-width: 0;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-color: #cccccc;
+	border-right-color: #cccccc;
+	border-bottom-color: #cccccc;
+	border-left-color: #cccccc;
+}
+.assessbox .buttom{
+	padding:10px 0px;
+	text-align: center;
+}
+/*end*/
+/*需求管理*/
+.pagebox{
+	padding: 20px 15px 20px 5px;
+}
+.pagebox .left{
+	width: 400px;
+	float: left;
+}
+.pagebox .right{
+	width: 300px;
+	float: right;
+	text-align: right;
+}
+.search{
+	color: #563B1D;
+	padding: 2px 0 5px 10px;
+	background-color: #FFC24F;
+}
+.search .lefts{
+	width: 510px;
+	float: left;
+}
+.search .rights{
+	float: right;
+	text-align: right;
+	padding-right: 15px;
+}
+.searchman{
+	color: #563B1D;
+	padding: 6px 0 6px 10px;
+	background-color: #FFC24F;
+}
+.searchman .leftsf{
+	width: 480px;
+	float: left;
+}
+.searchman .rightsf{
+	width: 220px;
+	float: right;
+	text-align: right;
+	padding-right: 15px;
+}
+.helpbox{
+	border: 1px solid #CCCCCC;
+}
+
+.helpbox h1{
+	font-size: 14px;
+	color: #563B1D;
+	background-color: #F7F6F6;
+	padding: 4px 0 4px 10px;
+}
+.helpbox  p{
+	padding: 10px 0px 15px 15px;
+}
+.notes{
+	background-image: url(../images/publish/zf_bg.gif);
+	background-repeat: no-repeat;
+	background-position: 35px 6px;
+	padding: 9px 0 0 80px;
+	height: 35px;
+	text-align: left;
+}
+.notes span{
+	color: #FF6600;
+	padding: 0 3px 0 3px;
+}
+
+/*展厅*/
+.f18hei{ font-family:"黑体";font-size:18px;}
+.notebox{padding:10px;line-height:220%;background:#fff7ee url(../images/ztbg01.gif) no-repeat 8px 10px;padding-left:106px; border:1px solid #ffaf4b;}
+.gobtn1{ background:url(../images/icr_03.gif) no-repeat 0 0; padding-left:24px;height:34px;font-size:14px;font-weight:bold;margin-right:12px;color:#ff6600;}
+
+.tabbiank td table.includetd {border:0;}
+.tabbiank td table.includetd td{padding: 1px 0;border:0; text-align:center;}
+
+.titcss1{ background:url(../images/publish/biao_04.gif) no-repeat 0 5px;padding-left:22px;font-size:12px;font-weight:border;}
+.tab01{ background:#ccc;}
+.tab01 td{ background:#fff;}
+.cctd td{ text-align:center;}
+.tab01 td.hs{ background:#e7e7e7;}
+
+.poptb{margin:8px 10px;}
+.poptb td{ padding:0; text-align:center; line-height:20px;}
+.popdiv{width:380px; background:#fff;border:1px solid #ff6600;}
+
+.popdiv .ttitle{ background:#ff6600; color:#fff; position:relative;height:22px;padding-left:12px;}
+.popdiv .closebox{ text-align:right; position:absolute;right:14px;top:0px;}
+.popdiv .closebox a,.popdiv .closebox a:hover,.popdiv .closebox a:active,.popdiv .closebox a:visited{ color:#fff;}
+
+/*新添加的*/
+
+/*新增样式（可整合到原来的样式表里） */
+body {padding:0; font-size:12px;}
+a:link, a:visited{color:#333;text-decoration:none;}
+a:hover{color:#f00;text-decoration:underline;}
+.f_14 {font-size:14px;}
+.f_gray {color:#999;}
+.f_red {color:#f00;}
+.f_red a:link, .f_red a:visited{color:#f00;text-decoration:underline;}
+.f_red a:hover{color:#f00;text-decoration:none;}
+.strong {font-weight:bold;}
+.mem_tab1 {width:100%; border:1px solid #ccc; border-bottom:none; background:#fff;}
+.mem_tab1 td {border-bottom:1px solid #ccc; padding:7px 10px; line-height:25px;}
+.mem_tab1 .tdbg {background:#f7f7f7; text-align:right; }
+.mem_tab2 {text-align:center; margin:10px 0;}
+.mem_tab2 td {padding:0; border:none; width:110px;}
+.mem_tab2 .pic {background:url(noneimg.gif) 5px 0 no-repeat; height:100px;}
+.mem_tab {margin:10px 0;}
+.mem_tab td {padding:0; border:none; line-height:18px;}
+

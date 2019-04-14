@@ -1,0 +1,342 @@
+﻿/*by yanweiping*/
+/*留言管理*/
+
+.suggestbox{
+	padding: 10px 10px 10px 15px;
+	height:1%;
+}
+.suggestbox h1{
+	color: #F87120;
+	font-size: 13px;
+}
+.suggestbox p{
+	padding: 2px 0 0 00;
+}
+.receivedbox{}
+.receivedbox .con{}
+.search{
+	font-size: 12px;
+	color: #563B1D;
+	padding: 10px 0 6px 10px;
+	background-color: #FFC24F;
+}
+.search .lefts{
+	width: 510px;
+	float: left;
+}
+.search .rights{
+	width: 220px;
+	float: right;
+	text-align: right;
+	padding-right: 15px;
+	padding-top: 2px;
+}
+.receivedbox .con A:link ,.receivedbox .con A:visited{
+	color: #333399;
+	text-decoration: underline;
+}
+.receivedbox .con A:hover,.receivedbox .con A:active{
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+
+.receivedbox .con h1{
+	padding: 20px 15px 4px 40px;
+	font-weight: bold;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #E7E7E7;
+}
+.receivedbox .con .color{
+	background-color: #FFFAEC;
+	padding: 0;
+}
+.receivedbox .con h1 span{
+	padding-left: 20px;
+}
+
+.receivedbox .con h1 ul{
+	padding: 0;
+	color: #999999;
+	font-size: 12px;
+	font-weight: normal;
+}
+.receivedbox .con h1 li{
+	width: 180px;
+	float: left;
+}
+
+.receivedbox .con .mescon{
+	padding: 4px 0 10px 10px;
+	font-size: 14px;
+	line-height: 180%;
+}
+.receivedbox .con .mescon input{
+	width: 20px;
+	float: left;
+	text-align: left;
+}
+.mescon .right{
+	width: 705px;
+	float: left;
+	padding: 0 0 10px 10px;
+
+}
+.mescon .right ul{
+	padding: 0 0 10px 0;
+	color: #999999;
+	font-size: 12px;
+}
+.mescon .right li{
+	width: 200px;
+	float: left;
+}
+.mescon .right p{
+	text-align: left;
+	width: 100%;
+	padding: 15px 0 15px 0;
+}
+.pagebox{
+	padding: 20px 15px 20px 5px;
+}
+.pagebox .left{
+	width: 300px;
+	float: left;
+}
+.pagebox .right{
+	width: 400px;
+	float: right;
+	text-align: right;
+}
+.pagebox .xia{
+	width: 700px;
+	float: left;
+	padding: 10px 0 0 0!important;padding: 0;
+}
+.helpbox{}
+.helpbox .title{
+	text-align: right;
+	padding-bottom: 5px;
+	padding-right: 15px;
+}
+.helpbox .con{
+	border: 1px solid #CCCCCC;
+}
+
+.helpbox .con h1{
+	font-size: 14px;
+	color: #563B1D;
+	background-color: #F7F6F6;
+	padding: 4px 0 4px 10px;
+}
+.helpbox .con p{
+	padding: 10px 0px 15px 15px;
+}
+/*添加好友*/
+.addbox{
+	padding: 35px 30px 40px 45px;
+	font-size: 14px;
+}
+.addbox p{
+	font-size: 14px;
+	padding: 20px 0 0;
+}
+.addbox .searchbox{
+	margin: 0 auto;
+	padding: 10px 0 0;
+}
+.addbox .searchbox table{
+	font-size: 14px;
+	line-height: 33px;
+}
+/*好友列表*/
+/*none*/
+/*添加好友*/
+.topaddzi{
+	padding: 10px 10px 5px 12px;
+}
+/*黑名单*/
+.blacktopbox{
+	padding: 5px;
+}
+.blacktopbox h1{
+	font-weight: normal;
+	background-color: #F7F6F6;
+	padding: 6px 0 6px 15px;
+	color: #F75F03;
+}
+/*短信息回复*/
+.topreply{
+	background-color: #F0F0F0;
+	padding: 10px;
+	margin: 3px;
+}
+.replycon{
+	padding: 10px 10px 0 20px;
+}
+.replycon p{
+	text-indent: 25px;
+	padding-bottom: 10px;
+
+}
+.replybox{}
+.replybox h1{
+	color: #F76E1E;
+	padding: 0 0 2px 35px;
+	font-size: 14px;
+}
+/*发送短信息*/
+.sendlist{
+	width: 180px;
+	float: right;
+	margin: 0 17px 5px 0!important;margin: 0 12px 5px 0;
+	border: 1px solid #CCCCCC;
+}
+.sendlist h1{
+	padding:5px 0 5px 10px;
+	background-color: #E7E7E7;
+}
+.sendlist p{
+	padding: 5px 10px 10px 10px;
+}
+/*留言管理回复*/
+.mesreply{
+	padding: 5px;
+	margin-top: 5px;
+}
+.mesreply span{padding-left:45px}
+
+/*短信试用*/
+.smsconbox{
+	padding: 5px;
+}
+.smsconbox h1{
+	text-align: left;
+	padding: 5px 3px 4px 10px;
+	font-weight: normal;
+	font-size: 12px;
+	background-color: #F0F0F0;
+}
+.smsconbox p{
+	width: 340px;
+	text-align: center;
+	padding: 25px 0 40px 0;
+	color: #563B1D;
+}
+.smsconbox td{
+	font-size: 14px;
+	padding-left: 3px;
+	padding: 10px 0 8px 5px;
+}
+/*短信通知*/
+.smsnotbox{
+	padding: 10px;
+}
+.smsnotbox .fill{
+	width: 600px;
+	margin: 0 auto;
+	padding: 25px 0 10px;
+}
+.smsnotbox .fill span{
+	display: block;
+	padding-top: 10px;
+}
+.smsnotbox .fill p{
+	padding: 10px 0 0 0;
+}
+.smsnotbox .buttom{
+	padding: 15px 0 25px;
+	text-align: center;
+}
+/*我的收藏*/
+.handtop .linonec{
+	background-image: none;
+	border:none;
+	width: 260px;
+	float: right;
+	text-decoration: none;
+}
+/*添加订阅*/
+.subtopt{
+	background-image: url(../images/MessageManage/sub_libg.gif);
+	height: 26px;
+	padding:0 0 0 9px;
+	margin:12px 0 0 0;
+}
+.subtopt ul{
+
+}
+.subtopt li{
+	background-image: url(../images/MessageManage/sub_libg2.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 85px;
+	float: left;
+	text-align: center;
+	height: 22px;
+	padding-top: 4px;
+
+}
+.subtopt .liwai{
+	background-image: url(../images/MessageManage/sub_liwaibg.gif);
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C6C6C6;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #C6C6C6;
+	background-repeat: repeat;
+	font-weight: bold;
+	color: #FF6600;
+	background-color: #F5F5F5;
+}
+.subtopt .liwain{background-image: none;}
+.subtab{
+	border-width:0;
+}
+.subtab td{
+	padding: 3px;
+	border-width:0;
+	}
+.subtab td.bxian{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #DFDFDF;
+}
+.subnews{}
+.subnews td{padding: 2px 3px 2px 5px}
+.industry{}
+.industry .left{
+	width:200px;
+	float:left;
+	line-height:180%
+}
+.industry .zhong{
+	width:80px;
+	float:left;
+	padding:20px 0 0 0
+}
+.industry .right{width:200px; float:left}
+.industryb{width:500px;padding:10px 0 0 0}
+.local{}
+.local .left{
+	width:320px;
+	float:left;
+	line-height:180%;
+	padding-top: 15px;
+}
+.local .left span{
+	display: block;
+	padding-top: 3px;
+}
+.local .zhong{
+	width:60px;
+	float:left;
+	text-align:left;
+	padding:15px 0 0 0
+}
+.local .right{
+	width:150px;
+	float:left;
+	text-align: center;
+}

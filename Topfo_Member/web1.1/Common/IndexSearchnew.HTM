@@ -1,0 +1,123 @@
+<style type="text/css">
+<!--
+#Layeraa {
+	position:absolute;
+	width:160px; 
+	height:64px;
+	z-index:100;
+	visibility: hidden;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+	if(v=='visible')
+	{
+		document.getElementById("RoleName").style.visibility="hidden";
+	}
+	else
+	{
+		document.getElementById("RoleName").style.visibility="visible";
+	}
+}
+//-->
+</script>
+<form id="form_Search" name="form_Search" action="" method="post" target="_blank">
+	<div class="search">
+		<div class="menu">
+			<div class="st_c">
+				<div name='searchmenu' id="searchmenu" class="miaobianh_t" onclick="ChangeSearchMenu(0);">全部</div>
+				<div name='searchmenu' id="searchmenu" class="bottom" onclick="ChangeSearchMenu(1);">投资</div>
+				<div name='searchmenu' id="searchmenu" class="bottom" onclick="ChangeSearchMenu(2);">融资</div>
+				<div name='searchmenu' id="searchmenu" class="bottom" onclick="ChangeSearchMenu(3);">招商</div>
+				<div name='searchmenu' id="searchmenu" class="bottom" onclick="ChangeSearchMenu(4);">资讯</div>
+			</div>
+		</div>
+		<div class="input">
+			<div class="kuang">
+			
+				<table width="80%" height="28" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <tr>
+                   
+                    <td width="69%"><input type="text" id='txtKeyWord' onblur='javascript:blurEdit(this);' style="COLOR: #999999;HEIGHT:21px;"
+					onfocus='javascript:focusEdit(this);' size='75' value='输入关键字进行搜索' name='txtKeyWord'
+					helptext="输入关键字进行搜索"> 
+                    <input id='hideKey' type='hidden' value='0' name='hideKey'></td>
+                    <td width="14%" align="center">
+				<a href="JavaScript:doSubmit();"><img src="/web1.1/img/search_ailiu.gif" width="80" height="26" align="absMiddle" /></a></td>
+                    <td width="17%" align="left"><table id="Tabother" onmouseover="MM_showHideLayers('Layeraa','','show')" onmouseout="MM_showHideLayers('Layeraa','','hide')"
+																	cellspacing="0" cellpadding="0" width="20%" align="center" border="0" style="float:left">
+                  <tr>
+                    <td width="10" height="20"></td>
+                    <td width="10" align="left"><div id="Layeraa" onmouseover="MM_showHideLayers('Layeraa','','show')" onmouseout="MM_showHideLayers('Layeraa','','hide')">
+                      <table width="95%" border="0" align="left" cellpadding="4" cellspacing="1" bgcolor="#fed653" style="margin:13px 0 0 0px;">
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishMerchantResource.aspx" target="_blank">发布政府招商需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishMerchant.aspx" target="_blank">发布政府招商机构</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCapital.aspx" target="_blank">发布投资需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishProject.aspx" target="_blank">发布融资需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCarveOutFindFund.aspx" target="_blank">发布创业信息（找资金）</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCarveOutFindProject.aspx" target="_blank">发布创业信息（找项目）</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishOppor.aspx" target="_blank">发布商机信息</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishExhibition.aspx" target="_blank">发布会展信息</a></td>
+                        </tr>
+                      </table>
+                    </div></td>
+                    <td align="center"><a href="/Member/Info/PublishCapital.aspx" target="_blank"><img src="/web1.1/img/pulishpic.gif" width="108" height="26" align="absMiddle"></a></td>
+                  </tr>
+                </table></td>
+                  </tr>
+              </table>
+				<a href="http://www.tz888.cn/Member/Info/PublishCapital.aspx" target="_blank"></a>
+				
+				<div class="greyzi">热门关键字： 
+				<a href="/Search/SearchResult.aspx?Title=房地产" target="_blank">房地产</a> 
+				<a href="/Search/SearchResult.aspx?Title=优惠政策" target="_blank">优惠政策</a> 
+				<a href="/Search/SearchResult.aspx?Title=土地" target="_blank">土地</a>
+				<a href="/Search/SearchResult.aspx?Title=皮革" target="_blank">皮革</a> 
+				<a href="/Search/SearchResult.aspx?Title=上海" target="_blank">上海</a> 
+				<a href="/Search/SearchResult.aspx?Title=林业" target="_blank">林业</a> 
+				<a href="/Search/SearchResult.aspx?Title=泉州" target="_blank">泉州</a> 
+				<a href="/Search/SearchResult.aspx?Title=惠安" target="_blank">惠安</a> 
+				<a href="/Search/SearchResult.aspx?Title=纺织" target="_blank">纺织</a> 
+				<a href="/Search/SearchResult.aspx?Title=重庆" target="_blank">重庆</a> <a href="/Search/SearchResult.aspx?Title=物流" target="_blank">物流</a> <a href="/Search/SearchResult.aspx?Title=节能" target="_blank">节能</a></div>
+			</div>
+		</div>
+		<script type="text/javascript" language="javascript">initPostUrl()</script>
+	</div>
+</form>

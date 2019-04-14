@@ -1,0 +1,13 @@
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\bin\Debug\Tz888.Pager.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\bin\Debug\Tz888.Pager.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\bin\Debug\en\Tz888.Pager.resources.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\bin\Debug\zh-CHT\Tz888.Pager.resources.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\ResolveAssemblyReference.cache
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.AspNetPager.resources
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.csproj.GenerateResource.Cache
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.AspNetPager.en.resources
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.AspNetPager.zh-CHT.resources
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\en\Tz888.Pager.resources.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\zh-CHT\Tz888.Pager.resources.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Pager\obj\Debug\Tz888.Pager.pdb

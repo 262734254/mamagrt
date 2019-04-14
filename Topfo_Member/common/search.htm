@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>搜索</title>
+
+    <script language="javascript" type="text/javascript">
+    function setSearchType()
+    {
+        var sel = new String(document.getElementById("select").value);
+        var frm = document.getElementById("form_Search");
+	if(document.getElementById("txtKeyWord").value=="请输入关键字")
+	document.getElementById("txtKeyWord").value="";
+        if(sel=="all")
+            frm.action = "http://search.topfo.com/SearchAllResult.aspx";
+        else
+            frm.action = "http://search.topfo.com/SearchResult"+sel+".aspx";
+    }
+    function setkey()
+    {
+        if(document.getElementById("txtKeyWord").value=="请输入关键字")
+        {document.getElementById("txtKeyWord").value="";return false;}
+    }
+    </script>
+
+</head>
+<body style="margin: 0">
+    <form id="form_Search" name="form_Search" action="http://search.topfo.com/SearchAllResult.aspx"
+        method="post" target="_blank">
+        <div>
+            <select name="select" id="select" class="line_con">
+                <option value="all">全部</option>
+                <option value="capital">投资</option>
+                <option value="project">融资</option>
+                <option value="merchant">招商</option>
+            </select>
+            <input name="txtKeyWord" type="text" id="txtKeyWord" value="请输入关键字" class="line_con2"
+                onclick="setkey()">
+            <input type='image' src="/images_fhy/text_search.gif" onclick="setSearchType()" width="64"
+                height="18" align="absmiddle">
+            <a href="javascript:void(0)" onclick="setSearchType()" target="_blank" style="display: none">
+                高级搜索</a>
+        </div>
+    </form>
+</body>
+</html>

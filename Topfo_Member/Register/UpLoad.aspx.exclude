@@ -1,0 +1,74 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UpLoad.aspx.cs" Inherits="UpLoad" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>多文件上传</title>
+
+    <script type="text/javascript"> 
+var maxRows=0; 
+function insertRows(){ 
+/*var tempRow=parseInt(document.getElementById('Text1').value);
+maxRows=tempRow; 
+tempRow=tempRow+1; 
+var Rows=table1.rows;//类似数组的Rows 
+var newRow=table1.insertRow(table1.rows.length);//插入新的一行 
+var Cells=newRow.cells;//类似数组的Cells 
+for (i=0;i<2;i++)//每行的7列数据 
+{ 
+var newCell=Rows(newRow.rowIndex).insertCell(Cells.length); 
+newCell.align="center"; 
+switch (i) 
+{ 
+case 0 : newCell.innerHTML="<td valign='top'><input type='file' size='50' name='File'><input name='rowNum' type='text' style='visibility:hidden' size='2' value='"+tempRow+"'></TD>"; break; 
+case 1 : newCell.innerHTML="<td valign='top'><input id='"+tempRow+"' type='button' value='Delete' onclick='delTableRow(this)'></TD>"; break; 
+} 
+} 
+maxRows+=1; 
+document.getElementById('Text1').value=tempRow;*/
+} 
+
+	//删除table的tr是从0索引开始的
+
+function delTableRow(e)
+{ 
+/*var rowNum = e.id;
+var c=document.getElementsByName('rowNum');
+for(var i=0;i<c.length;i++)
+{
+if (c[i].value==rowNum)
+{ 
+table1.deleteRow(i); 
+} 
+} */
+}
+    </script>
+
+</head>
+<body>
+    <form id="form1" method="post" runat="server" enctype="multipart/form-data">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table border="0" align="center" id="table1">
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="Text1" value="0" size="5" style="visibility: hidden" />
+                    <a href="http://" onclick="insertRows()">添加附件</a>
+                    <asp:Button runat="server" Text="开始上传" ID="UploadButton" OnClick="UploadButton_Click">
+                    </asp:Button>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <asp:Label ID="strStatus" runat="server" Font-Names="宋体" Font-Bold="True" Font-Size="9pt"
+                 BorderStyle="None" BorderColor="White"></asp:Label>
+            <uc1:AddLinkMan ID="AddLinkMan1" runat="server" />
+        </p>
+    </form>
+</body>
+</html>

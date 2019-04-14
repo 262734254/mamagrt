@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[Topfo_Member.sln]
+SCC_Aux_Path = "\\192.168.100.220\vss"
+SCC_Project_Name = "$/Topfo_Member/Topfo_Member", BVRAAAAA
+
+[Topfo_Member2.sln]
+SCC_Aux_Path = "\\192.168.100.57\TopfoVSS"
+SCC_Project_Name = "$/Topfo_Member/Topfo_Member", BVRAAAAA

@@ -1,0 +1,362 @@
+/*yanweiping*/
+/*帐户充值*/
+
+.otherbank{
+	margin: 6px;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+.otherbank .title{
+	padding: 3px 0px 3px 7px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #F4F5F5;
+}
+.otherbank .ulbox{
+	background-image: url(../images/AccountInfo/otherbg.gif);
+	height: 470px;
+	background-repeat: repeat;
+}
+.otherbank .libox{
+	list-style-type: none;
+	width: 355px!important;width: 350px;
+	float: left;
+	height: 160px;
+	padding: 7px 8px 0 8px;
+}
+
+.otherbank .rightzi{
+	width: 250px;
+	float: left;
+	padding: 15px 0 0 7px;
+}
+.otherbank .rightzi img{
+	margin-top: 6px;
+}
+.otherbank .rightzi p{
+	margin: 0 0 19px 0;
+	padding: 0;
+}
+.otherbank .libox h3{
+	color: #0A0AB6;
+	font-size: 14px;
+}
+.otherbank .libox h3 span{
+	font-size: 12px;
+	font-weight: normal;
+	color: #FF0000;
+}
+.otherbank .leftimg{
+	width: 95px;
+	float: left;
+	text-align: center;
+	padding-top: 20px;}
+
+/*充值管理*/	
+.suggestbox{
+	padding: 10px 10px 10px 15px;
+	height:1%;
+	font-weight: normal;
+	font-size: 12px;
+}
+.suggestbox h1{
+	color: #F87120;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 10px 10px 5px 10px;
+}
+.suggestbox p{
+	padding: 5px 0 0 00;
+}
+.search{
+	font-size: 12px;
+	color: #563B1D;
+	padding: 6px 0 6px 10px;
+}
+.search .lefts{
+	width: 510px;
+	float: left;
+}
+.search .rights{
+	width: 220px;
+	float: right;
+	text-align: right;
+	padding-right: 15px;
+}
+.pagebox{
+	padding: 20px 15px 20px 5px;
+}
+.pagebox .left{
+	width: 350px;
+	float: left;
+}
+.pagebox .right{
+	width: 480px;
+	float: right;
+	text-align: right;
+}
+.print{
+	text-align: right;
+	padding: 0 10px 10px 0;
+}
+.helpbox{}
+.helpbox .title{
+	text-align: right;
+	padding-bottom: 5px;
+	padding-right: 15px;
+}
+.helpbox .con{
+	border: 1px solid #CCCCCC;
+}
+
+.helpbox .con h1{
+	font-size: 14px;
+	color: #563B1D;
+	background-color: #F7F6F6;
+	padding: 4px 0 4px 10px;
+}
+.helpbox .con p{
+	padding: 10px 0px 15px 15px;
+}
+.helpbox ul{
+	padding: 15px 15px 0 15px;
+	margin-left: 25px;
+}
+.helpbox li{
+	list-style-position: outside;
+	list-style-type: decimal;
+}
+
+/*支付页面*/
+.contenpay{
+	border: 1px solid #F98742;
+	text-align: center;
+}
+td.spaytop{
+	background-color: #FFC24F;
+	padding: 0;
+}
+.spaybox{
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+.spaybox .title{
+	padding: 3px 0px 3px 7px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+}
+.spaybox .ulbox{
+	background-image: url(../images/AccountInfo/otherbg2.gif);
+	height: 280px;
+	background-repeat: repeat;
+}
+.spaybox .libox{
+	list-style-type: none;
+	width: 350px;
+	float: left;
+	height: 153px;
+	padding: 15px 10px 0 15px;
+}
+
+.spaybox .rightzi{
+	width: 220px;
+	float: left;
+	padding: 15px 7px 0 0;
+}
+.spaybox .rightzi img{
+	margin-top: 6px;
+}
+.spaybox .rightzi p{
+	margin: 0 0 14px 0;
+	padding: 0;
+}
+.spaybox .libox h3{
+	color: #0A0AB6;
+	font-size: 14px;
+}
+.spaybox .leftimg{
+	width: 120px;
+	float: left;
+	text-align: center;
+	padding-top: 25px;
+}
+.contenpay{
+	border: 1px solid #F98742;
+	text-align: center;
+}
+.spayboxb{
+	text-align: center;
+	height: 120px;
+	padding-top: 6px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.spayboxb .titleb{
+	background-image: url(/PaymentSystem/images/czSuccessimg/xuxian.gif);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	margin: 0 6px 0 6px;
+	font-weight: bold;
+	padding: 5px;
+	text-align: left;
+	
+}
+
+.spayboxb ul{
+	padding: 25px 0 0 25px;
+}
+.spayboxb li{
+	width: 180px;
+	float: left;
+	list-style-type: square;
+	font-size: 12px;
+	font-weight: none;
+	color: #0A0AB6;
+	list-style-position: inside;
+}
+/*购买充值卡*/
+.fillbox{}
+.fillbox h1{
+	font-weight: normal;
+	padding: 5px;
+}	
+/*修改支付密码*/
+.titlepub{
+	position: absolute;
+	margin: 10px 0 0 45px;
+	background-color: #FFFFFF;
+	padding: 0 5px 0 5px;
+	font-size: 14px;
+	color: #1C2C81;
+	font-weight: bold;
+}
+.publisha{
+	border: 1px dashed #CCCCCC;
+	padding: 25px 15px 20px 25px;
+	margin: 0 5px 0 5px;
+}
+.publisha h1{
+	padding: 5px;
+	font-weight: normal;
+	border: 1px solid #CCCCCC;
+}
+.publisha p{
+	padding: 20px 0 0 0;
+}
+.publisha p img{
+	margin: 0 0 0 50px;
+}
+/*账户信息管理*/
+.accmanagebox{
+	background-color: #F7F7F7;
+	padding: 15px;
+	color: #563B1D;
+}
+.accmanagebox b{color: #F87120;}
+.accmanagebox .shang{
+	clear: both;
+	width: 100%;
+}
+.accmanagebox .left{
+	width: 500px;
+	float: left;
+	line-height: 26px;
+
+}
+.accmanagebox .left h1{
+	background-image: url(../images/AccountInfo/chengbg.gif);
+	background-repeat: no-repeat;
+	color: #F87120;
+	padding: 1px 0 0 10px;
+	margin: 5px 0 5px 0;
+}
+.accmanagebox .right{
+	width: 200px;
+	float: right;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+.accmanagebox .right h1{
+	background-image: url(../images/AccountInfo/huibg.gif);
+	padding: 3px 0 1px 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+.accmanagebox .right p{
+	padding: 10px 10px 10px 7px;
+}
+.accmanagebox .zhong{
+	width: 97%;
+	clear: both;
+	padding: 10px 0 10px 20px;
+}
+.accmanagebox .zhong ul{
+}
+.accmanagebox .zhong li{
+	width: 300px;
+	float: left;
+	height: 22px;
+}
+
+.accmanagebox .xia{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	padding: 0 0 20px 0;
+}
+.accmanagebox .xia h1{
+	padding: 10px 0 5px 0;
+}
+
+/*神州行充值*/
+.szxczbox{
+}
+.szxczbox table{ font-size:14px}
+
+.zfblcbox{
+	text-align: center;
+}
+/*支付宝充值*/
+.zfblcbox ul{
+	padding: 30px 0 0 80px;
+}
+.zfblcbox li{
+	list-style-type: none;
+	background-image: url(../images/AccountInfo/zfbanliubg.gif);
+	background-repeat: no-repeat;
+	width: 96px;
+	float: left;
+	height: 23px;
+	text-align: left;
+	padding-left: 5px;
+	margin-right: 4px;
+	padding-top: 2px;
+}
+.zfblcbox .liwai{
+	list-style-type: none;
+	background-image: url(../images/AccountInfo/zfbanliubg2.gif);
+	background-repeat: no-repeat;
+	width: 66px;
+	float: left;
+	height: 23px;
+	text-align: left;
+}
+.zfblcbox li p{
+	padding-left: 4px;
+}
+.zfblcbox ul div{
+	background-image: url(../images/AccountInfo/zfbanliujt.gif);
+	background-repeat: no-repeat;
+	background-position: right 4px;
+}

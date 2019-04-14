@@ -1,0 +1,41 @@
+﻿/*新增样式（可整合到原来的样式表里） */
+body {padding:0; font-size:12px;}
+a:link, a:visited{color:#333;text-decoration:none;}
+a:hover{color:#f00;text-decoration:underline;}
+.f_14 {font-size:14px;}
+.f_gray {color:#999;}
+.f_red {color:#f00;}
+.f_red a:link, .f_red a:visited{color:#f00;text-decoration:underline;}
+.f_red a:hover{color:#f00;text-decoration:none;}
+.strong {font-weight:bold;}
+.mem_tab1 {width:100%; border:1px solid #ccc; border-bottom:none; background:#fff;}
+.mem_tab1 td {border-bottom:1px solid #ccc; padding:7px 10px; line-height:25px;}
+.mem_tab1 .tdbg {background:#f7f7f7; text-align:right; }
+.mem_tab2 {text-align:center; margin:10px 0;}
+.mem_tab2 td {padding:0; border:none; width:110px;}
+.mem_tab2 .pic {background:url(noneimg.gif) 5px 0 no-repeat; height:100px;}
+.mem_tab {margin:10px 0;}
+.mem_tab td {padding:0; border:none; line-height:18px;}
+ .code {    background-image:url(code.jpg);   font-family:Arial;    font-style:italic;    color:Red;   
+            border:0;   
+            padding:2px 3px;   
+            letter-spacing:3px;   
+            font-weight:bolder;   
+        }   
+        .unchanged   
+        {   
+            border:0;   
+        }   
+
+
+
+
+
+
+
+
+
+
+
+
+

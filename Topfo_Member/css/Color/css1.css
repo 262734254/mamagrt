@@ -1,0 +1,61 @@
+/*by yanweiping*/
+
+/*会员中心首页*/
+.topbgc{
+	background-image: url(/TopfoCenter/images/Color/Yellowtopbg.jpg);
+	background-repeat: no-repeat;
+}
+.leftc{
+	background-color: #FFF79F;
+}
+.leftbg{
+	background-image: url(/TopfoCenter/images/Color/Yellowleftbg.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.ztopbg{
+	background-image: url(/TopfoCenter/images/Color/Yellowtopxk.gif);
+	background-repeat: no-repeat;
+}
+.ztitlebk{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFCF74;
+}
+.zhelpbox ul{
+	background-image: url(/TopfoCenter/images/Color/Yellowlibg.gif);
+}
+.zhelpbox li{
+	background-image: url(/TopfoCenter/images/Color/Yellowlibuttombg.gif);
+	background-repeat: no-repeat;
+
+}
+.zhelpbox .liwai{
+	background-image: url(/TopfoCenter/images/Color/Yellowliwaibuttombg.gif);
+	background-repeat: no-repeat;
+}
+.zhelpsanb{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFCF74;
+	border-bottom-color: #FFCF74;
+	border-left-color: #FFCF74;
+}
+.rtitlebg{
+	background-image: url(/TopfoCenter/images/Color/Yellowjbbg_t.gif);
+}
+.rsibiank{
+	border: 1px solid #FFCB68;
+}
+.rsuggestbg{
+	background-image: url(/TopfoCenter/images/Color/Yellowjbbg_c.gif);
+}
+.rxuxianb{
+	background-image: url(/TopfoCenter/images/Color/Yellowxuxinab.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}

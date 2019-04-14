@@ -1,0 +1,241 @@
+/*充值成功*/
+#contentbox{
+	padding: 10px 0 10px 0;
+}
+.shang{}
+.czbox{
+	width: 644px;
+	float: left;
+
+}
+.czbox .top{
+	background-image: url(/PaymentSystem/images/endimg/topleft_t.gif);
+	background-repeat: no-repeat;
+	height: 12px;
+	overflow: hidden;
+}
+.czbox .content{
+	background-image: url(/PaymentSystem/images/endimg/topleft_bg.gif);
+	height: 140px;
+	background-repeat: no-repeat;
+	background-position: 40px 20px;
+		background-color: #FFFFE1;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.czbox .content img{
+	float: right;
+	margin: 80px 65px 0 0;
+}
+.czbox .bottom{	background-image: url(/PaymentSystem/images/endimg/topleft_b.gif);
+	background-repeat: no-repeat;
+	height: 13px;}
+.chaxuanbox{
+	width: 644px;
+	float: left;
+}
+.chaxuanbox strong{
+	font-size: 14px;
+	display: block;
+	padding: 5px 0 0 25px;
+}
+.chaxuanbox .content{
+	background-image: url(/PaymentSystem/images/endimg/chaxun_bg.gif);
+	border: 1px dashed #AAAAAA;
+	padding: 8px 0 8px 20px;
+}	
+.sqbox{
+	background-image: url(/PaymentSystem/images/endimg/topright_c.gif);
+	width: 294px;
+	float: right;
+}
+.sqbox .top{
+	background-image: url(/PaymentSystem/images/endimg/topright_t.gif);
+	height: 16px;
+	background-repeat: no-repeat;
+}
+.sqbox .content{
+	background-image: url(/PaymentSystem/images/endimg/zi_shengqing.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding: 40px 20px 0px 30px;
+
+}
+.sqbox .content p{
+	font-weight: bold;
+	padding: 10px 20px 0 0px;
+	text-align: center;
+}
+.sqbox .content p span{
+	padding-top: 2px;
+	display: block;
+}
+.sqbox .content strong{
+	color: #FF7429;
+}
+.sqbox .bottom{
+	background-image: url(/PaymentSystem/images/endimg/topright_b.gif);
+	height: 16px;
+	background-repeat: no-repeat;
+}
+.btn{
+	height:31px;
+	padding: 0;
+	margin: 0;
+	width: 90%;
+
+}
+.btn a{display:block; text-decoration:none; float:left}
+a.link1:link, a.link1:visited, a.link1:hover,a.link1:active{
+	width:161px;
+	height:26px;
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+	background-image: url(/PaymentSystem/images/bankimg/buttom_cheng.gif);
+	background-repeat: no-repeat;
+}
+#listbox{
+	border: 1px solid #FFAF4B;
+}
+#listbox .top{
+	background-image: url(/PaymentSystem/images/endimg/listtop_bg.gif);
+	height: 34px;
+	border-right-width: 4px;
+	border-left-width: 4px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #EFF0F0;
+	border-left-color: #EFF0F0;
+	background-color: #CC3300;
+	padding-top:10px;
+}
+#listbox .top ul{
+	margin: 0 0 0 5px;
+}
+#listbox .top li{
+	background-image: url(/PaymentSystem/images/endimg/listtop_li.gif);
+	width: 94px;
+	height: 22px;
+	float: left;
+	list-style-type: none;
+	margin-right: 8px;
+	text-align: center;
+	padding-top: 2px;
+}
+#listbox .top .liwai{
+	background-image: url(/PaymentSystem/images/endimg/listtop_liwai.gif);
+	width: 94px;
+	height: 22px;
+	float: left;
+	list-style-type: none;
+	margin-right: 8px;
+	font-weight: bold;
+	color: #FF7429;
+}
+#listbox .content{
+	border-right-width: 4px;
+	border-bottom-width: 4px;
+	border-left-width: 4px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #EFF0F0;
+	border-bottom-color: #EFF0F0;
+	border-left-color: #EFF0F0;
+	height: 500px;
+}
+#listbox .content td{
+	text-align: center;
+}
+#listbox .content p{
+	text-align: right;
+	padding: 10px 50px 0 0;
+}
+.xuxianb{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #A3A69B;
+}
+.xianbh{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E9E9E9;
+	background-color: #FFFFE1;
+}
+#listbox .content A:link, #listbox .content A:visited {
+	COLOR: #061E9C; TEXT-DECORATION: none
+}
+
+#listbox .content A:hover,#listbox .content A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+ 
+/*订单已提交end_bank*/
+.czbox .conbank{
+	background-image: url(/PaymentSystem/images/endimg/ebank_lb.gif);
+	height: 225px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: #FFFFE1;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.czbox .conbank .simg{
+	padding: 5px 0 0 5px;
+	background-image: url(/PaymentSystem/images/Orders/biao_b2.gif);
+	background-repeat: no-repeat;
+	height: 83px;
+	background-position: 15px 0px;
+}
+.czbox .conbank .simg img{
+	text-align: right;
+	float: right;
+	margin: 24px 30px 0 0;
+}
+.czbox .conbank p{
+	padding: 8px 0 0 40px;
+}
+.czbox .conbank h1{
+	font-size: 12px;
+	font-weight: normal;
+	padding: 24px 0px 0 35px;
+}
+.czbox .conbank h1 span{
+	padding-left: 24px;
+}
+.ebmenu{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #F98742;
+	font-size: 14px;
+	padding: 20px 0 20px 15px;
+}
+.ebmenu ul{
+	margin-left: 15px;
+}
+.ebmenu li{
+	list-style-image: url(/PaymentSystem/images/bankimg/biao_yjtou.gif);
+	margin-bottom: 8px;
+	list-style-position: outside;
+	padding-bottom: 3px;
+}
+.ebmenu li u{
+	margin-left: 0px!important;margin-left: 3px;
+}
+/*订单已提交end_order*/
+.czbox .conbank .porder{
+	padding: 22px 0 6px 40px;
+	font-weight: bold;
+}

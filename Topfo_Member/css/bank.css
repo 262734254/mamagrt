@@ -1,0 +1,397 @@
+/*网银支付*/
+#main .content{
+	padding: 15px 0px 8px 0px;
+	font-size: 12px;
+}
+#main .content strong{
+	color: #555555;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0px 0 5px 25px;
+}
+
+.xuxiank {
+	border: 1px dashed #AAAAAA;
+	font-size: 14px;
+	margin-top: 1px;
+}
+.morebuy{
+	font-size:14px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #F98742;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-left: auto;
+}
+.btn{
+	width:90%;
+	height:31px;
+	padding: 0;
+	margin: 0px 0 0 25px;
+}
+.btn a{display:block; text-decoration:none; float:left}
+a.link1:link, a.link1:visited, a.link1:hover,a.link1:active{
+	width:161px;
+	height:31px;
+	color: #333333;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	background-image: url(/PaymentSystem/images/bankimg/buttom_cheng.gif);
+	background-repeat: no-repeat;
+	line-height: 230%;
+}
+a.link2:link, a.link2:visited, a.link2:hover, a.link2:active{
+	width:175px;
+	height:31px;
+	color: #6F6F6D;
+	font-size: 14px;
+	text-align: center;
+	line-height: 230%;
+}
+a.link3:link, a.link3:visited,a.link3:hover,a.link3:active{
+	width:140px;
+	height:31px;
+	background:url(images/cost_r4_c40.jpg) no-repeat 0 6px;
+	color: #6F6F6D;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 8px;
+}
+.contentk{
+	border: 1px solid #F98742;
+	text-align: center;
+}
+.contentk h1{
+	padding: 5px 5px 5px 10px;
+	margin: 3px;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #F4F4F4;
+	border: 1px dashed #AAAAAA;
+	color: #F75F03;
+	text-align: left;
+}
+.contentk table {
+	font-size: 14px;
+	margin-top: 25px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+}
+.contentk .xuxian {
+	padding: 0 0 0 10px;
+}
+#bankbox{
+	width: 700px;
+	margin: 0 auto;
+	padding-bottom: 15px;
+}
+#bankbox .title{
+	font-size: 14px;
+	font-weight: bold;
+}
+#bankbox ul{
+	margin: 5px 0 0px 25px;
+}
+#bankbox li{
+	width: 220px;
+	float: left;
+	list-style-type: none;
+	text-align: center;
+	height: 65px;
+}
+/*帐户支付*/
+.contentk h2{
+	padding: 2px 5px 3px 10px;
+	margin: 6px;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #FFFFE1;
+	border: 1px solid #CFCFCF;
+	text-align: left;
+}
+/*帐户支付(充值)*/
+.chongzhi{
+	padding: 25px 0 25px 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.otherbank{
+	margin: 6px;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+.otherbank .title{
+	padding: 3px 0px 3px 7px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #F4F5F5;
+}
+.otherbank .ulbox{
+	background-image: url(/PaymentSystem/images/bankimg/otherbg.gif);
+	height: 470px;
+	background-repeat: repeat;
+}
+.otherbank .libox{
+	list-style-type: none;
+	width: 430px;
+	float: left;
+	padding-top: 10px;
+	height: 160px;
+}
+
+.otherbank .rightzi{
+	width: 270px;
+	float: left;
+	padding-top: 15px;
+}
+.otherbank .rightzi img{
+	margin-top: 6px;
+}
+.otherbank .rightzi p{
+	margin: 0 0 19px 0;
+	padding: 0;
+}
+.otherbank .libox h3{
+	color: #0A0AB6;
+	font-size: 14px;
+}
+.otherbank .leftimg{
+	width: 150px;
+	float: left;
+	text-align: center;
+	padding-top: 25px;
+}
+/*手机支付*/
+#phonebox{
+	border: 4px solid #ECECEC;
+	padding: 6px 15px 0 15px;
+	height: 500px;
+}
+#phonebox .pic{
+	text-align: center;
+	padding-top: 10px;
+}
+#phonebox p{
+	text-align: right;
+	padding: 0 5px 5px 0;
+}
+#phonebox .tishi{
+	background-color: #FFFFE1;
+	border: 1px solid #CFCFCF;
+	padding: 5px;
+}
+#phonebox .tishi span{
+	display: block;
+	padding-left: 60px;
+}
+.chengxux{
+	background-image: url(/PaymentSystem/images/bankimg/phone_cxubg.gif);
+	height: 6px;
+	overflow: hidden;
+}
+/*确认购买资源*/
+.notes{
+	background-image: url(/PaymentSystem/images/bankimg/zf_bg.gif);
+	background-repeat: no-repeat;
+	background-position: 15px 6px;
+	padding: 7px 0 0 50px;
+	height: 30px;
+}
+.notes span{
+	color: #FF6600;
+}
+.spaybox{
+	margin: 8px;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+}
+.spaybox .title{
+	padding: 3px 0px 3px 7px;
+	margin: 0px;
+	font-size: 12px;
+	font-weight: normal;
+	background-color: #F4F5F5;
+}
+.spaybox .ulbox{
+	background-image: url(/PaymentSystem/images/bankimg/otherbg.gif);
+	height: 280px;
+	background-repeat: repeat;
+}
+.spaybox .libox{
+	list-style-type: none;
+	width: 440px;
+	float: left;
+	padding-top: 10px;
+	height: 145px;
+}
+
+.spaybox .rightzi{
+	width: 285px;
+	float: left;
+	padding-top: 15px;
+}
+.spaybox .rightzi img{
+	margin-top: 6px;
+}
+.spaybox .rightzi p{
+	margin: 0 0 14px 0;
+	padding: 0;
+}
+.spaybox .libox h3{
+	color: #0A0AB6;
+	font-size: 14px;
+}
+.spaybox .leftimg{
+	width: 150px;
+	float: left;
+	text-align: center;
+	padding-top: 25px;
+}
+.contenpay{
+	border: 1px solid #F98742;
+	text-align: center;
+}
+.spayboxb{
+	text-align: center;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #F98742;
+	border-bottom-color: #F98742;
+	border-left-color: #F98742;
+	height: 120px;
+	padding-top: 6px;
+}
+.spayboxb .titleb{
+	background-color: #F4F5F5;
+	background-image: url(/PaymentSystem/images/czSuccessimg/xuxian.gif);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	margin: 0 6px 0 6px;
+	font-weight: bold;
+	padding: 5px;
+}
+.spayboxb ul{
+	padding: 23px 0 0px 40px;
+}
+.spayboxb li{
+	width: 220px;
+	float: left;
+	list-style-type: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0A0AB6;
+}
+.spayboxb li A:link,.spayboxb li A:visited {
+	COLOR: #0A0AB6; TEXT-DECORATION: underline
+}
+
+.spayboxb li A:hover ,.spayboxb li A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+/*银行汇款支付*/
+.unionmes{
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #CFCFCF;
+	border-bottom-color: #CFCFCF;
+	padding: 25px 15px 25px 300px;
+}
+.unionmes span{
+	padding-left: 150px;
+}
+.unionnots{
+	background-image: url(/PaymentSystem/images/bankimg/union_huibg.gif);
+	width: 866px;
+	height: 122px;
+	padding: 20px 0 0 20px;
+	margin-bottom: 45px;
+	background-repeat: no-repeat;
+}
+.contenunion{
+	border: 1px solid #F98742;
+	text-align: center;
+}
+.contenunion table {
+	font-size: 14px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding: 0 10px 0 0;
+}
+#contenunbox{
+	border: 4px solid #ECECEC;
+	padding: 6px 30px 0 30px;
+}
+#contenunbox .pic{
+	text-align: center;
+	padding-top: 10px;
+}
+
+/*银行汇款下一步*/
+.conbankn{
+	border: 1px solid #F98742;
+	text-align: center;
+	font-size: 12px;
+}
+#banknbox{
+	border: 4px solid #ECECEC;
+	padding: 6px 15px 0 15px;
+	text-align: center;
+	height: 700px;
+}
+#banknbox table{font-size:12px;}
+#banknbox .pic{
+	text-align: center;
+	padding-top: 10px;
+}
+.bankdhntitle{
+	color: #F75F03;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f75f03;
+	padding-left: 5px;
+	padding-bottom: 3px;
+	width: 830px;
+	margin: 0 auto;
+}
+.bankdhntitle span{
+	font-size: 12px;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+	margin-left: 650px;
+}
+.bankdhntaba{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 40px;
+	margin-left: auto;
+}
+.bankdhntabb{
+	line-height: 150%;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+/*支付宝支付*/
+#phonebox .tishizfb{
+	background-color: #FFFFE1;
+	border: 1px solid #CFCFCF;
+	padding: 10px 0 10 10px;
+}

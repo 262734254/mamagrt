@@ -1,0 +1,13 @@
+/* CSS Document */
+*{margin:0;padding:0;}
+BODY {FONT-SIZE: 12px;COLOR: #000000;LINE-HEIGHT: 180%; font-family: "ËÎÌו";}
+img,img a{border:0;}
+img a{cursor:hand;}
+.clear{clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT:0px}
+.tophead{width:948px;margin:0 auto;zoom:1;_height:0;padding-top:12px; }
+.tophead .topll,.tophead .topll img{float:left}
+.tophead .topll span{ position:relative;top:8px;left:5px;}
+
+.tophead .toprr{float:right;width:500px; text-align:right;margin-bottom:0 !important;margin-bottom:8px;}
+.tophead .toprr .tlink{border-bottom: 1px solid #cccccc;margin-bottom:6px;padding-top:10px;}
+.tophead .toprr a{margin:0 3px;}

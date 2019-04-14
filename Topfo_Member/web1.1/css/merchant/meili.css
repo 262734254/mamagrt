@@ -1,0 +1,241 @@
+BODY {
+	FONT-SIZE: 12px;
+	MARGIN: 0px;
+	FONT-FAMILY: "宋体";
+	color: #747474;
+	line-height: 170%;
+	text-align: center;
+	word-break:break-all; 
+dispaly: block; 
+}
+
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;}
+div{ text-align:left;}
+.clear {
+	clear: both;
+	}
+
+.chengshe {
+	color: #FF6600;
+}
+.heishe {
+	color: #000000;
+}
+.honeshe {
+	color: #ED361E;
+}
+h1 {
+	margin:0;
+	padding:0;
+	font-size: 16px;
+	font-weight: normal;
+	color: #ED361E;
+	text-align: center;
+	font-family: "黑体";
+}
+h4 {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	font-family: "宋体";
+}
+h2 {
+	margin:0;
+	padding:0;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF6600;
+	text-align: left;
+	font-family: "宋体";
+	line-height: 200%;
+}
+h3 {
+	margin:0;
+	padding:0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF6600;
+	text-align: left;
+	font-family: "宋体";
+	vertical-align: text-bottom;
+}
+h5 {
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF6600;
+	text-align: left;
+	font-family: "宋体";
+	vertical-align: text-bottom;
+}
+.clear {
+	clear: both;
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px}
+	.nav_m {
+	width: 948px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #D7D7D7;
+	border-bottom-color: #D7D7D7;
+	padding-top: 6px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.nav_m .left {
+	padding-left: 10px;
+	width: 300px;
+	float: left;
+}
+.nav_m .right {
+	float: right;
+	width: 465px;
+}
+.nav_m .left img {
+	float: left;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+.main {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width: 948px;
+}
+.main_l {
+	float: left;
+	width: 678px;
+}
+.l_top {
+	width: 678px;
+	float: left;
+}
+.l_picbox {
+	width: 676px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #D0D0D0;
+	border-bottom-color: #D0D0D0;
+	border-left-color: #D0D0D0;
+}
+.picrowa {
+	padding-top: 10px;
+	padding-left: 0px;
+}
+
+.picbg {
+	float: left;
+	height: 170px;
+	width: 198px;
+	background-image: url(../../img/MerchantImg/meili/picbg.jpg);
+	background-repeat: no-repeat;
+	margin-left: 22px!important;
+	margin-left: 15px;
+	margin-top: 15px!important;margin-top: 10px;
+
+}
+.picbg img {
+	margin-top: 4px;
+	margin-left: 4px;
+}
+.piczi {
+	font-size:14px;
+	color:#000000;
+	filter:
+Dropshadow(offx=1,offy=0,color=#ffffff) Dropshadow(offx=0,offy=1,color=#ffffff) Dropshadow(offx=0,offy=-1,color=#ffffff) Dropshadow(offx=-1,offy=0,color=#ffffff);
+	font-weight: bold;
+	padding-top: 7px;
+	letter-spacing: 2px;
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+.piczic {
+	font-size:14px;
+	color:#000000;
+	filter:
+Dropshadow(offx=1,offy=0,color=#ffffff) Dropshadow(offx=0,offy=1,color=#ffffff) Dropshadow(offx=0,offy=-1,color=#ffffff) Dropshadow(offx=-1,offy=0,color=#ffffff);
+	font-weight: bold;
+	padding-top: 7px;
+	float: left;
+	width: 195px;
+	text-align: center;
+}
+.l_page {
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #D5D5D5;
+	margin-top: 10px;
+	margin: 5px;
+	padding-top: 4px;
+	font-size: 14px;
+	padding-bottom: 2px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+.main_r {
+	float: right;
+	width: 260px;
+}
+.rightsibian {
+	float: right;
+	width: 258px;
+	border: 1px solid #C3CECD;
+}
+.rcapitaltop {
+	width: 240px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #C3CECD;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
+.rcapcontentx {
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+.rcapitaltop img {
+	float: left;
+	margin-top: 4px;
+}
+.rcapitaltop .more {
+	float: right;
+	width: 50px;
+	padding-top: 2px;
+}
+.r_button {
+	float: left;
+	width: 260px;
+}

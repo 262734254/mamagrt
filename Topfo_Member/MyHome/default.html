@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中国招商投资网快捷桌面</title>
+<meta name="keywords" content="招商，投资" />
+<meta name="description" content="中国招商投资网快捷桌面" />
+<base target="_blank">
+<link href="css/yellow.css" rel="stylesheet" type="text/css" />
+<style>
+  #Map area{cursor:pointer;}
+  area{cursor:pointer;}
+   #data{position:absolute;display:none;}
+</style>
+<!--切换颜色JS-->
+<script type="text/javascript" src="js/color.js"></script>
+</head>
+
+<body>
+
+<!--鼠标触发效果JS-->
+<script type="text/javascript" src="js/trigger.js"></script>
+<!--邮箱登录JS-->
+<script type="text/javascript" src="js/email.js"></script>
+
+<!--Top部分-->
+<div class="logo">
+	<div class="logo_l">保护您的视力：<script type="text/javascript">writeCSSLinks();</script></div>
+	<div class="logo_r">
+		<div class="inl">
+			<ul>
+				<li class="n1"><a href="http://www.topfo.com/help/index.shtml">帮助中心</a></li>
+				<li class="n2"><a href="http://member.topfo.com/Login.aspx">登录</a></li>
+				<li class="n3"><a href="http://member.topfo.com/Register/Register.aspx">用户注册</a></li>
+				<li class="n4"><a href="http://www.topfo.com/">首页</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<div class="log">
+			用户名：<input type="text" name="textfield2" class="inp_lo">
+			密码：<input type="password" name="textfield2" class="inp_lo">
+			<input type="submit" name="Submit2" value="" class="btn1">
+	    </div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<!--菜单分类切换-->
+<div class="menu f_14">
+	<ul>
+		<li class="on" id=nav_btn_1 onclick="SetBtn('nav',1);">拓富网</li>
+		<li id=nav_btn_4 onclick="SetBtn('nav',4);">邮件地址</li>
+		<li id=nav_btn_2 onclick="SetBtn('nav',2);">新闻网</li>
+		<li id=nav_btn_3 onclick="SetBtn('nav',3);">金融网</li>
+		<li id=nav_btn_5 onclick="SetBtn('nav',5);">娱乐休闲</li>
+		<li id=nav_btn_6 onclick="SetBtn('nav',6);">读书/学习</li>
+		<li id=nav_btn_7 onclick="SetBtn('nav',7);">在线工具</li>
+		<li id=nav_btn_8 onclick="SetBtn('nav',8);">常用软件</li>
+	</ul>
+</div>
+
+<!--主体部分-->
+<div class="date f_date">
+	<!--天气预报-->
+   
+	<div class="date_l">
+
+             <div style=" float:left;"><iframe width="150" height="20" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://news.sina.com.cn/iframe/2008/weather/jump_new.html"></iframe></div>	
+            <div style=" float:left; padding-top:2px;"><a href="http://www.weather.com.cn/static/html/weather.shtml" title="点击查询更多的天气预报">选择城市</a></div>
+  
+ </div>
+	<!--日期-->
+	<div class="date_r"><script language="javascript" type="text/javascript" src="js/date.js"></script></div>
+	<div class="clear"></div>
+</div>
+
+<!--拓富网-->
+<div class="con" id="nav_con_1">
+	<!--导航-->
+	<div class="nav f_14 f_nav strong">
+		<ul>
+			<li class="one"><a href="http://www.topfo.com/">首页</a></li>
+			<li><a href="http://rz.topfo.com/" target="_blank">融资</a></li>
+			<li><a href="http://tz.topfo.com/" target="_blank">投资</a></li>
+			<li><a href="http://zs.topfo.com/" target="_blank">政府招商</a></li>
+			<li><a href="http://zycs.topfo.com/" target="_blank">资源超市</a></li>
+			<li><a href="http://www.topfo.com/CarveOut/" target="_blank">创业</a></li>
+			<li><a href="http://www.topfo.com/news/" target="_blank">资讯</a></li>
+			<li><a href="http://www.topfo.com/agent/" target="_blank">拓富分站</a></li>
+			<li><a href="http://union.topfo.com/" target="_blank">专业服务</a></li>
+		</ul>	
+	</div>
+	<!--搜索-->
+	<div class="sea">
+	<script language="javascript" type="text/javascript" src="js/search.js"></script>
+	<form id="form_Search" name="form_Search" action="http://search.topfo.com/AllResource.aspx"  accept-charset="gb2312" method="post" target="_blank">
+		<div class="sea_l">
+			<div class="sel">
+				<ul>
+  				 <li class="on1" id="searchmenu" onclick="ChangeSearchMenu(0);" name="searchmenu" style="left:0;"><div class="lineSelect" id="searchmenusp" name="searchmenusp">全部</div></li>
+                    <li id="searchmenu" onclick="ChangeSearchMenu(1);" name="searchmenu"><div id="searchmenusp" name="searchmenusp">找资本</div></li>
+                    <li id="searchmenu" onclick="ChangeSearchMenu(2);" name="searchmenu"><div id="searchmenusp" name="searchmenusp">找企业项目</div></li>
+                    <li id="searchmenu" onclick="ChangeSearchMenu(3);" name="searchmenu"><div id="searchmenusp" name="searchmenusp">找政府项目</div></li>
+                    <li id="searchmenu" onclick="ChangeSearchMenu(4);" name="searchmenu"><div id="searchmenusp" name="searchmenusp">找资讯</div></li>
+			</ul>
+			</div>
+			<div class="inp">
+				<span>				
+				    <input id="txtKeyWord" onclick="javascript:this.value='';" value="输入关键字进行搜索" name="txtKeyWord"  helptext="输入关键字进行搜索" class="inp_fo"/>&nbsp;
+				    <input id="hideKey" type="hidden" name="hideKey" />
+				    <input id="Submit1" type="submit" value="" class="btn2"/>
+				</span>
+				<span class="adv f_line"><a href="http://search.topfo.com/SeniorSearch_Capital.aspx">高级搜索</a></span>
+			</div>
+		</div>
+		<div class="sea_r">
+			<span class="key f_key">关键字：题材 机构 创业科技 新贵 机构 创业科技</span>
+			<span class="rel f_line"><a href="http://member.topfo.com/Publish/PublishMerchant1.aspx">免费发布</a> <a href="http://member.topfo.com/Register/Register.aspx">注册会员</a></span>
+		</div>
+		<div class="clear"></div>
+	</form>
+	</div>
+	<!--网址列表-->
+	<table border="0" cellspacing="0" cellpadding="0" class="tab1 f_14">
+      <tr>
+        <td colspan="6" class="col strong">投资频道</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://tz.topfo.com/">投资频道</a></td>
+        <td width="16%"><a href="http://search.topfo.com/CapitalSummary.aspx" target="_blank">资本总汇</a></td>
+        <td width="16%"><a href="http://cases.topfo.com/CaseList.aspx?t=08" target="_blank">投资案例 </a></td>
+        <td width="16%"><a href="http://tz.topfo.com/capital_news_list.aspx" target="_blank">投资资讯</a></td>
+        <td width="16%"><a href="http://tz.topfo.com/capital_policy_list.aspx" target="_blank">投资政策</a></td>
+        <td width="16%"><a href="http://tz.topfo.com/capital_study_list.aspx" target="_blank">投资学苑|</a></td>
+      </tr>
+
+      <tr>
+        <td colspan="6" class="col strong">融资频道</td>
+      </tr>
+      <tr>
+        <td><a href="http://rz.topfo.com">融资频道</a></td>
+        <td><a href="http://search.topfo.com/ProjectSummary.aspx" target="_blank">项目总汇</a></td>
+        <td><a href="http://rz.topfo.com/FineProject.aspx" target="_blank">优质项目</a></td>
+        <td><a href="http://cases.topfo.com/CaseList.aspx?t=02" target="_blank">融资案例</a></td>
+        <td><a href="http://elites.topfo.com/elite_list.aspx?tid=08" target="_blank">融资精英</a></td>
+        <td><a href="http://rz.topfo.com/ProjectNewsList.aspx" target="_blank">融资资讯</a></td>
+      </tr>
+
+      <tr>
+        <td colspan="6" class="col strong">政府招商</td>
+      </tr>
+      <tr>
+        <td><a href="http://zs.topfo.com/">招商频道</a></td>
+        <td><a href="http://search.topfo.com/MerchantSummary.aspx" target="_blank">政府招商项目</a></td>
+        <td><a href="http://zs.topfo.com/zszgIndex.aspx" target="_blank">招商中国</a></td>
+        <td><a href="http://zs.topfo.com/zs_area.aspx" target="_blank">优秀投资区域</a></td>
+        <td><a href="http://zs.topfo.com/zs_project.aspx" target="_blank">重大投资商机</a></td>
+        <td><a href="http://zs.topfo.com/org.aspx" target="_blank">优秀招商机构</a></td>
+      </tr>
+<!--
+      <tr>
+        <td colspan="6" class="col strong">分站</td>
+      </tr>
+      <tr>
+        <td>分站体系</td>
+        <td>分站章程</td>
+        <td>分站权利与义务</td>
+        <td>分站业务项目</td>
+        <td>分站工作流程</td>
+        <td>分站服务</td>
+      </tr>
+      <tr>
+        <td>常见问题</td>
+        <td>分站申请</td>
+        <td>分站汇总</td>
+        <td>分站动态</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+	  -->
+      <tr>
+        <td colspan="6" class="col strong">资讯频道</td>
+      </tr>
+      <tr>
+          <td><a href="http://tz.topfo.com/capital_news_list.aspx" target="_blank">投资资讯</a></td>
+          <td><a href="http://rz.topfo.com/ProjectNewsList.aspx" target="_blank"> 融资资讯</a></td>
+          <td><a href="http://zs.topfo.com/DynamicList.aspx" target="_blank">招商动态 </a></td>
+          <td><a href="http://news.topfo.com/Carve/CarveNewsList.aspx" target="_blank">创业新闻</a></td>
+          <td><a href="http://www.topfo.com/News/OpportunityNewsList.aspx" target="_blank">商机快讯</a></td>
+          <td><a href="http://www.topfo.com/News/EconomyNewsList.aspx" target="_blank">经济要闻</a></td>
+      </tr>
+    </table>
+</div>
+
+<!--新闻网-->
+<div class="con" id="nav_con_2" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">新闻类网址导航</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://www.topfo.com" target="_blank">中国招商投资网</a></td>
+        <td width="16%"><a href="http://www.ifeng.com/" target="_blank">凤凰网</a></td>
+        <td width="16%"><a href="http://news.sina.com.cn/" target="_blank">新浪新闻</a></td>
+        <td width="16%"><a href="http://news.sohu.com/" target="_blank">搜狐新闻</a></td>
+        <td width="16%"><a href="http://news.163.com/" target="_blank">网易新闻</a></td>
+        <td width="16%"><a href="http://news.qq.com/" target="_blank">腾讯新闻</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.people.com.cn/" target="_blank">人民网</a></td>
+        <td><a href="http://www.takungpao.com/index.html" target="_blank">大公报</a></td>
+        <td><a href="http://www.infzm.com/" target="_blank">南方周末</a></td>
+        <td><a href="http://chinese.wsj.com/gb/index.asp" target="_blank">华尔街日报</a></td>
+        <td><a href="http://news.china.com/" target="_blank">中华网新闻</a></td>
+        <td><a href="http://www.huanqiu.com/" target="_blank">环球时报</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.cyol.net/" target="_blank">中国青年报</a></td>
+        <td><a href="http://www.cnr.cn/" target="_blank">中国广播网</a></td>
+        <td><a href="http://www.ce.cn/" target="_blank">中国经济网</a></td>
+        <td><a href="http://www.gov.cn/jrzg/" target="_blank">中国政府网</a></td>
+        <td><a href="http://www.zaobao.com/" target="_blank">联合早报</a></td>
+        <td><a href="http://www.chinanews.com.cn/" target="_blank">中国新闻网</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.bjnews.com.cn/" target="_blank">新京报</a></td>
+        <td><a href="http://hsb.hsw.cn/2010-11/24/node_833.htm" target="_blank">华商报</a></td>
+        <td><a href="http://www.sznews.com/" target="_blank">深圳新闻网</a></td>
+        <td><a href="http://bjyouth.ynet.com/" target="_blank">北京青年报</a></td>
+        <td><a href="http://nf.nfdaily.cn/" target="_blank">南方报业网</a></td>
+        <td><a href="http://www.wccdaily.com.cn/epaper/hxdsb/html/2010-11/24/node_2.htm" target="_blank">华西都市报</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.ftchinese.com/" target="_blank">英国金融时报</a></td>
+		<td><a href="http://www.bbc.co.uk/ukchina/simp/" target="_blank">英国bbc中文网</a></td>
+		<td><a href="http://www.washingtonobserver.org/" target="_blank">华盛顿观察</a></td>
+		<td><a href="http://www.time.com/time/" target="_blank">时代周刊[美]</a></td>
+		<td><a href="http://www.swissinfo.ch/" target="_blank">瑞士中文网</a></td>
+		<td><a href="http://chinese.joins.com/gb/" target="_blank">韩国中央日报</a></td>
+      </tr>
+	  <tr>
+		  <td><a href="http://bbs.ifeng.com/" target="_blank">凤凰网论坛</a></td>
+		  <td><a href="http://forum.home.news.cn/index.jsp" target="_blank">新华网论坛</a></td>
+		  <td><a href="http://bbs.news.163.com/bbs/list.jsp?boardid=shishi" target="_blank">网易时事论坛</a></td>
+		  <td><a href="http://bbs1.people.com.cn/" target="_blank">人民网强国社区</a></td>
+		  <td><a href="http://cpc.people.com.cn/GB/191862/191863/index.html" target="_blank">直通中南海</a></td>
+		  <td><a href="http://www.tianya.cn/publicforum/articleslist/0/free.shtml" target="_blank">天涯杂谈</a></td>
+	  </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--金融网-->
+<div class="con" id="nav_con_3" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">金融/财经类网址列表</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://www.topfo.com" target="_blank">中国招商投资网</a></td>
+        <td width="16%"><a href="http://fund.eastmoney.com/" target="_blank">天天基金网</a></td>
+        <td width="16%"><a href="http://www.eastmoney.com/" target="_blank">东方财富网</a></td>
+        <td width="16%"><a href="http://www.yicai.com/" target="_blank">第一财经</a></td>
+        <td width="16%"><a href="http://www.cfi.net.cn/" target="_blank">中财网</a></td>
+        <td width="16%"><a href="http://www.forbeschina.com/" target="_blank">福布斯中文网</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.cs.com.cn/" target="_blank">中国证券报</a></td>
+        <td><a href="http://finance.ifeng.com/" target="_blank">凤凰财经</a></td>
+        <td><a href="http://www.ce.cn/" target="_blank">中国经济网</a></td>
+        <td><a href="http://www.cnfol.com/" target="_blank">中金在线</a></td>
+        <td><a href="http://www.cnstock.com/" target="_blank">中国证券网</a></td>
+        <td><a href="http://www.591hx.com/" target="_blank">华讯财经</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.newone.com.cn/" target="_blank">招商证券</a></td>
+        <td><a href="http://www.ebscn.com/index.html" target="_blank">光大证券</a></td>
+        <td><a href="http://www.szse.cn/" target="_blank">深圳证券交易所</a></td>
+        <td><a href="http://www.sse.com.cn/sseportal/ps/zhs/home.html" target="_blank">上海证券交易所</a></td>
+        <td><a href="http://www.cs.ecitic.com/" target="_blank">中信证券</a></td>
+        <td><a href="http://www.shfe.com.cn/" target="_blank">上海期货交易所</a></td>
+      </tr>
+	  <tr>
+	  <td><a href="http://www.gf.com.cn/" target="_blank">广发证券</a></td>
+	  <td><a href="http://www.xyzq.com.cn/xyzq/index.html" target="_blank">兴业证券</a></td>
+	  <td><a href="http://www.essence.com.cn/essence/index.html" target="_blank">安信证券</a></td>
+	  <td><a href="http://www.newone.com.cn/" target="_blank">招商证券</a></td>
+	  <td><a href="http://www.gtja.com/index/index.html" target="_blank">国泰君安</a></td>
+	  <td><a href="http://www.csrc.gov.cn/pub/newsite/" target="_blank">中国证监会</a></td>
+	  </tr>
+      <tr>
+        <td><a href="http://www.icbc.com.cn/icbc/" target="_blank">工商银行</a></td>
+        <td><a href="http://www.cmbchina.com/" target="_blank">招商银行</a></td>
+        <td><a href="http://www.ccb.com/cn/home/index.html" target="_blank">建设银行</a></td>
+        <td><a href="http://www.bankcomm.com/BankCommSite/cn/index.html" target="_blank">交通银行</a></td>
+        <td><a href="http://www.boc.cn/" target="_blank">中国银行</a></td>
+        <td><a href="http://www.gdb.com.cn/" target="_blank">广东发展银行</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.ecitic.com/bank/" target="_blank">中信银行</a></td>
+        <td><a href="http://www.psbc.com/" target="_blank">邮政储蓄银行</a></td>
+        <td><a href="http://www.sdb.com.cn/website/page" target="_blank">深圳发展银行</a></td>
+        <td><a href="http://www.xib.com.cn/" target="_blank">厦门国际银行</a></td>
+        <td><a href="http://www.cib.com.cn/netbank/cn/index.html" target="_blank">兴业银行</a></td>
+        <td><a href="http://www.cmbc.com.cn/" target="_blank">民生银行</a></td>
+      </tr>
+	   <tr>
+	  <td><a href="http://www.caihuanet.com/" target="_blank">财华网</a></td>
+	  <td><a href="http://www.sosostock.com/" target="_blank">搜股网</a></td>
+	  <td><a href="http://www.zhicheng.com/" target="_blank">至诚财经网</a></td>
+	  <td><a href="http://www.caikuu.com/" target="_blank">财库股票网</a></td>
+	  <td><a href="http://www.cf66888.com/" target="_blank">股市直通车</a></td>
+	  <td><a href="http://www.cnlist.com/" target="_blank">上市公司资讯网</a></td>
+	   </tr>
+	   <tr>
+	   <td><a href="http://blog.cnfol.com/" target="_blank">中金博客</a></td>
+	   <td><a href="http://bbs.gupiao8.com/" target="_blank">股票吧</a></td>
+	   <td><a href="http://jingji.cntv.cn/program/shichangfxs/01/index.shtml" target="_blank">CCTV2证券时间</a></td>
+	   <td><a href="http://www.secon.cn/templets/video/zhibo.htm" target="_blank">股市在线</a></td>
+	   <td><a href="http://video.cnfol.com/" target="_blank">中金在线直播</a></td>
+	   <td><a href="http://v.788111.com/index.shtml" target="_blank">大赢家宽频</a></td>
+	   </tr>
+	  <tr>
+	  <td><a href="http://bank.hangseng.com/1/2/home" target="_blank">恒生银行</a></td>
+	  <td><a href="http://www.hkbea.com.cn/" target="_blank">东亚银行</a></td>
+	  <td><a href="http://www.hsbc.com.cn/1/2/" target="_blank">汇丰中国银行</a></td>
+	  <td><a href="http://www.hsbc.com.hk/1/2/home" target="_blank">香港汇丰银行</a></td>
+	  <td><a href="https://home.americanexpress.com/home/hk/ch/home_p.shtml" target="_blank">美国运通银行</a></td>
+	  <td><a href="http://www.fubonbank.com.hk/web/html/index_c.html" target="_blank">香港富邦银行</a></td>
+	  </tr>
+	  <tr>
+	   <td><a href="http://www.pingan.com/" target="_blank">中国平安保险公司</a></td>
+	   <td><a href="http://www.chinalife.com.cn/" target="_blank">中国人寿保险公司</a></td>
+	   <td><a href="http://www.picc.com.cn/piccup/piccweb/picckg_v2.0/welcome.html" target="_blank">中国人保</a></td>
+	   <td><a href="http://www.taikang.com/" target="_blank">泰康人寿保险公司</a></td>
+	    <td><a href="http://www.newchinalife.com/" target="_blank">新华人寿保险公司</a></td>
+		<td><a href="http://www.circ.gov.cn/web/site0/" target="_blank">中国保监会</a></td>
+	  </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--邮件地址-->
+<div class="mail" id="nav_con_4" style="display:none;">
+	<div class="mail_l"></div>
+	<div class="mail_r">
+		<form method="post" target="_blank" name="mailForm" onsubmit='return log_submit();'>
+				<input type="hidden" name="u" value=""> 
+				<input type="hidden" name="user" value=""> 
+				<input type="hidden" name="LoginName" value=""> 
+				<input type="hidden" name="username" value=""> 
+				<input type="hidden" name="UserName" value=""> 
+				<input type="hidden" name="login_name" value=""> 
+				<input type="hidden" name="login" value=""> 
+				<input type="hidden" name="psw" value=""> 
+				<input type="hidden" name="language" value=""> 
+				<input type="hidden" name="pass" value=""> 
+				<input type="hidden" name="passwd" value=""> 
+				<input type="hidden" name="password" value=""> 
+				<input type="hidden" name="Password" value=""> 
+				<input type="hidden" name="login_password" value=""> 
+				<input type="hidden" name="url" value=""> 
+				<input type="hidden" name="BackURL" value=""> 
+		<span class="name">
+			邮箱名：<input name="mail_name" onfocus="this.select" class="inp_mail">
+			<select name="mailSelect"> 
+				<option selected>选择您的邮箱</option> 
+				<option value="http://mail.sina.com.cn/cgi-bin/login.cgi">@sina.com</option> 
+				<option value="http://reg.163.com/in.jsp?url=http://fm163.163.com/coremail/fcg/ntesdoor2?username=wd.dm.mailForm.name.value">@163.com</option> 
+				<option value="http://login.mail.sohu.com/chkpwd.php">@sohu.com</option> 
+				<option value="http://login.chinaren.com/zhs/servlet/Login;url;http:/mail.chinaren.com">@ChinaRen.com</option> 
+				<option value="http://bjweb.163.net/cgi/163/login_pro.cgi">@163.net</option> 
+				<option value="http://bjweb.mail.tom.com/cgi/163/login_pro.cgi">@Tom.com</option> 
+				<option value="http://webmail.21cn.com/NULL/NULL/NULL/NULL/NULL/SignIn.gen">@21cn.com</option> 
+				<option value="https://edit.bjs.yahoo.com/config/login">@yahoo.com.cn</option> 
+				<option value="http://entry.126.com/cgi/login">@126.com</option> 
+				<option value="http://g2wm.263.net/xmweb">@263.net</option> 
+				<option value="http://freemail.eyou.com/cgi-bin/login">@eyou.com</option> 
+				<option value="http://vip.sina.com/cgi-bin/login.cgi">@vip.sina.com</option> 
+				<option value="http://vip.163.com/payment/VipLogon.jsp">@vip.163.com</option> 
+				<option value="http://paymail.china.com/extend/gb/NULL/NULL/NULL/SignIn.gen">@China.com</option> 
+				<option value="http://mw1.elong.com/cgi-bin/weblogon.cgi">@elong.com</option> 
+				<option value="http://login.etang.com/servlet/login;BackURL;http:/mail.etang.com/cgi/door">@etang.com</option> 
+				<option value="http://www.citiz.net/login.jsp">@citiz.net</option> 
+				<option value="http://202.106.186.230/extend/newgb1/NULL/NULL/NULL/SignIn.gen">@email.com.cn</option> 
+	      	</select><br>
+			密　码：<input type="password" name="mail_password" onfocus="this.select" class="inp_mail">
+		</span>
+		<span class="ent">
+			请放心输入该邮箱密码，系统会加密跳转密码不会被记录。<br/>
+			<input type="submit" name="" value="" class="btn3">
+		</span>
+		</form> 
+	</div>
+	<div class="clear"></div>
+	<table border="0" cellspacing="0" cellpadding="0" class="tab4">
+      <tr>
+        <td width="10%"><a href="http://email.163.com/" target="_blank">网易163邮箱</a></td>
+        <td width="10%"><a href="http://mail.sina.com.cn/" target="_blank">新浪邮箱</a></td>
+        <td width="10%"><a href="http://mail.sohu.com/" target="_blank">搜狐邮箱</a></td>
+        <td width="10%"><a href="http://mail.tom.com/" target="_blank">TOM邮箱</a></td>
+        <td width="10%"><a href="http://www.126.com/" target="_blank">网易126邮箱</a></td>
+        <td width="10%"><a href="http://mail.10086.cn/" target="_blank">139手机邮箱</a></td>
+       <td width="10%"><a href="https://mail.qq.com/cgi-bin/loginpage" target="_blank">QQ邮箱</a></td>
+       <td width="10%"><a href="http://mail.cn.yahoo.com/" target="_blank">雅虎邮箱</a></td>
+       <td width="10%"><a href="https://www.google.com/accounts/ServiceLogin?service=mail&passive=true&rm=false&continue=http%3A%2F%2Fmail.google.com%2Fmail%2F%3Fui%3Dhtml%26zy%3Dl&bsv=1eic6yu9oa4y3&scc=1&ltmpl=default&ltmplcache=2" target="_blank">Gmail</a></td>
+       <td width="10%"><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1290663860&rver=6.1.6206.0&wp=MBI&wreply=http:%2F%2Fmail.live.com%2Fdefault.aspx&lc=2052&id=64855&mkt=zh-cn&cbcxt=mai&snsc=1" target="_blank">Hotmail</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.eyou.com/" target="_blank">亿邮</a></td>
+        <td><a href="https://mail.qq.com/cgi-bin/loginpage" target="_blank">QQ邮箱</a></td>
+        <td><a href="http://mail.sogou.com/" target="_blank">搜狗邮箱</a></td>
+        <td><a href="http://webmail15.189.cn/webmail/" target="_blank">189邮箱</a></td>
+        <td><a href="http://mail.wo.com.cn/" target="_blank">联通手机邮箱</a></td>
+        <td><a href="http://mail.qq.com/cgi-bin/loginpage?t=fox_loginpage&sid=,2,zh_CN&r=b2ca925e1c42cb7a69532a031ef7a1a9" target="_blank">foxmail</a></td>
+        <td><a href="http://www.263.net/" target="_blank">263邮箱</a></td>
+         <td><a href="http://mail.21cn.com/" target="_blank">21CN邮箱</a></td>
+        <td><a href="http://www.188.com/" target="_blank">188财富邮</a></td>
+         <td><a href="http://www.yeah.net/" target="_blank">网易Yeah.net邮箱</a></td>
+      </tr>
+    </table>
+</div>
+
+<!--休闲娱乐-->
+<div class="con" id="nav_con_5" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">休闲娱乐类网址</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="#" target="_blank">中国招商投资网</a></td>
+        <td width="16%"><a href="http://www.youku.com/" target="_blank">优酷网</a></td>
+        <td width="16%"><a href="http://www.tudou.com/" target="_blank">土豆网</a></td>
+        <td width="16%"><a href="http://v.ifeng.com/" target="_blank">凤凰宽频</a></td>
+        <td width="16%"><a href="http://www.xunlei.com/" target="_blank">迅雷看看</a></td>
+        <td width="16%"><a href="http://bb.news.qq.com/" target="_blank">腾讯视频</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://ent.ifeng.com/movie/" target="_blank">凤凰影视娱乐</a></td>
+        <td><a href="http://www.chinafilm.com/" target="_blank">中国电影网</a></td>
+         <td><a href="http://tv.sohu.com/hdtv/" target="_blank">搜狐高清</a></td>
+         <td><a href="http://video.sina.com.cn/movie/" target="_blank">新浪大片</a></td>
+         <td><a href="http://www.pptv.com/" target="_blank">PPTV</a></td>
+        <td><a href="http://www.funshion.com/" target="_blank">风行</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://mp3.baidu.com/" target="_blank">百度MP3</a></td>
+        <td><a href="http://mbox.kuwo.cn/" target="_blank">酷我音乐盒</a></td>
+        <td><a href="http://mp3.sogou.com/" target="_blank">搜狗音乐</a></td>
+        <td><a href="http://mp3.gougou.com/" target="_blank">狗狗音乐</a></td>
+        <td><a href="http://www.kugou.com/" target="_blank">酷狗</a></td>
+        <td><a href="http://www.qianqian.com/paihang.html?f=hao123" target="_blank">千千音乐</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://sports.sohu.com/" target="_blank">搜狐体育</a></td>
+        <td><a href="http://sports.qq.com/" target="_blank">腾讯体育</a></td>
+        <td><a href="http://sports.sina.com.cn/" target="_blank">新浪体育</a></td>
+       <td><a href="http://www.hoopchina.com/" target="_blank">虎扑体育</a></td>
+        <td><a href="http://2010.163.com/" target="_blank">网易体育</a></td>
+        <td><a href="http://sports.cntv.cn/" target="_blank">cctv5</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://tieba.baidu.com/" target="_blank">百度贴吧</a></td>
+        <td><a href="http://www.tianya.cn/" target="_blank">天涯社区</a></td>
+        <td><a href="http://bbs.163.com/" target="_blank">网易论坛</a></td>
+        <td><a href="http://club.sohu.com/" target="_blank">搜狐社区</a></td>
+        <td><a href="http://bbs.sina.com.cn/" target="_blank">新浪论坛</a></td>
+        <td><a href="http://bbs.ifeng.com/" target="_blank">凤凰论坛</a></td>
+      </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--读书/学习-->
+<div class="con" id="nav_con_6" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">读书/学习类网址</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://www.nlc.gov.cn/" target="_blank">国家图书馆</a></td>
+        <td width="16%"><a href="http://www.qnwz.cn/" target="_blank">青年文摘</a></td>
+        <td width="16%"><a href="http://www.shigeku.org/" target="_blank">诗歌库</a></td>
+        <td width="16%"><a href="http://www.duzhe.com/" target="_blank">读者</a></td>
+        <td width="16%"><a href="http://www.storychina.cn/" target="_blank">故事会</a></td>
+        <td width="16%"><a href="http://wind.yinsha.com/" target="_blank">且听风吟</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://book.qq.com/" target="_blank">腾讯读书</a></td>
+        <td><a href="http://book.sohu.com/" target="_blank">搜狐读书</a></td>
+        <td><a href="http://book.sina.com.cn/" target="_blank">新浪读书</a></td>
+        <td><a href="http://www.lcread.com/" target="_blank">连城书盟</a></td>
+        <td><a href="http://www.6dudu.com/book.htm" target="_blank">榕树下</a></td>
+        <td><a href="http://uutxt.com/" target="_blank">悠悠书盟</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--在线工具-->
+<div class="con" id="nav_con_7" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">在线工具网址</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://chaxun.1616.net/lieche.htm" target="_blank">列车时刻查询</a></td>
+        <td width="16%"><a href="http://www.qunar.com/" target="_blank">航班查询</a></td>
+        <td width="16%"><a href="http://www.13393.com/kuaidi.htm" target="_blank">快递查询</a></td>
+        <td width="16%"><a href="http://www.8684.cn/" target="_blank">深圳公交查询</a></td>
+        <td width="16%"><a href="http://weather.news.sina.com.cn/" target="_blank">天气预报</a></td>
+        <td width="16%"><a href="http://map.baidu.com/" target="_blank">地图查询</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.ip138.com/" target="_blank">IP地址查询</a></td>
+        <td><a href="http://quote.eastmoney.com/quote1_1.html" target="_blank">股票查询</a></td>
+        <td><a href="http://translate.google.com.hk/#" target="_blank">在线翻译</a></td>
+        <td><a href="http://i.maxthon.cn/tuan/index.htm" target="_blank">热门团购</a></td>
+        <td><a href="http://www.lottery.gov.cn/" target="_blank">体育彩票</a></td>
+        <td><a href="http://www.zhcw.com/" target="_blank">福利彩票</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://jd.zol.com.cn/topic/2038439.html" target="_blank">家电报价</a></td>
+        <td><a href="http://www.boc.cn/sourcedb/whpj/" target="_blank">外汇牌价</a></td>
+        <td><a href="http://auto.sohu.com/s2004/weizhangchaxun.shtml" target="_blank">交通违章查询</a></td>
+        <td><a href="http://www.13393.com/u/xingzuo/index.htm" target="_blank">星座查询</a></td>
+        <td><a href="http://car.autohome.com.cn/" target="_blank">汽车报价</a></td>
+        <td><a href="http://www.51jiemeng.com/" target="_blank">周公解梦</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--常用软件-->
+<div class="con" id="nav_con_8" style="display:none;">
+  <table border="0" cellspacing="0" cellpadding="0" class="tab2 f_14">
+      <tr>
+        <td colspan="6" class="col strong">常用软件网址</td>
+      </tr>
+      <tr>
+        <td width="16%"><a href="http://dl_dir.qq.com/qqfile/qq/QQ2010/QQ2010Beta.exe" target="_blank">qq2010</a></td>
+        <td width="16%"><a href="http://download.get.live.cn/files/441e36c0-fc83-4cb3-be33-621c9b1be881/Install_WLMessenger.exe" target="_blank">MSN</a></td>
+       <td width="16%"><a href="http://www.winrar.com.cn/download/wrar380sc.exe" target="_blank">WinRAR</a></td>
+        <td width="16%"><a href="http://ime.sogou.com/dl/sogou_pinyin_431d.exe" target="_blank">搜狗拼音</a></td>
+        <td width="16%"><a href="http://liveupdate.wopti.net/WoptiFree.zip" target="_blank">优化大师</a></td>
+        <td width="16%"><a href="http://www.jpwb.net/download/jpwb.exe" target="_blank">极品五笔</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://down.sandai.net/Thunder5.9.16.1306.exe" target="_blank">迅雷</a></td>
+        <td><a href="http://down.neoimaging.cn/neoimaging/NeoImaging3.1.1.58.exe" target="_blank">光影魔术手</a></td>
+        <td><a href="http://ttplayer.qianqian.com/download/ttpsetup.exe" target="_blank">千千静听</a></td>
+        <td><a href="http://dl.baofeng.com/storm3/Storm2012595.exe" target="_blank">暴风影音</a></td>
+        <td><a href="ftp://file4.mydrivers.com/mydrivers/mydrivers_DG_2009_V25_bd.zip" target="_blank">驱动精灵</a></td>
+        <td><a href="http://61.141.5.181/flashget3.0.0.1047cn.exe" target="_blank">网际快车</a></td>
+      </tr>
+      <tr>
+        <td><a href="http://images.nciku.cn/tools/imeshell/nshell/0.9.1.3/1/nShellInstaller_0_9_1_3.exe" target="_blank">及时译</a></td>
+        <td><a href="http://download.pplive.com/pplivesetup_black_0024.exe" target="_blank">PPLive</a></td>
+        <td><a href="http://dl.ijinshan.com/safe/setup_2.0.1.1199.exe" target="_blank">金山卫士</a></td>
+        <td><a href="http://www.yunduan.cn/swboxresource/softclub/CloudSetup0.9beta3_0814.exe" target="_blank">云端一装机</a></td>
+        <td><a href="http://dl.sd.keniu.com/setup.exe" target="_blank">可牛免费杀毒</a></td>
+        <td><a href="http://download.verycd.com/easyMule-Setup.exe" target="_blank">电驴</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+	<div class="exp f_exp">注册为拓富通会员,登录后可自定义导航分类和编辑网址列表.　&gt;&gt;<a href="#">免费注册会员</a></div>
+</div>
+
+<!--Bottom部分-->
+<div class="con">
+	<div class="link"><a href="http://www.topfo.com/aboutus/index.shtml">关于我们</a> - <a href="http://www.topfo.com/ContactUs.shtml">联系我们</a> - <a href="http://www.topfo.com/Aboutus/ServiceOnline/index.shtml">我们的服务</a> - <a href="http://www.topfo.com/ADbusiness/ad/ad_pay.htm">支付方式</a> - <a href="http://www.topfo.com/ADbusiness/ad/ad_first.htm">广告服务</a> - <a href="http://www.topfo.com/ServiceItem/ServiceItem.shtml">服务条款</a> - <a href="http://www.topfo.com/Map.shtml">网站地图</a> - <a href="http://www.topfo.com/zhaoping/index.shtml">诚聘英才</a> - <a href="http://www.topfo.com/Sys/Message.aspx">留言反馈</a> - <a href="http://www.topfo.com/link/">友情链接</a></div>
+	<div class="copy">
+		Copyright &copy; 1998-2010 <a href="http://www.topfo.com/">www.investguide.cn</a> All Rights Reserved<br>
+		拓富网络：<a href="http://www.topfo.com/">中国招商投资网</a> <a href="http://english.topfo.com/">英文站</a> <a href="#">专业服务网</a> <a href="http://www.topfo.com/">拓富排行榜</a> <a href="http://www.heromet.com/">贤泽投资</a>　支持合作：联合国工业发发展组织中国投资促进会 唯一授权合作网站<br>
+		经营许可证编号：<a href="http://www.miibeian.gov.cn/">粤B2-20040428</a>  ICP编号：粤B2-19981001<br>
+		客服热线:0755-82210116
+	</div>
+</div>
+</body>
+</html>
+

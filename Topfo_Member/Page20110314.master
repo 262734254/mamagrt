@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Page20110314.master.cs" Inherits="Page20110314" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://img2.topfo.com/member/css/payment.css" rel="stylesheet" type="text/css" />
+
+<link href="http://img2.topfo.com/member/css/common.css" rel="stylesheet" type="text/css" />
+<link href="http://img2.topfo.com/member/css/frist-page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://img2.topfo.com/member/js/trigger.js"></script>
+<script type="text/javascript" src="http://img2.topfo.com/member/js/trigger-1.js"></script>
+<script language="JavaScript" type="text/javascript" src="http://img2.topfo.com/member/js/navbar.js"></script>
+<script type="text/javascript" src="http://img2.topfo.com/member/js/tuofu-help.js"></script>
+
+    <title>拓富中心-拓富·中国招商投资网</title>
+
+    <script language="javascript" type="text/javascript">
+        function LogoutToURL(url)
+        {  
+
+              var ToURL;
+              if(url!="")
+                ToURL = url;
+              else
+                ToURL = location.href;   
+
+              location.href ='/Logout.aspx?url='+ToURL;
+        }
+       
+
+function menuuu(a)
+{
+
+   $("#Menu"+a+"").toggle() 
+}
+
+
+    </script>
+
+</head>
+<body style="word-break: break-all">
+<form runat="server" id="frmsearch">
+<div class="head-bg">
+  <div class="head">
+    <div class="logo"> <img src="http://img2.topfo.com/member/images/member_14.jpg" /> </div>
+    <div class="head-list">
+      <ul>
+        <li><a href="http://rz.topfo.com/">融资</a></li>
+        <li><a href="http://tz.topfo.com/">投资</a></li>
+        <li><a href="http://zs.topfo.com/">政府招商</a></li>
+        <li><a href="http://zycs.topfo.com/">资源超市</a></li>
+        <li><a href="http://zy.topfo.com/">资源联盟</a></li>
+        <li id="head-kf-bg"><a href="#">客服中心</a></li>
+        <li id="head-fh-bg"><a href="http://www.topfo.com/">返回首页</a></li>
+      </ul>
+    </div>
+    <div class="head-phon"> <img src="http://img2.topfo.com/member/images/member_20.jpg" /> </div>
+  </div>
+</div>
+<div class="caption">
+  <div class="hello">您好，欢迎<span class="f_cen strong"><asp:Label ID="lblUserName" runat="server" ></asp:Label></span>登录拓富中心！当前日期：<span class="f_cen"><asp:Label runat="server" ID="lblTime"></asp:Label> </span> <a href="javascript:void(0)"
+                    onclick="LogoutToURL('Login.aspx');return false;">退出</a>
+                    <div  style="display: none">
+                    <div >
+                        今天共发了<span class="red_2"><asp:Label ID="lblInfoCount" runat="server" Text="0"></asp:Label></span>条新的需求，新加入会员<span
+                            class="red_2"><asp:Label ID="lblMemberCount" runat="server" Text="0"></asp:Label></span>人</div>
+                </div>
+                     </div>
+  <div class="help"> <span onmouseover="ShowDivCity();" onmouseout="HiddenDivCity();"><img src="http://img2.topfo.com/member/images/member-help001.jpg" width="160" height="21" /></span>
+    <div id="DivCity" onmouseover="ShowDivCity();" onmouseout="HiddenDivCity();">
+      <ul>
+        <li style="background:url(http://img2.topfo.com/member/images/help-tb_03.jpg) no-repeat 0 center"><a href="http://member.topfo.com/InnerInfo/inbox2.aspx">我的短信息</a></li>
+        <li style="background:url(http://img2.topfo.com/member/images/help-tb_05.jpg) no-repeat 0 center"><a href="http://member.topfo.com/helper/InfoComment/commentReceive.aspx">给我的留言</a></li>
+        <li style="background:url(http://img2.topfo.com/member/images/help-tb_06.jpg) no-repeat 0 center"><a href="http://member.topfo.com/helper/MatchingInfo.aspx">我的订阅</a></li>
+       <li style="background:url(http://img2.topfo.com/member/images/help-tb_07.jpg) no-repeat 0 center"><a href="http://member.topfo.com/helper/FriendManager/FriendAttention.aspx">谁在关注我</a></li>
+        <li style="background:url(http://img2.topfo.com/member/images/help-tb_08.jpg) no-repeat 0 center"><a href="http://member.topfo.com/helper/FriendManager/FriendList.aspx">好友的更新</a></li>
+        <li style="background:url(http://img2.topfo.com/member/images/help-tb_08.jpg) no-repeat 0 center"><a href="http://member.topfo.com/PayManage/trade_info_wait.aspx">我的购物车</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div class="main">
+  <div class="member-left" id="fhy_menu">
+  <asp:Literal ID="ltMenu" runat="server"></asp:Literal>
+   
+  </div>
+  <div class="member-right">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+  </div>
+</div>   
+<script type="text/javascript" language="javascript">
+         function chkmenucolor(str)
+         { 
+            var Arr = document.getElementById("fhy_menu").getElementsByTagName("a");
+            for(var a=0;a<Arr.length;a++)
+            {
+                if(str.indexOf(Arr[a].href)!=-1)
+                {
+                    Arr[a].style.color="red";
+                }
+                else
+                {
+                    Arr[a].style.color="black";
+                }
+            }
+         }
+         chkmenucolor(location.href);
+        </script>
+  
+ <div class="foot-fg">
+  <div class="foot">
+    <p> <a href="http://www.topfo.com/aboutus/index.aspx" target="_blank">关于我们</a> | <a href="http://www.topfo.com/aboutus/pt/index.shtml"
+                            target="_blank">平台介绍</a> | <a href="http://www.topfo.com/Aboutus/ServiceOnline/index.shtml"
+                            target="_blank">我们的服务</a> | <a href="http://www.topfo.com/ADbusiness/ad/ad_pay.htm"
+                                target="_blank">支付方式</a> | <a href="#">广告服务</a> | <a href="http://www.topfo.com/ServiceItem/ServiceItem.shtml"
+                                    target="_blank">服务条款</a> | <a
+                        href="http://www.topfo.com/ContactUs.shtml" target="_blank">联系我们</a> | <a href="http://www.topfo.com/Sys/Message.aspx" target="_blank">留言反馈</a> | <a href="http://www.topfo.com/link/" target="_blank">友情链接</a> </p>
+    <p> 1998-2009 版权所有    InvestGuide.cn <script src="http://s16.cnzz.com/stat.php?id=2629166&web_id=2629166&show=pic" language="JavaScript"></script><br />
+      拓富科技 中国招商投资网  英文站  拓富网  贤泽投资 支持合作：联合国工业发展组织中国投资促进处唯一授权合作网站<br />
+      经营许可证编号为:粤B2-20040428 　ICP编号：粤B2-19981001
+      E-Mial:advise@tz888.cn </p>
+  </div>
+</div>
+<div style="display: none">
+
+                    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? " https://ssl." : " http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                    </script>
+
+                    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15744874-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+                </div>
+               </form>
+   
+</body>
+</html>

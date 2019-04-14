@@ -1,0 +1,31 @@
+body {
+  font: 62.5%/1.6 "Lucida Grande", "Lucida Sans", 
+  "Lucida Sans Unicode", Verdana, sans-serif;} 
+#pic {
+  width: 340px;height: 226px;position: relative;}
+#pic ul {
+  margin: 0;padding: 0;list-style: none;font-size: 1.8em;}
+#pic a {
+  text-decoration: none;color: #039;}
+#pic a .hotspot {
+  width: 50px;height: 50px;position: absolute;}
+#pic a .link {
+  position: absolute;display: block;width: 15em;}
+#pic a:hover .hotspot {
+  border: 1px solid #fff;}
+#pic a:hover .link {
+  color: #0066FF;}
+#pic a:hover {
+  border: none;}
+#pic .rich a .hotspot {
+  top: 6px;left: 50px;}
+#pic .andy a .hotspot {
+  top: 60px;left: 150px;}
+#pic .jeremy a .hotspot {
+  top: 140px;left: 220px;}
+#pic .rich a .link {
+  left: 0;}
+#pic .andy a .link {
+  left: 0;}
+#pic .jeremy a .link {
+  left: 0;}

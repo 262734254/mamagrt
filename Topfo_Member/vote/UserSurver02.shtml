@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网站改版调查-中国招商投资网</title>
+<link href="css/surver2.css" rel="stylesheet" type="text/css" />
+<link href="css/head.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="wrap">
+<!--#include file="head.html" -->
+
+
+
+<div class="redblack6"></div>
+
+<div class="topbg"><img src="images/bg01.gif" /></div>
+
+<div class="msgcont">
+<div class="bgimg"></div>
+<div class="pagecont">
+<h3 class="icr01">感谢您参与此次新版上线用户调查！</h3>
+<p>您将获得我们为您提供的参与奖，我们的客服人员会按照您留下的联系方式与您联络。本次调查结束后，将会进行幸运大抽奖，敬请继续关注拓富·中国招商投资网！</p>
+<p>您的支持是我们前进的最大动力！</p>
+<p>如果您还有其它问题，<a href="http://www.topfo.com/Sys/Message.aspx" target="_blank"><img src="images/btn_msg.gif" border="0" align="absmiddle" /></a></p>
+</div>
+<div class="bgimg02"></div>
+</div>
+
+<div class="blank20"></div>
+<div class="blank20"></div>
+<!--include file="/web13/Common/bottom.html" --></div>
+</div>
+
+</body>
+</html>

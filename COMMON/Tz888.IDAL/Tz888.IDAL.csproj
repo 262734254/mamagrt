@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EC654D9-ACA8-47E2-B201-59781959A5CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tz888.IDAL</RootNamespace>
+    <AssemblyName>Tz888.IDAL</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="advertise\IADlaunchInfo.cs" />
+    <Compile Include="Alliance\IAuditMail.cs" />
+    <Compile Include="Alliance\IConsumeInfos.cs" />
+    <Compile Include="Alliance\IConsumeRepay.cs" />
+    <Compile Include="Alliance\INotice.cs" />
+    <Compile Include="Alliance\IResourcesNotice.cs" />
+    <Compile Include="Alliance\IUserInfo.cs" />
+    <Compile Include="Common\ICommonFunction.cs" />
+    <Compile Include="Common\IDictionaryInfo.cs" />
+    <Compile Include="Common\IIndustry.cs" />
+    <Compile Include="Common\IInquiry.cs" />
+    <Compile Include="Common\IParameter.cs" />
+    <Compile Include="Common\ISetCapital.cs" />
+    <Compile Include="Common\ISetCurrency.cs" />
+    <Compile Include="Common\ISetMerchantAttribute.cs" />
+    <Compile Include="Common\IZoneSelect.cs" />
+    <Compile Include="Company\ICompanyInfoTab.cs" />
+    <Compile Include="Company\ICompanyMade.cs" />
+    <Compile Include="Company\ICompanyShow.cs" />
+    <Compile Include="Company\ILMOrderTab.cs" />
+    <Compile Include="Company\INarrowAdInfoTab.cs" />
+    <Compile Include="Email\IEmail.cs" />
+    <Compile Include="IAccountInfo.cs" />
+    <Compile Include="IAreaImg.cs" />
+    <Compile Include="IAreaText.cs" />
+    <Compile Include="IAutoSendMsg.cs" />
+    <Compile Include="IBusinesProcess.cs" />
+    <Compile Include="ICard.cs" />
+    <Compile Include="IloanscontactsTab.cs" />
+    <Compile Include="IloansInfo.cs" />
+    <Compile Include="IloansInfoTab.cs" />
+    <Compile Include="Info\ICarveOutInformationService.cs" />
+    <Compile Include="ICollection.cs" />
+    <Compile Include="ICommendDAL.cs" />
+    <Compile Include="IConn.cs" />
+    <Compile Include="ICustomInfo.cs" />
+    <Compile Include="IEnterprise.cs" />
+    <Compile Include="IErrorBase.cs" />
+    <Compile Include="IFinance.cs" />
+    <Compile Include="IGoodFriend.cs" />
+    <Compile Include="IGovernment.cs" />
+    <Compile Include="IIndex_Edit.cs" />
+    <Compile Include="IInnerInfo.cs" />
+    <Compile Include="ILeaveMsg.cs" />
+    <Compile Include="ILog.cs" />
+    <Compile Include="ILoginInfoIM.cs" />
+    <Compile Include="IMemberInfo.cs" />
+    <Compile Include="IMemberResource.cs" />
+    <Compile Include="IMerchantChanel.cs" />
+    <Compile Include="IMerchantOppor.cs" />
+    <Compile Include="IMerchantSite.cs" />
+    <Compile Include="InfoStatic\IInfoStaticQueueTab.cs" />
+    <Compile Include="InfoStatic\ISetInfoPageStaticTab.cs" />
+    <Compile Include="Info\ICapitalInfoArea.cs" />
+    <Compile Include="Info\IInfoContact.cs" />
+    <Compile Include="Info\IInfoDefaultDEF.cs" />
+    <Compile Include="Info\IInfoViewCollection.cs" />
+    <Compile Include="Info\IMainInfo.cs" />
+    <Compile Include="Info\IMatchInfo.cs" />
+    <Compile Include="Info\IOpportunityInfol.cs" />
+    <Compile Include="Info\IReportTab.cs" />
+    <Compile Include="Info\ISetDefaultValue.cs" />
+    <Compile Include="Info\ISetSubDefaultValue.cs" />
+    <Compile Include="Info\IShortInfo.cs" />
+    <Compile Include="Info\V124\ICapitalInfo.cs" />
+    <Compile Include="Info\V124\IMerchantZone.cs" />
+    <Compile Include="IOrderManage.cs" />
+    <Compile Include="IPageIniControl.cs" />
+    <Compile Include="IPayPwd.cs" />
+    <Compile Include="ISendNotice.cs" />
+    <Compile Include="IStrikeOrder.cs" />
+    <Compile Include="ISubscribeSet.cs" />
+    <Compile Include="ITFZS.cs" />
+    <Compile Include="ITPMerchant.cs" />
+    <Compile Include="ITPPicture.cs" />
+    <Compile Include="ITPVideo.cs" />
+    <Compile Include="IUserParameters.cs" />
+    <Compile Include="IVipMsg.cs" />
+    <Compile Include="IVoucherConvert.cs" />
+    <Compile Include="Koubei\IJoinkoubei.cs" />
+    <Compile Include="LoginInfo\ICommon.cs" />
+    <Compile Include="LoginInfo\ILoginInfo.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="Info\ICapitalInfo.cs" />
+    <Compile Include="Info\ICommon.cs" />
+    <Compile Include="Info\IInfoContactMan.cs" />
+    <Compile Include="Info\IInfoResource.cs" />
+    <Compile Include="Info\IMarchantInfo.cs" />
+    <Compile Include="Info\IProjectInfo.cs" />
+    <Compile Include="IPay.cs" />
+    <Compile Include="IPermission.cs" />
+    <Compile Include="LoginInfo\IMember.cs" />
+    <Compile Include="Manage\IMenuPermission.cs" />
+    <Compile Include="Manage\IPermission.cs" />
+    <Compile Include="MyHome\IHomeLink.cs" />
+    <Compile Include="MyHome\IHomeType.cs" />
+    <Compile Include="news\INewsTab.cs" />
+    <Compile Include="news\INewsTypeTab.cs" />
+    <Compile Include="news\INewsViewTab.cs" />
+    <Compile Include="Order\IndustryReportIDAL.cs" />
+    <Compile Include="Order\OrderLinkIDAL.cs" />
+    <Compile Include="Order\OrderMainIDAL.cs" />
+    <Compile Include="PayPwd.cs" />
+    <Compile Include="Professional\OrganizationTypeIDAL.cs" />
+    <Compile Include="Professional\ProfessionalinfoIDAL.cs" />
+    <Compile Include="Professional\ProfessionalLinkIDAL.cs" />
+    <Compile Include="Professional\ProfessionalPleaseIDAL.cs" />
+    <Compile Include="Professional\ProfessionaltalentsIDAL.cs" />
+    <Compile Include="Professional\ProfessionalTypeIDAL.cs" />
+    <Compile Include="Professional\ProfessionalviewIDAL.cs" />
+    <Compile Include="Register\common.cs" />
+    <Compile Include="Register\IEnterpriseRegister.cs" />
+    <Compile Include="Register\IGovernmentRegister.cs" />
+    <Compile Include="Register\IMemberInfo.cs" />
+    <Compile Include="Register\IOrgRegister.cs" />
+    <Compile Include="Register\ISEOLoginTab.cs" />
+    <Compile Include="Register\IVIPMemberRegister.cs" />
+    <Compile Include="Register\LoginInfo.cs" />
+    <Compile Include="Search\ISearchInfo.cs" />
+    <Compile Include="SendMsg\MobileMsg.cs" />
+    <Compile Include="Subject\ISubjectExtend.cs" />
+    <Compile Include="TFZS\ICommon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TFZS\IExpressTarget.cs" />
+    <Compile Include="TFZS\IMainTarget.cs" />
+    <Compile Include="TFZS\IMeasureStandard.cs" />
+    <Compile Include="TFZS\ITFZS_ProjectDetaiSub.cs" />
+    <Compile Include="IUserInfoH.cs" />
+    <Compile Include="WebUnion\IWebUnion_UserInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tz888.Model\Tz888.Model.csproj">
+      <Project>{059992ED-C5FF-4E37-A3F1-BC4FA6854304}</Project>
+      <Name>Tz888.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,76 @@
+/* CSS Document */
+
+*{margin:0;padding:0;}
+
+BODY {FONT-SIZE: 12px;COLOR: #555555;LINE-HEIGHT: 160%;	FONT-FAMILY: "ËÎÌו";padding: 2px 0 0 0;text-align:center; background:#ffffff;}
+
+table,tr,td{font:12px/200% "ËÎÌו";}
+
+ul,li{ list-style:none;}
+
+img,img a{border:0;}
+
+input,select,option{font-size:12px;}
+
+.clear{clear:both;}
+.clear_2{{font:0px/0px sans-serif;display:block;clear:both;}
+
+.chengcu{
+	color:#F75F03;
+	font-weight: bold;
+}
+
+.blank8 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px;dispaly:block;
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+
+
+.area_1{border:1px solid #AA9696;background:#ffffff;padding:3px;line-height:18px;}
+
+.bottom_blank8{margin-bottom:10px;clear:both}
+
+.up_blank8{margin-top:10px;clear:both}
+.rrll_blank{margin:0 10px;}
+
+.fb{font-weight: bold;}
+
+
+A:link,A:visited,A:active {	COLOR: #000000; TEXT-DECORATION: none}
+A:hover {COLOR: #ff0000;text-decoration: underline;}
+
+
+A.chenglink:link, A.chenglink:visited{
+	COLOR: #F87120;
+	TEXT-DECORATION: none
+}
+
+A.chenglink:hover,A.chenglink:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+
+A.blue:link,A.blue:visited,A.blue:active {	COLOR: #08099F; text-decoration: underline;}
+A.blue:hover {COLOR: #F87120;text-decoration: underline;}
+
+A.Spaces:link    {}
+A.Spaces:visited {}
+A.Spaces:active  {}
+A.Spaces:hover   {left: 1px;top: 1px;position: relative;}
+
+
+.left_mar_1{padding-left:10px;}
+.left_mar_2{padding-left:20px;}
+.left_mar_3{margin-left:25px;}
+
+
+
+.transparent{
+background-color:#ffffff;
+filter:alpha(opacity=30)
+-moz-opacity:0.30;
+opacity:0.30;
+
+}

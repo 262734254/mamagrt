@@ -1,0 +1,263 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class PayManage_trade_info_list : Tz888.Common.Pager.BasePage
+{
+    Tz888.BLL.Conn bll = new Tz888.BLL.Conn();
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        bool isTof = Page.User.IsInRole("GT1002");
+      
+        if (isTof)
+        {
+            Page.MasterPageFile = "/indexTof.master";
+        }
+        else
+        {
+            Page.MasterPageFile = "/MasterPage.master";
+        }
+    }
+    public string GetTypeName(object str)
+    {
+        if (str.ToString().Trim() == "Capital")
+        {
+            return "投资资源";
+        }
+        if (str.ToString().Trim() == "Project")
+        {
+            return "融资资源";
+        }
+        if (str.ToString().Trim() == "Merchant")
+        {
+            return "招商资源";
+        }
+        else
+        {
+            return "";
+        }
+
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Page.User.Identity.Name == null || Page.User.Identity.Name.Trim() == "")
+        {
+            Response.Redirect("../Login.aspx");
+        }
+        if (!Page.IsPostBack)
+        {
+            ViewState["pagesize"] = 15;
+            ViewState["CurrPage"] = 1;
+            bind();
+        }
+      
+    }
+    public string GetStr(object str, int _lenght)
+    {
+        if (str.ToString().Length > _lenght)
+        {
+            return str.ToString().Substring(0, _lenght);
+        }
+        else
+        {
+            return str.ToString();
+        }
+    }
+    public void bind()
+    {
+        string strWhere = "";
+        string LoginName = Page.User.Identity.Name;
+        long CurrPage = Convert.ToInt64(ViewState["CurrPage"]);
+        long TotalCount = 0;
+        long PageSize = Convert.ToInt64(ViewState["pagesize"]);
+        //未指定搜索条件
+        lblUserPoint.Text= OnlineStrike.getUserPoint(LoginName).ToString();
+
+        if (ddldiff.Value.Trim() == "all" && ddltype.Value.Trim() == "all" && ddluserType.Value.Trim()=="all")
+        {
+            strWhere = "LoginName='" + LoginName + "'";
+        }
+        //按照资源类型搜索
+        if (ddldiff.Value.Trim() == "all" && ddltype.Value.Trim() != "all" && ddluserType.Value.Trim() == "all")
+        {
+            strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "'";
+        }
+        //按用户类型搜索
+        if (ddldiff.Value.Trim() == "all" && ddltype.Value.Trim() == "all" && ddluserType.Value.Trim() != "all")
+        {
+            strWhere = "LoginName='" + LoginName + "'";
+        }
+        //按时间搜索
+        if (ddldiff.Value.Trim() != "all" && ddltype.Value.Trim() == "all" && ddluserType.Value.Trim() == "all")
+        {
+            if (ddldiff.Value.Trim() == "90")
+            {
+                strWhere = "LoginName='" + LoginName + "' and DateDiff(d,ConsumeTime,getdate())>" + ddldiff.Value.Trim();
+            }
+            else
+            {
+                strWhere = "LoginName='" + LoginName + "' and DateDiff(d,ConsumeTime,getdate())<" + ddldiff.Value.Trim();
+            }
+        }
+        //按时间与资源类型
+        if (ddldiff.Value.Trim() != "all" && ddltype.Value.Trim()!= "all" && ddluserType.Value.Trim() == "all")
+        {
+            if (ddldiff.Value.Trim() == "90")
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "' and DateDiff(d,ConsumeTime,getdate())>" + ddldiff.Value.Trim();
+            }
+            else
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "' and DateDiff(d,ConsumeTime,getdate())<" + ddldiff.Value.Trim();
+            }
+        }
+       //按时间与用户类型
+        if (ddldiff.Value.Trim() != "all" && ddltype.Value.Trim() == "all" && ddluserType.Value.Trim() != "all")
+        {
+            if (ddldiff.Value.Trim() == "90")
+            {
+                strWhere = "LoginName='" + LoginName + "'";
+            }
+            else
+            {
+                strWhere = "LoginName='" + LoginName + "'";
+            }
+        }
+        //按资源用户类型
+        if (ddldiff.Value.Trim()== "all" && ddltype.Value.Trim() != "all" && ddluserType.Value.Trim() != "all")
+        {
+            if (ddldiff.Value.Trim() == "90")
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "'";
+            }
+            else
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "'";
+            }
+        }
+        //按时间 用户类型 资源类型
+        if (ddldiff.Value.Trim() != "all" && ddltype.Value.Trim() != "all" && ddluserType.Value.Trim() != "all")
+        {
+            if (ddldiff.Value.Trim() == "90")
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "' and DateDiff(d,ConsumeTime,getdate())>" + ddldiff.Value.Trim();
+            }
+            else
+            {
+                strWhere = "LoginName='" + LoginName + "' and InfoTypeID='" + ddltype.Value.Trim() + "' and DateDiff(d,ConsumeTime,getdate())<" + ddldiff.Value.Trim();
+            }
+        }
+        DataTable dt = bll.GetList("ConsumeRecVIW", "ID", "*", strWhere, "ID desc", ref CurrPage, PageSize, ref TotalCount);
+        lblCount.Text = TotalCount.ToString();
+        lblPageCount.Text = System.Math.Ceiling(Convert.ToDouble(TotalCount) / Convert.ToDouble(PageSize)).ToString();
+        lblCurrPage.Text = CurrPage.ToString();
+        txtPage.Value = CurrPage.ToString();
+        lblCount.Text = TotalCount.ToString();
+        Pager();
+        myList.DataSource = dt;
+        myList.DataBind();
+
+    }
+    public void Pager()
+    {
+        if (ViewState["CurrPage"].ToString() == lblPageCount.Text)
+        {
+            NextPage.Enabled = false;
+            LastPage.Enabled = false;
+            if (lblPageCount.Text != "1")
+            {
+                FirstPage.Enabled = true;
+                PerPage.Enabled = true;
+            }
+        }
+        if (Convert.ToInt32(ViewState["CurrPage"]) < Convert.ToInt32(lblPageCount.Text))
+        {
+
+            if (lblPageCount.Text != "1")
+            {
+                NextPage.Enabled = true;
+                LastPage.Enabled = true;
+                FirstPage.Enabled = true;
+                PerPage.Enabled = true;
+            }
+        }
+        if (ViewState["CurrPage"].ToString() == "1")
+        {
+            FirstPage.Enabled = false;
+            PerPage.Enabled = false;
+            if (Convert.ToInt32(lblPageCount.Text) > 1)
+            {
+                NextPage.Enabled = true;
+                LastPage.Enabled = true;
+            }
+        }
+        if (lblCount.Text == "0" || lblCount.Text == "1")
+        {
+            FirstPage.Enabled = false;
+            PerPage.Enabled = false;
+            NextPage.Enabled = false;
+            LastPage.Enabled = false;
+        }
+    }
+    protected void button_ServerClick(object sender, EventArgs e)
+    {
+        bind();
+    }
+    protected void FirstPage_Click(object sender, EventArgs e)
+    {
+        ViewState["CurrPage"] = 1;
+        bind();
+    }
+    protected void PerPage_Click(object sender, EventArgs e)
+    {
+        ViewState["CurrPage"] = Convert.ToInt64(ViewState["CurrPage"]) - 1;
+        bind();
+    }
+    protected void NextPage_Click(object sender, EventArgs e)
+    {
+        ViewState["CurrPage"] = Convert.ToInt64(ViewState["CurrPage"]) + 1;
+        bind();
+    }
+    protected void LastPage_Click(object sender, EventArgs e)
+    {
+        ViewState["CurrPage"] = lblPageCount.Text;
+        bind();
+    }
+    protected void btnGo_ServerClick(object sender, EventArgs e)
+    {
+        ViewState["CurrPage"] = txtPage.Value.Trim();
+        bind();
+    }
+    protected void PageSize10_Click(object sender, EventArgs e)
+    {
+        ViewState["pagesize"] = 10;
+        PageSize10.ForeColor = System.Drawing.Color.Red;
+        PageSize20.ForeColor = System.Drawing.Color.Blue;
+        PageSize30.ForeColor = System.Drawing.Color.Blue;
+        bind();
+    }
+    protected void PageSize20_Click(object sender, EventArgs e)
+    {
+        ViewState["pagesize"] = 20;
+        PageSize20.ForeColor = System.Drawing.Color.Red;
+        PageSize10.ForeColor = System.Drawing.Color.Blue;
+        PageSize30.ForeColor = System.Drawing.Color.Blue;
+        bind();
+    }
+    protected void PageSize30_Click(object sender, EventArgs e)
+    {
+        ViewState["pagesize"] = 30;
+        PageSize30.ForeColor = System.Drawing.Color.Red;
+        PageSize10.ForeColor = System.Drawing.Color.Blue;
+        PageSize20.ForeColor = System.Drawing.Color.Blue;
+        bind();
+    }
+
+}

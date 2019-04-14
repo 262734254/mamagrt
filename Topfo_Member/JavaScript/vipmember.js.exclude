@@ -1,0 +1,332 @@
+﻿function init()
+{
+  var ManageType = document.getElementById("<%= hidManageType.ClientID %>");
+  var str=window.location.href; 
+  var es1=/ApplyID=/; 
+  var typeVaule;
+  if(es1.exec(str))//修改
+  { 
+    typeVaule=RegExp.rightContext; 
+    var   a   =   document.getElementsByName("ManageType");   
+   for(var i=0;i<a.length;i++)   
+   {   
+      if(a[i].value==typeVaule)
+      {
+        a[i].checked=true;
+        break;
+      }
+   }
+    changeManageType(typeVaule);
+  }
+  else//添加
+  { 
+     changeManageType(1003);   
+  }
+    //rem1.className = "";
+    //rem2.className = "";
+   // rem3.className = "";
+    clearPage();
+}
+function clearPage()
+{
+	CheckItem(0,'OrgName',rem1);
+    CheckItem(0,'RealName',rem2);
+    CheckItem(0,'Tel',rem3);
+    CheckItem(0,'Mobile',rem4);
+    CheckItem(0,'email',rem5);
+}
+function changetype1(rem)
+{
+    rem.className = "tdright";    
+}
+function changetype2(rem)
+{
+    rem.className = "";    
+}
+function changeManageType(type)
+{     
+    var name = document.getElementById("<%= lbOrgName.ClientID %>");
+    var ManageType = document.getElementById("<%= hidManageType.ClientID %>");
+    if(type==1003)
+    {
+       divOrgName.style.display = "block";
+       divPosition.style.display = "none";
+       name.innerHTML = "公司名称：";
+     }		
+    if(type==1001)    
+    {
+        divOrgName.style.display = "none"; 
+        divPosition.style.display = "none";
+    }
+     if(type==1004)
+     {
+        divOrgName.style.display = "block";
+        divPosition.style.display = "block";
+        name.innerHTML = "机构名称：";
+      }
+      ManageType.value = type;
+      clearPage();
+}
+
+//tag 是否需要验证（0：会员类型的切换，不要验证 ; 1：填写验证）
+var isValid= true;
+var isValid1=true;
+function CheckItem(tag,type,output)
+{
+   var src = "";
+   if(type=="OrgName")
+   {
+       if(tag==0)
+       {
+         output.innerHTML = "提醒：请按照公司营业执照上面的全称填写.";
+         changetype2(output);
+         document.getElementById("imgOrgName").style.display = "none";
+         isValid =  false;
+         isValid1 =  true;
+       }
+       else
+       {
+           src = document.getElementById("tbOrgName").value; 
+           if(src =="" || src == null )
+          {
+             output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>名称不能为空.";	
+             document.getElementById("imgOrgName").style.display = "none";			
+             changetype1(output);
+             isValid =  false;
+             return false;
+          }	
+          else
+          {
+             output.innerHTML = "提醒：请按照公司营业执照上面的全称填写.";
+             changetype2(output);
+             document.getElementById("imgOrgName").style.display = "block";
+             isValid =  true;
+           }
+       }
+   }
+    if(type=="RealName")
+   {
+      if(tag==0)
+       {
+        output.innerHTML = "提醒：请填写您的真实姓名.";
+          changetype2(output);
+          document.getElementById("imgRealName").style.display = "none";
+         isValid =  false;
+         isValid1 =  true;          
+       }
+       else
+       {
+           src = document.getElementById("tbRealName").value; 
+           if(src =="" || src == null )
+          {
+             output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>姓名不能为空.";	
+             document.getElementById("imgRealName").style.display = "none";			
+             changetype1(output);        
+             isValid = false;
+             return false;
+          }	
+          else
+          {
+              output.innerHTML = "提醒：请填写您的真实姓名.";
+              changetype2(output);
+              document.getElementById("imgRealName").style.display = "block";
+              isValid = true;
+          }
+      }
+   }
+   if(type=="Position")
+   {
+      if(tag==0)
+       {
+             output.innerHTML = "";
+             changetype2(output);
+             document.getElementById("imgPosition").style.display = "none";
+             isValid =  false;
+             isValid1 =  true;
+       }
+       else
+       {
+         var ManageType = document.getElementById("<%= hidManageType.ClientID %>");
+         if( ManageType.value ==1004)
+         {
+             src = document.getElementById("tbPosition").value; 
+              if(src =="" || src == null )
+              {
+                 output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>职务不能为空.";	
+                 document.getElementById("imgOrgName").style.display = "none";			
+                 changetype1(output);
+                 isValid =  false;
+                 return false;
+              }	
+              else
+              {
+                 output.innerHTML = "";
+                 changetype2(output);
+                 document.getElementById("imgPosition").style.display = "block";
+                 isValid =  true;
+               }
+          }
+      }
+   }
+   if(type=="Tel")
+   { 
+     if(tag==0)
+       {
+         output.innerHTML = "";
+          changetype2(output);
+          document.getElementById("imgTel").style.display = "none";
+             isValid =  false;
+             isValid1 =  true;
+       }
+       else
+       {
+          if (!checkTel())
+          {
+             output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>电话号码填写错误.";	
+             document.getElementById("imgTel").style.display = "none";	
+             changetype1(output);	
+           
+             isValid =  false;
+             return false;
+          }
+          else
+          {
+              output.innerHTML = "";
+              changetype2(output);
+              document.getElementById("imgTel").style.display = "block";
+              isValid = true;
+          }
+      }
+   }
+   
+     if(type=="Mobile")
+   { 
+     if(tag==0)
+       {
+        output.innerHTML = "";
+          changetype2(output);
+          document.getElementById("imgMobile").style.display = "none";
+             isValid =  false;
+             isValid1 =  true;
+       }
+       else
+       {
+           src = document.getElementById("txtMobile").value; 
+          if (!checkMobile(src))
+          {
+             output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>手机填写错误.";	
+             document.getElementById("imgMobile").style.display = "none";	
+             changetype1(output);	
+             isValid = false;	
+             return false;
+          }	
+          else
+          {
+              output.innerHTML = "";
+              changetype2(output);
+              document.getElementById("imgMobile").style.display = "block";
+              isValid = true;
+          }
+      }
+    }
+   if(type=="email")
+   {
+   if(tag==0)
+       {
+        output.innerHTML = "请务必填写真实,并确认是您最常用的电子邮.";
+         changetype2(output);
+         document.getElementById("imgEmail").style.display = "none";
+             isValid =  false;
+             isValid1 =  true;
+       }
+       else
+       {
+          src = document.getElementById("txtEmail").value; 
+          var objRegExp  = /^[a-z0-9]([a-z0-9_\-\.]*)@([a-z0-9_\-\.]*)(\.[a-z]{2,4}(\.[a-z]{2}){0,2})$/i;
+           if(src =="" || src == null )
+          {
+             output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>邮箱不能为空.";	
+             document.getElementById("imgEmail").style.display = "none";
+             changetype1(output);
+              isValid = false;
+             return false;
+          }	
+          else if (!objRegExp.test(src))
+          {
+	         output.innerHTML = "<img src='../images/Application/icon_wrong.gif'/>电子邮件的格式不对";
+	         document.getElementById("imgEmail").style.display = "none";
+	         changetype1(output);
+	          isValid =  false;
+	          alert("email2"+isValid);			
+	         return false;
+          }
+          else
+          {
+             output.innerHTML = "请务必填写真实,并确认是您最常用的电子邮.";
+             changetype2(output);
+             document.getElementById("imgEmail").style.display = "block";
+             isValid = true;
+           }
+       }
+     }
+ } 
+ 
+	function checkTel()
+	{
+		/*\d 代表一个数字
+{7,8} 代表7－8位数字（表示电话号码）
+{3,} 代表分机号码
+d{2,3} 代表区号
+\+]\d{2,3} 代表国际区号*/
+        var me = false;
+		var t1 = document.getElementById("txtTelCountry").value; 
+		var t2 = document.getElementById("txtTelZoneCode").value; 
+		var t3 = document.getElementById("txtTelNumber").value; 
+		if(t1==""|| t1 == null ||t2==""|| t2 == null ||t3==""|| t3 == null )
+		{
+		     me = false;
+		      if (!me){ me = false;}
+          return me;
+		}
+		else
+		{
+			var phone=t1+"-"+t2+"-"+t3;		   
+	    //  var p1 = /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/;
+            var p1 = /^(([0\+]\d{2,3}-)?(0\d{2,3})-)?(\d{7,8})(-(\d{3,4}))?(,(\d{7,8})(-(\d{3,4}))?)*$/;
+            var me = false;
+            if (p1.test(phone))  me=true;
+            if (!me){ me = false;}
+          return me;
+	    }
+	}
+		
+ 	function checkMobile(strValue)
+	{
+	/*^13\d{5,9}$/ //130–139。至少5位，最多9位
+/^153\d{4,8}$/ //联通153。至少4位，最多8位
+/^159\d{4,8}$/ //移动159。至少4位，最多8位 */
+        var mobile=strValue;
+        var reg0 = /^13\d{5,9}$/;
+        var reg1 = /^153\d{4,8}$/;
+        var reg2 = /^159\d{4,8}$/;
+        var reg3 = /^0\d{10,11}$/;
+        var my = false;
+        if (reg0.test(mobile))my=true;
+        if (reg1.test(mobile))my=true;
+        if (reg2.test(mobile))my=true;
+        if (reg3.test(mobile))my=true;
+        if (!my){       
+            my = false;
+        }        
+        return my;	
+	}
+	function CheckSubmit(source,arg)
+	{
+	    CheckItem(1,'OrgName',rem1);
+        CheckItem(1,'RealName',rem2);
+        CheckItem(1,'Tel',rem3);
+        CheckItem(1,'Mobile',rem4);
+        CheckItem(1,'email',rem5);
+        alert(isValid);
+        arg.IsValid=isValid & isValid1 ;
+	}

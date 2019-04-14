@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<regex>
+		<b><![CDATA[xxx,(?<id>[0-9]+).html$]]></b>
+		<a><![CDATA[default.aspx]]></a>
+	</regex>
+	<regex>
+		<!--重写以后的虚拟地址-->
+		<b><![CDATA[(?<d>([a-zA-Z0-9\s])*).html$]]></b>
+		<!--实际地址-->
+		<a><![CDATA[${d}.aspx]]></a>
+	</regex>
+</root>
+

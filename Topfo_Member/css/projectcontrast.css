@@ -1,0 +1,84 @@
+.mainbox{
+	width: 948px;
+	margin:0 auto;
+}
+.mainbox a:link,.mainbox a:visited,.mainbox a:active{color:#162580;}
+.mainbox A:hover   {	color:#ff0000;	text-decoration: underline;}
+.mtoptitle{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #333333;
+	font-size: 14px;
+	padding: 15px 0 5px 5px;}
+.mtoppublish{
+	padding: 10px 0 0 0;
+	background-position: 0px 0px;
+}
+.mtoppublish .left{
+	width: 400px;
+	float: left;
+}
+.mtoppublish .right{
+	background-image: url(../images/project/list/buttom_pfreebg.gif);
+	background-repeat: no-repeat;
+	width: 143px;
+	float: right;
+	font-size: 14px;
+	text-align: center;
+	padding: 6px 0 5px 0!important;padding: 8px 0 5px 0;
+}
+.mconbox{
+}
+.mconbox table{
+	border:#cccccc solid;
+	border-width:1px 0 0 1px;
+}
+.mconbox td{
+	border:#cccccc solid;
+	border-width:0 1px 1px 0;
+	padding: 7px;
+}
+.mconbox tr.lanshe{
+	background-color: #F6F6F6;
+}
+.mconbox td.colorzi{
+	color: #2373EE;
+	text-align: right;
+}
+.mconbox td.colorbg{background-color:#F0F9FD;}
+.mconbox td.ontopbg{
+	background-image: url(../images/project/Contrast/ontopbg.gif);
+	padding: 0;
+	text-align: center;
+	
+}
+.mconbox td.onbuttombg{
+	background-image: url(../images/project/Contrast/onbuttombg.gif);
+	padding: 0;
+	text-align: center;
+	
+}
+.mconbox td.ontop{border-width:0 1px 1px 0;
+	padding: 0;
+}
+.pcbbox{}
+.pcbbox .topy{
+	line-height: 1%;
+	background-image: url(../images/project/Contrast/buttom_ty.gif);
+	height: 4px;
+	overflow: hidden;
+}
+.pcbbox .con{
+	background-image: url(../images/project/Contrast/buttom_cbg.gif);
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #B3B3B3;
+	border-left-color: #B3B3B3;
+	padding: 5px 10px 5px 15px;
+}
+.pcbbox .bottomy{line-height: 1%;
+	background-image: url(../images/project/Contrast/buttom_by.gif);
+	height: 5px;
+	overflow: hidden;}

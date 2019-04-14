@@ -1,0 +1,9 @@
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.DBUtility.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.DBUtility.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.IDAL.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.Model.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.Model.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\bin\Debug\Tz888.IDAL.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\obj\Debug\ResolveAssemblyReference.cache
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\obj\Debug\Tz888.DBUtility.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.DBUtility\obj\Debug\Tz888.DBUtility.pdb

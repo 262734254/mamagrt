@@ -1,0 +1,215 @@
+/*by yanweiping*/
+/*头部及共用链接文字等属性*/
+BODY {
+	FONT-SIZE: 12px;
+	COLOR: #555555;
+	LINE-HEIGHT: 160%;
+	FONT-FAMILY: "宋体";
+	padding: 5px 0 5px 0;
+	margin: 0;
+
+}
+.td{FONT-SIZE: 12px;}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.chenglink:link {
+	COLOR: #F87120;
+	TEXT-DECORATION: underline
+}
+A.chenglink:visited {
+	COLOR: #F87120; TEXT-DECORATION: none
+}
+A.chenglink:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.chenglink:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+
+A.Spaces:link    {
+}
+A.Spaces:visited {
+}
+A.Spaces:active  {
+}
+A.Spaces:hover   {
+	left: 1px;
+	top: 1px;
+	position: relative;
+}
+
+DIV,FORM,IMG,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt,p{
+	 PADDING: 0px; MARGIN: 0px; 
+}
+
+.clear {
+	CLEAR: both
+}
+.blank8 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+.blank0 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 10px
+}
+.blank20 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 20px
+}
+.clear{ clear:both}
+.padleft{ padding-left:10px;}
+.font12{ font-size:12px;}
+.font14{ font-size:14px;}
+.chengcu{
+	color:#F75F03;
+	font-weight: bold;
+}
+.cheng{
+	color:#F75F03;
+}
+.hong{
+	color:#FF0000
+}
+.hui{ color:#9C9C9C}
+.cu{
+	font-weight: bold;
+}
+.lansen{ color:#061E9C}
+.wrapper{width:948px;margin:0 auto;}
+
+/*头部属性*/
+#header{width: 948px;margin: 0 auto;}
+#header .shang {
+	height: 30px;
+}
+#header .shang ul{
+	display:inline-block;
+
+	*display:inline;
+	width: 290px;
+	float: left;
+	color: #563B1D;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+#header .shang li{list-style:none;float:left;}
+#header .shang .on{
+	background-image:url(/TopfoCenter/images/toponbg.gif);
+	background-repeat:no-repeat;
+	background-position: center 2px;
+}
+.thm-1,.thm-2,.thm-3,.thm-4,.thm-5,.thm-6,.thm-7{
+	width:8px;
+	height:8px;
+	border:1px solid #024D69;
+	background:#C7D4DC;
+	margin:3px 2px 0 1px;
+	overflow:hidden;
+	cursor:pointer;
+	cursor:hand;
+	_height /* */:10px;
+	_width /* */:10px;
+}
+.thm-1{
+	background-position:2px 2px;
+	background-color: #FFE649;
+}
+.thm-2{
+	background-color:#93D9FD;
+	border-color:#A5620C;
+	background-position:-18px 2px;
+}
+.thm-3{
+	background-color:#8BD861;
+	border-color:#4D3B53;
+	background-position:-38px 2px;
+}
+.thm-4{
+	background-color:#ECF8FD;
+	border-color:#688130;
+	background-position:-58px 2px;
+}
+.thm-5{
+	background-color:#F8C3D0;
+	border-color:#77724A;
+	background-position:-78px 2px;
+}
+.thm-6{
+	background-color:#BDADC7;
+	background-position:-98px 2px;
+}
+.thm-7{background-color:#CACACA;border-color:#575757;margin-right:.4em;background-position:-118px 2px;}
+#header .shang div{
+	width: 630px;
+	float: left;
+}
+#header .shang div span{
+	padding-left:60px;
+}
+#header .shang div A:link,#header .shang div A:visited {COLOR: #515151; text-decoration: underline;}
+#header .shang div  A:hover,#header .shang div A:active {	COLOR: #ff0000;text-decoration: underline;}
+#header .xia{
+	height: 128px;
+	width: 948px;
+}
+#header .xia .logo{
+	width: 170px;
+	height: 70px;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#header .xia .logo a{
+	width: 170px;
+	height: 70px;
+	display: block;
+}
+/*左边属性*/
+.leftbox{
+	width: 149px;
+	float: left;
+	border: 1px dashed #5B5F6E;
+	font-size: 14px;
+	padding: 10px 10px 130px 10px;
+}
+.leftbox img{
+	margin-right:5px;
+}
+.leftbox div{
+	background-image: url(/TopfoCenter/images/buttom_left.gif);
+	background-repeat: no-repeat;
+	height: 27px;
+	padding: 5px 0 0 10px;
+	font-weight: bold;
+}
+.leftbox ul{
+	padding: 0px 0 0 40px;
+}
+.leftbox li{
+	list-style-image: url(/TopfoCenter/images/icon_open.gif);
+}
+.leftbox textarea{
+	margin-top: 10px;
+	color: #666666;
+	width: 143px;
+	font-size: 12px;
+}
+.leftbox dir{
+	margin: 10px 0 0 0;
+	padding: 0;
+	text-align: center;
+}

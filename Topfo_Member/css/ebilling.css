@@ -1,0 +1,262 @@
+/*ebilling充值*/
+#conczbox{}
+#conczbox .title{
+	height: 70px;
+
+}
+td{ font-size:12px;}
+#conczbox .title .anliu{
+	background-image: url(/PaymentSystem/images/ebillingimg/cz_anliubg.gif);
+	height: 32px;
+	width: 263px;
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	float: left;
+}
+#conczbox .title .anliu span{
+	width: 100px;
+	float: left;
+	display: block;
+	padding-top: 3px;
+}
+#conczbox .title .anliu .menu{
+	width: 159px;
+	float: left;
+}
+#conczbox .title .anliu .menux{
+MARGIN-TOP: 16px;
+}
+#conczbox .title .anliu .menux td{ padding-left:15px;}
+#conczbox .title .center{
+	width: 350px;
+	float: left;
+	text-align: right;
+	padding: 30px 0px 0 0;
+}
+#conczbox .title .tubiao{
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding: 25px 10px 0 0;
+}
+
+#concz{
+	background-image: url(/PaymentSystem/images/ebillingimg/cz_contopbg.gif);
+	background-repeat: no-repeat;
+	padding: 20px 0 0 0;
+}
+#concz .left{
+	background-image: url(/PaymentSystem/images/ebillingimg/cz_leftbg.gif);
+	float: left;
+	width: 232px;
+	height: 510px;
+	background-repeat: no-repeat;
+	background-color: #F6F5F5;
+}
+#concz .left dl{
+	padding: 20px 15px 0 20px;
+}
+#concz .left dt{
+	font-weight: bold;
+	padding-bottom: 3px;
+	font-size: 14px;
+}
+#concz .left dd A:link,#concz .left dd A:visited {
+	color: #061E9C;
+}
+
+#concz .left dd A:hover,#concz .left dd A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+ 
+#concz .left dd{}
+#concz .left p{
+	padding: 58px 15px 0 25px;
+}
+
+#concz .right{
+	width: 700px;
+	float: right;
+}
+#concz .right .tishi{
+	background-color: #FFFFE1;
+	border: 1px solid #CFCFCF;
+	padding: 9px 0 6px 15px;
+}
+#concz .right .tishi span{
+	display: block;
+	padding-left: 60px;
+}
+#concz .right h1{
+	text-align: right;
+	color: #003399;
+	padding: 10px 15px 5px 0;
+	font-size: 12px;
+	font-weight: normal;
+}
+#concz .right table{ font-size:14px}
+#concz .right .zhuyi{
+	background-image: url(/PaymentSystem/images/ebillingimg/cz_zhuyibg.gif);
+	width: 694px;
+	height: 120px;
+}
+#concz .right .zhuyi p{
+	padding: 20px 15px 15px 20px;
+}
+/*ebilling声讯充值*/
+#telshang{
+	border: 1px solid #CCCCCC;
+}
+#telshang h2{
+	color: #FF7429;
+	background-color: #F2F2F2;
+	font-size: 12px;
+	border-top-width: 2px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	padding: 3px 0 3px 15px;
+}
+#telshang p{
+	padding: 25px 25px 25px 30px;
+}
+#telshang span{
+	display: block;
+	text-align: center;
+	padding-bottom: 25px;
+}
+.telxuxian{
+	margin: 5px 0 8px 0;
+}
+#telxia{
+	background-image: url(/PaymentSystem/images/ebillingimg/telbg.gif);
+	background-repeat: no-repeat;
+	background-position: left 40px;
+	height: 250px;
+}
+#telxia h2{
+	text-align: center;
+
+}
+#telxia ul{
+	padding: 82px 0 0 40px!important;padding: 85px 0 0 20px;
+}
+#telxia li{
+	list-style-type: none;
+	width: 83px;
+	float: left;
+	margin-right: 24px;
+	margin-left: 20px;
+
+}
+#telxia .liwai{
+	list-style-type: none;
+	width: 83px;
+	float: left;
+
+}
+#telxia li P{
+	padding-top: 5px;
+}
+#telxia li span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #F75F03;
+	line-height: 200%;
+}
+
+/*神州行充值*/
+#conczbox .title .tubiaoszx{
+	width: 300px;
+	float: right;
+	text-align: right;
+	padding: 5px 10px 0 0;
+}
+/*银行电汇充值下一步*/
+
+#concz .rightdhn{
+	width: 700px;
+	float: right;
+}
+.bankdhntitle{
+	color: #F75F03;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f75f03;
+	padding-left: 5px;
+	padding-bottom: 3px;
+}
+.bankdhntitle span{
+	font-size: 12px;
+	color: #333333;
+	font-weight: normal;
+	text-align: right;
+	margin-left: 540px;
+}
+.bankdhntaba{
+	margin: 20px 0 40px 0;
+}
+.bankdhntabb{
+	margin: 5px 0 0px 0;
+	line-height: 150%;
+}
+/*支付宝充值*/
+#concz .right .zhuyis{
+	background-image: url(/PaymentSystem/images/ebillingimg/xuxiank.gif);
+	width: 694px;
+	height: 85px;
+	background-repeat: no-repeat;
+}
+#concz .right .zhuyis p{
+	padding: 13px 15px 10px 25px;
+}
+.zfblcbox{
+	text-align: center;
+}
+.zfblcbox ul{
+	padding: 30px 0 0 80px;
+}
+.zfblcbox li{
+	list-style-type: none;
+	background-image: url(/PaymentSystem/images/ebillingimg/zfbanliubg.gif);
+	background-repeat: no-repeat;
+	width: 94px;
+	float: left;
+	height: 23px;
+	text-align: center;
+	padding-left: 5px;
+	margin-right: 4px;
+}
+.zfblcbox .liwai{
+	list-style-type: none;
+	background-image: url(/PaymentSystem/images/ebillingimg/zfbanliubg2.gif);
+	background-repeat: no-repeat;
+	width: 66px;
+	float: left;
+	height: 23px;
+	text-align: left;
+}
+.zfblcbox li p{
+	padding-left: 4px;
+}
+.zfblcbox ul div{
+	background-image: url(/PaymentSystem/images/ebillingimg/zfbanliujt.gif);
+	background-repeat: no-repeat;
+	background-position: right 4px;
+}
+/*网上银行充值*/
+#concz .right .tishiwb{
+	background-color: #FFFFE1;
+	border: 1px solid #CFCFCF;
+	padding: 9px 0 9px 15px;
+}

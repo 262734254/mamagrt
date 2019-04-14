@@ -1,0 +1,95 @@
+.vipreg_warp{float:right;width:750px; }
+.vipreg_warp{padding-bottom:18px;}
+
+
+
+.reg_channel{ background:url(../../images/vip_reg/bg01.gif) no-repeat 0 0;width:750px;height:38px;display:block}
+.reg_channel{ text-align:right;padding-top:25px;font-weight:bold;font-size:11pt;color:#1F73C1;}
+
+.reg_channel span{ font-size:20pt;color:#FF6600;}
+
+
+.vrtopbg{background: url(../../images/vip_reg/bg02.gif) no-repeat top left;height:18px;width:750px; display:block;margin-top:6px; padding-top:18px;}
+
+.vip_box{width:747px; clear:both;border:1px solid #7EB3F0;border-width:0px 1px 1px 1px; clear:both;}
+
+.vip_title1{padding:9px 0 0 60px;}
+
+.vntop{width:694px;margin:0 auto}
+.vntop{ background:#F3F3F3 url(../../images/vip_reg/bg03.gif) no-repeat 0 0;padding-top:10px;}
+.vnbot{ background:url(../../images/vip_reg/bg04.gif) no-repeat bottom left; padding-bottom:10px;}
+
+.vnimg{ background: url(../../images/vip_reg/icr01.gif) no-repeat left 5px; display:block;padding-left:90px;}
+
+.vnimg h3{ color:#F75F03;font-size:11pt;font-weight:bold}
+.vnimgr{ text-align:right;padding-right:20px;}
+
+.vipInfo{width:694px;margin:10px auto;}
+.vipInfo td{font-size:11pt; vertical-align:top;padding-bottom:12px;padding-top:4px;}
+.vipInfo td span{color:#ff0000;}
+.vipInfo td.w120{width:140px; text-align:right;padding-right:8px;}
+
+.vipInfo td.vipsolid{ border-top:1px  dashed #C0C0C0;}
+
+.viplineon{ background:#FFFCC7;border:1px solid #F3C089;font-size:9pt;margin-left:6px;padding:2px 5px; color:#FD2704;line-height:14px;width:290px;}
+.viplineoff{ background:#F3F3F3;border:1px solid #e4e4e4;font-size:9pt;margin-left:6px;padding:2px 5px;line-height:16px;width:290px;}
+
+.vipwid200{width:200px;}
+
+.vipgj{width:40px;margin-right:4px;}
+.vipgj2{width:100px;margin-right:4px;}
+
+.vipcenter{ text-align:center}
+
+.vipdj{width:720px;margin:20px auto;padding-bottom:80px; text-align:center; clear:both}
+.vipbtn2{ background: url(../../images/vip_reg/bt03.gif) no-repeat center bottom;height:20px; display:block;padding-top:8px;color:#FE6F0F;font-size:10pt;font-weight:bold;margin-top:8px;}
+
+
+
+
+/* ³É¹¦Ò³css  */
+
+.succeednote{width:721px;background:url(../../images/vip_reg/line04.gif) repeat-y 0 0;margin:15px auto;}
+
+.succeelay{ background:url(../../images/vip_reg/line02.gif) no-repeat 0 0;}
+.succeedownline{ background:url(../../images/vip_reg/line03.gif) no-repeat bottom left;height:19px; display:block;}
+
+
+.succeelay .sleft{float:left;width:394px;padding:6px 20px 0px 20px; }
+.succeelay .sright{float:right;width:230px;padding:6px 20px 0px 20px;}
+
+.succeelay .sleft  h2 img{margin:0 0 0 20px;}
+.succeelay .sleft .tip{ background: url(../../images/vip_reg/icr02.gif) no-repeat 0 0;height:59px;padding:20px 0 0 82px;}
+.succeelay .sleft .tip{ color:#ff0000;font-size:14px;font-weight:bold;line-height:24px;margin-bottom:10px;clear:both;}
+.succeelay .sleft h3{font-size:12pt;font-weight:bold; font-family:Helvetica;line-height:1.6em;}
+.succeelay .sleft span{color:#ff0000;font-size:18pt;}
+.succeelay .sleft .more{text-align:right;margin-top:6px;}
+
+
+.succeelay .sright .scon{padding:13px 3px 0 3px;}
+
+.succeelay .sright h3{font-size:12pt;font-weight:bold; color:#07A621;border-bottom:1px solid #B1B1B1;text-align: center;padding:4px 0;}
+.succeelay .sright h2{font-size:10pt;font-weight:bold; }
+.succeelay .sright .rfall{margin-top:6px;color:#0E3197;}
+
+
+.vipflow{ background: url(../../images/vip_reg/bg07.gif) no-repeat left 19px; display:block;width:721px;margin:34px auto 0 auto;}
+.vipflow .flowtitle{ background:#ffffff;width:410px;margin-left:30px;font-size:12pt;font-weight:bold;padding-left:8px;color:#1F73C1;line-height:1.8em;}
+.vipflow .flowtitle span{color:#ff0000;font-size:16pt;}
+
+
+.vipflowp{ background:url(../../images/vip_reg/icr05.jpg)  no-repeat right bottom;border:1px solid #99B3D4;border-width:0px 1px 1px 1px;width:719px;margin:0 auto;min-height:146px;height:146px; overflow:visible;display:block;}
+
+
+.flowbj{padding:36px 0 0 70px;}
+.flowbj div{float:left;}
+.flowbj .bgflow{ background:url(../../images/vip_reg/bg06.gif) no-repeat 0 0;height:53px;width:90px; display:block; text-align:center;padding:15px 6px;}
+.flowbj .bgflow h3{font-size:11pt;font-weight:bold;}
+.flowbj .arwflow{ background:url(../../images/vip_reg/icr046.gif) no-repeat 0 30px;width:16px;height:92px;margin:0 6px;}
+
+
+
+
+
+
+

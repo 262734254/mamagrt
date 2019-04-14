@@ -1,0 +1,190 @@
+@charset "gb2312";
+/*by yanweiping*/
+/*我的购物车*/
+
+.suggestbox{
+	padding: 10px 10px 10px 15px;
+	background-color: #FFF7EE;
+}
+.suggestbox h1{
+	color: #F87120;
+	font-size: 13px;
+}
+.suggestbox p{
+	padding: 2px 0 0 00;
+}
+.mycartbox{}
+
+.mycartbox .con{
+}
+.mycartbox .con h1{padding: 10px 0 5px 15px;}
+.mycartbox .con .search{
+	font-size: 12px;
+	color: #563B1D;
+	padding: 6px 0 6px 10px;
+}
+.mycartbox .con .search .lefts{
+	width: 510px;
+	float: left;
+}
+.mycartbox .con .search .rights{
+	width: 220px;
+	float: right;
+	text-align: right;
+	padding-right: 15px;
+}
+.mycartbox .con .search .rights a{
+	color: #333399;
+	text-decoration: underline;
+}
+.mycartbox .con p{
+	padding: 10px 25px 25px 15px;
+}
+.mycartbox .con p a{color: #333399;}
+.mycartbox .con p span{
+	padding-left:145px;
+}
+.mycartbox .buttom{
+	text-align: center;
+	padding: 20px 0 10px 0;
+}
+.helpbox{}
+.helpbox .titleh{
+	text-align: right;
+	padding-bottom: 5px;
+	padding-right: 15px;
+}
+.helpbox .con{
+	border: 1px solid #CCCCCC;
+}
+
+.helpbox .con h1{
+	font-size: 14px;
+	color: #563B1D;
+	background-color: #F7F6F6;
+	padding: 4px 0 4px 10px;
+}
+.helpbox .con p{
+	padding: 10px 0px 0 15px;
+}
+.helpbox .con dir{
+	text-align: right;
+	padding: 0 15px 5px 0;
+}
+.helpbox .bottomzi{
+	padding: 10px 0 0 10px;
+}
+/*已完成交易*/
+.suggestbox p span{
+	padding: 0 0 0 280px;
+}
+.mycartbox .con h1 span{
+	font-weight: normal;
+	padding: 0 0 0 100px;
+}
+/*订单明细*/
+.creditsbox{}
+.creditsbox h1{
+	background-color: #EFF0F0;
+	color: #563B1D;
+	padding: 4px 0 2px 15px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.creditsbox ul{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E8E8E8;
+	height: 40px;
+}
+.creditsbox li{
+	width: 370px;
+	float: left;
+	padding: 10px 0 10px 10px;
+}
+.creditsbox li A:link ,.creditsbox li A:visited {
+	color: #333399;
+	text-decoration: underline;
+}
+.creditsbox li A:hover,.creditsbox li A:active{
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.closebox{
+	padding: 25px 0 15px 0;
+	text-align: center;
+}
+.closebox p{
+	text-align: right;
+	padding: 10px;
+}
+/*我的购物券/购物券兑换*/
+.mycartbox .con .left{
+	width: 372px;
+	float: left;
+	margin: 4px!important;margin: 4px 4px 4px 2px;
+	color: #563B1D;
+}
+.mycartbox .con .left .top{
+	border: 1px dashed #848484;
+	padding: 15px 0 15px 15px;
+}
+.mycartbox .con .left .top ul{
+
+}
+.mycartbox .con .left .top li{
+	width: 170px;
+	float: left;
+	line-height: 200%;
+}
+.mycartbox .con .left td{font-size:14px;}
+.mycartbox .con .right{
+	width: 371px;
+	float: right;
+	background-color: #F7F7F7;
+	margin: 2px;
+	padding: 15px 0 15px 0;
+}
+.mycartbox .con .right h2{
+	background-image: url(/TopfoCenter/images/PayManage/xuxian.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	color: #563B1D;
+	font-size: 14px;
+	padding: 0px 0 3px 15px;
+	margin-bottom: 10px;
+}
+.mycartbox .con .right td{
+	line-height: 180%;
+}
+/*我的购物券/兑换记录*/
+.mycartbox .con .titlea{
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #333333;
+	padding: 7px 0 5px 15px;
+	font-size: 13px;
+	color: #563B1D;
+}
+
+.mycartbox .con .titlea2{
+	padding: 14px 0px 0px 15px;
+	line-height:1em;
+	font-size: 13px;
+	color: #563B1D;
+}
+
+.mycartbox .con .titleb{
+	padding: 0px 0px 10px 15px;
+	font-size: 13px;
+	color: #563B1D;
+}
+.mycartbox .con .titleb strong{color: #061E9C;}
+.mycartbox .con .titleb span{
+	padding-left: 80px;
+}
+.mycartbox .con .bottom{
+	padding: 10px 25px 10px 15px;
+	text-align: center;
+}
+.mycartbox .con .bottom span{padding-left:100px;}

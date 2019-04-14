@@ -1,0 +1,82 @@
+<script type="text/javascript">
+function initMenu(){
+  var obj=document.getElementById("menu");
+  if (!obj)return;
+  for (var i=0,c;c=obj.childNodes[i];i++){
+    if (c.nodeType==3)continue;
+    var a=c.getElementsByTagName("a");
+    if (!a||a.length==0)continue;
+    a[0].onmouseup=function(){
+      var u=this.parentNode.getElementsByTagName("ul");
+      if (!u||u.length==0)return;
+      with (u[0].style){
+        display=(display=='none'?'block':'none');
+      }
+    }
+  }
+}
+window.onload=initMenu;
+</script>
+<script>
+	var cssPath = "css/css";
+	var styleID=1;
+	document.write('<link rel="stylesheet" type="text\/css" id="cssLink" href="'+cssPath+styleID+'.css" \/>');
+	function styleChange(n) {
+		var mcs = document.getElementById("cssLink");
+		mcs.href = cssPath + n + ".css";
+		
+		var framid=window.frames["rightFrame"];
+		var mfcs=framid.document.getElementById("cssLink");
+		mfcs.href = cssPath + n + ".css" ;
+	}
+</script>
+
+<div id="header">
+    <div class="shanga">
+        <ul>
+            <li>选择模板颜色： </li>
+            <li class="thm-1 "><a href="javascript:styleChange(1);">&nbsp;</a></li>
+            <li class="thm-2 on"><a href="javascript:styleChange(2);">&nbsp;</a></li>
+            <li class="thm-3"></li>
+            <li class="thm-4"></li>
+            <li class="thm-5"></li>
+            <li class="thm-6"></li>
+            <li class="thm-7 "></li>
+        </ul>
+        <div>
+            <select name="select" id="select" style="color: #999999; width: 60px; height: 16px;
+                font-size: 12px;">
+                <option>招商</option>
+            </select>
+            <input name="textarea" type="text" id="textarea" value="请输入关键字" style="color: #999999;
+                width: 180px; height: 14px; font-size: 12px;">
+            <img src="/Member/images/buttom_search.gif" width="64" height="18" align="absmiddle">
+            <a href="#">高级搜索</a><span><a href="http://www.tz888.cn" target="_blank">网站首页</a><img
+                src="/Member/images/icon_topsj.gif" width="10" height="5" align="texttop">
+                <a href="#">个人助理</a><img src="/Member/images/icon_topsj.gif" width="10" height="5" align="texttop">
+                <a href="#"><strong>退出</strong></a></span>
+        </div>
+    </div>
+    <div class="xia topbgc">
+        <div class="shangtop">
+            <div class="logo">
+                <a href="http://www.tz888.cn/" target="_blank" alt="网站首页"></a>
+            </div>
+            <div class="banner">
+                <img src="/Member/images/topgg.gif"></div>
+        </div>
+        <div class="xiatop">
+            <div class="lefttop">
+                欢迎拓富通会员<a href="#"><font class="chengcu">Vince727</font></a> 光临拓富中心</div>
+            <div class="right">
+                今天共发布了 <a href="#"><font class="chengcu">300</font></a> 条新的需求，新加入会员 <a href="#"><font
+                    class="chengcu">268</font></a> 人</div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<div class="blank6">
+</div>

@@ -1,0 +1,254 @@
+.cheng{ color:#FB6A2D}
+.header {
+	width:600px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 107px;
+	background-image: url(../../img/register/MemberFeedback/top.jpg);
+	background-repeat: no-repeat;
+}
+.header img {
+	padding-top: 16px;
+	padding-left: 23px;
+}
+
+.mail{
+	width:600px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../../img/register/MemberFeedback/mailbg.gif);
+	}
+.nav {
+	background-image: url(../../img/register/MemberFeedback/menubg.gif);
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: right;
+	color: #FF8425;
+	padding-right: 25px;
+	height: 23px;
+	padding-top: 2px;
+}
+.nav A:link {
+	COLOR: #FF8425; TEXT-DECORATION: none
+}
+.nav  A:visited {
+	COLOR: #FF8425; TEXT-DECORATION: none
+}
+.nav A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.nav A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.mailbody {
+	width: 570px!important;width: 560px
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.mailbody .top {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #787878;
+	padding-left: 10px;
+}
+.userbox {
+	background-image: url(../../img/register/MemberFeedback/bg2.gif);
+	background-repeat: no-repeat;
+	color: #3C3C3C;
+	padding-left: 10px;
+	line-height: 160%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 560px;
+}
+.stupzi {
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 12px;
+}
+.stupone {
+	background-image: url(../../img/register/MemberFeedback/onebg.gif);
+	background-repeat: no-repeat;
+	height: 24px;
+	color: #FB6A2D;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 35px;
+	padding-top: 4px;
+	width: 531px;
+	margin-top: 3px;
+	background-position: 1px;
+	margin-bottom: 2px;
+}
+.stupone img {
+}
+.stup_c_one {
+	background-image: url(../../img/register/MemberFeedback/stupbg.gif);
+	background-repeat: no-repeat;
+	color: #3C3C3C;
+	line-height: 160%;
+	background-position: 4px top;
+	width: 566px;
+	height: 199px;
+}
+.stup_c_one .left {
+	width: 140px;
+	float: left;
+	padding: 15px 10px 5px 27px;
+}
+.stup_c_one .left p {
+	padding-top: 5px;
+	padding-bottom: 11px;
+	padding-left: 10px;
+}
+.stup_c_one .left p A:link {
+	COLOR: #3C3C3C; TEXT-DECORATION: underline
+}
+.stup_c_one .left p A:visited {
+	COLOR: #3C3C3C; TEXT-DECORATION: underline
+}
+.stup_c_one .left p A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_one .left p A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_one .center {
+	width: 140px;
+	float: left;
+	padding: 15px 10px 5px 20px;
+	margin-left: 15px;
+}
+.stup_c_one .center p A:link {
+	COLOR: #FB6A2D; TEXT-DECORATION: underline
+}
+.stup_c_one .center p A:visited {
+	COLOR: #FB6A2D; TEXT-DECORATION: underline
+}
+.stup_c_one .center p A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_one .center p A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_one .right {
+	width: 140px;
+	float: left;
+	padding: 15px 10px 5px 20px;
+	margin-left: 20px;
+}.stup_c_one .right p {
+	text-indent: 15px;
+}
+.stup_c_two {
+	background-image: url(../../img/register/MemberFeedback/stupbg2.gif);
+	background-repeat: no-repeat;
+	color: #3C3C3C;
+	line-height: 160%;
+	background-position: 5px top;
+	float: left;
+	width: 566px;
+	height: 75px;
+
+}
+.stup_c_two .stop {
+	padding-left: 25px;
+	padding-top: 8px;
+}
+.stup_c_two .stop A:link {
+	COLOR: #064EC5; TEXT-DECORATION: underline
+}
+.stup_c_two .stop A:visited {
+	COLOR: #064EC5; TEXT-DECORATION: underline
+}
+.stup_c_two .stop A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_two .stop A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_two .xia {
+	padding-left: 25px;
+	padding-top: 6px;
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+.stup_c_two .xia img {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.stup_c_two .xia A:link {
+	COLOR: #FE6600; TEXT-DECORATION: underline
+}
+.stup_c_two .xia A:visited {
+	COLOR: #FE6600; TEXT-DECORATION: underline
+}
+.stup_c_two .xia A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.stup_c_two .xia A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.mailbody .footer {
+	background-image: url(../../img/register/MemberFeedback/mail.gif);
+	background-repeat: no-repeat;
+	width: 566px;
+	background-position: 45px 20px;
+	padding-bottom: 20px;
+	float: left;
+}
+.mailbody .footer .xia img {
+	margin-right: 5px;
+}
+
+.mailbody .footer .shang {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.mailbody .footer .xia {
+	width: 420px;
+	float: right;
+	padding-bottom: 10px;
+}
+.mailbody .footer .xia  A:link {
+	COLOR: #FE6600; TEXT-DECORATION: underline
+}
+.mailbody .footer .xia A:visited {
+	COLOR: #FE6600; TEXT-DECORATION: underline
+}
+.mailbody .footer .xia  A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.mailbody .footer .xia  A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+.mailfooter{
+	background-image: url(../../img/register/MemberFeedback/footerbg.gif);
+	background-repeat: no-repeat;
+	width: 600px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	text-align: center;
+	padding-top: 10px;
+	height: 22px;
+}

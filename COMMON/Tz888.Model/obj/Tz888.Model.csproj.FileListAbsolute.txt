@@ -1,0 +1,5 @@
+E:\MyWork\Topfo_Member\COMMON\Tz888.Model\bin\Debug\Tz888.Model.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Model\bin\Debug\Tz888.Model.pdb
+E:\MyWork\Topfo_Member\COMMON\Tz888.Model\obj\Debug\ResolveAssemblyReference.cache
+E:\MyWork\Topfo_Member\COMMON\Tz888.Model\obj\Debug\Tz888.Model.dll
+E:\MyWork\Topfo_Member\COMMON\Tz888.Model\obj\Debug\Tz888.Model.pdb

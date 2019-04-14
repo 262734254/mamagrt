@@ -1,0 +1,184 @@
+/* CSS Document */
+
+/* 默认样式 */
+
+*{margin:0;padding:0;}
+BODY {FONT-SIZE: 12px;COLOR: #000000;LINE-HEIGHT: 180%;	FONT-FaMILY: "宋体";}
+
+
+p,ul,li,h7,h6,h5,h4,h3,h2,h1,input,textarea,select{margin:0;padding:0;}
+
+input,textarea,select{padding:1px;margin:0 2px;font-size:12px;}
+input,textarea,select{COLOR: #555555;}
+
+
+table,tr,td{font-family: "宋体";font-size:12px;LINE-HEIGHT: 180%;}
+
+ul,li{ list-style:none;}
+
+img,img a{border:0;}
+img a{cursor:hand;}
+
+.clear{clear:both;}
+
+
+/* -----------------------------------左右浮动,左口对齐样式-------------------------------  */
+
+.leftfloat{float:left;}
+.rightfloat{float:right;}
+
+.leftalign{ text-align:left;}
+.rightalign{ text-align:right;}
+
+
+
+/* -------------------------------------------字体链接样式------------------------------------------  */
+
+a:link,a:visited,a:active {	COLOR: #000000; TEXT-DECORaTION: none} /* 默认样式 */
+a:hover{COLOR: #ff0000;text-decoration: underline;}
+
+
+/*  ---兰色---- */
+a.Ablue01:link, a.Ablue01:visited,a.Ablue01:active{COLOR: #08099F;TEXT-DECORaTION: underline}
+a.blue01:hover{COLOR: #ff0000;text-decoration: underline;}
+
+a.Ablue02:link,a.Ablue02:visited,a.Ablue01:active{color:#162580;text-decoration:underline;}
+a.Ablue02:hover{ color:#FF3B01;text-decoration:underline;}
+
+
+/*  ---橙色---- */
+a.Aorange01:link, a.Aorange01:visited,a.Aorange01:active{COLOR: #F87120;TEXT-DECORaTION: none}
+a.Aorange01:hover{COLOR: #ff0000;text-decoration: underline;}
+
+
+/*  ---红色---- */
+a.Ared01:link, a.Ared01:visited,a.Ared:active{COLOR: #ff0000;TEXT-DECORaTION: none}
+a.Ared01:hover{COLOR: #00000;text-decoration: underline;}
+
+
+
+
+/* ----------------------------------------字体色彩及字号------------------------------------------  */
+
+.bold{font-weight:bold}
+.space1{letter-spacing:1px;}
+
+/*  ---字号---- */
+.font10{font-size:10px;}
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.font18{font-size:18px;}
+.font20{font-size:20px;}
+
+/*  ---色彩---- */
+.orange01{color:#F75F03;}/* 橙色1 */
+
+.red01{color:#FF0000}/*红色1 */
+
+.gray01{color:#9C9C9C}/*灰色1 */
+.gray02{color:#F8F8F8}/*灰色2 */
+
+.blue01{ color:#061E9C}/*兰色1 */
+
+
+
+
+
+/* ----------------------------------------边线色彩---------------------------------  */
+
+.line_orange1{border:1px solid #F59153;}/* 橙色边线1 */
+
+.line_gray1{border-bottom:1px dashed #CECECE;}/*灰色边线1 */
+
+
+
+
+
+/* --------------------------------------------空白样式------------------------------------  */
+
+.blank0 {clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 10px}
+.blank6 {clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px}
+.blank8 {clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px}
+.blank20{clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 20px}
+
+.redblack6{clear: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px;background:#FF8600}
+
+
+/* ---------------------------------------------宽度------------------------------------  */
+.width30{width:30px;}
+.width60{width:60px;}
+.width80{width:80px;}
+.width100{width:100px;}
+.width200{width:200px;}
+.width300{width:300px;}
+.width400{width:400px;}
+.width500{width:500px;}
+
+
+/* --------------------------------------------边距------------------------------------  */
+
+/* 边距 */
+.margin10{margin:10px;}
+.margin20{margin:20px;}
+
+.margin_LR10{margin:0 10px;}
+.margin_LR20{margin:0 20px;}
+
+/* 填充 */
+.padding10{padding:10px;}
+.padding10{padding:20px;}
+
+.padding_LR10{padding:10px;}
+.padding_LR20{padding:20px;}
+
+
+
+
+/* ------------------------------------------其它效果样式----------------------------------  */
+
+/*  ---移动效果---- */
+a.Spaces:link    {}
+a.Spaces:visited {}
+a.Spaces:active  {}
+a.Spaces:hover   {left: 1px;top: 1px;position: relative;}
+
+
+/*  ---透明效果---- */
+.transparent{
+background-color:#ffffff;
+filter:alpha(opacity=30);
+-moz-opacity:0.30;
+opacity:0.30;
+}
+
+/* ---------------------------------------------------------------------------------------  */
+
+.wrap{width:948px;margin:0 auto; background:#ffffff;}
+
+.topbg{ background: url(../images/line02.gif) repeat-x 0 0; text-align:center}
+.topbg2{ background:url(../images/bg04.gif) no-repeat 0 0; text-align:center;width:854px;height:70px; display:block; margin:0 auto;}
+
+
+.msgcont{ background: url(../images/line01.gif) repeat-y 0 0;width:864px;margin:0 auto;}
+
+.bgimg{ background:url(../images/bg02.gif) no-repeat;width:864px;height:52px; display:block}
+.bgimg02{ background:url(../images/bg03.gif) no-repeat bottom left;width:864px;height:25px; display:block;padding-top:70px;}
+.bgimg03{ background:url(../images/bg05.gif) no-repeat;width:854px;height:50px; display:block}
+.bgimg04{ background:url(../images/bg06.gif) no-repeat bottom left;width:854px;height:66px; display:block;padding-top:10px;}
+
+
+.pagecont{padding:0 100px; position:relative; top:-2px;}
+
+h3.icr01{ background: url(../images/icr01.gif) no-repeat 0 0;heigh:26px;padding-left:30px;font-size:14px;font-weight:bold;margin-bottom:20px;}
+
+.pagecont p{ text-indent:30px;line-height:28px;margin:15px 0;font-size:16px;}
+
+
+.container{ background:#FFA23A url(../images/line03.gif) repeat-x 0 0;padding-bottom:20px;}
+.topnote{ background: url(../images/line04.gif) repeat-y 0 0;width:854px;margin:0 auto;}
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07B8C6F7-A748-4421-B90B-3A9A30575D49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tz888.Common</RootNamespace>
+    <AssemblyName>Tz888.Common</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=9.2.17.1, Culture=neutral, PublicKeyToken=4735ae9824c7d3ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Topfo_Member\Bin\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DexterLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Interop.DexterLib.dll</HintPath>
+    </Reference>
+    <Reference Include="RadUpload.Net2, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RadUpload.Net2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpICTCLAS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\AjaxMethod.cs" />
+    <Compile Include="Ajax\AjaxServies.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="DateTimeBox\DateTimeBox.cs" />
+    <Compile Include="DEncrypt\DEncrypt.cs" />
+    <Compile Include="DEncrypt\DESEncrypt.cs" />
+    <Compile Include="DEncrypt\HashEncode.cs" />
+    <Compile Include="DEncrypt\RSACryption.cs" />
+    <Compile Include="FileHelper.cs" />
+    <Compile Include="FileManage.cs" />
+    <Compile Include="GUID.cs" />
+    <Compile Include="Ictclas.cs" />
+    <Compile Include="InfoResourceManage.cs" />
+    <Compile Include="MakeCriteria.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Pager\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pager\Pager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MessageBox.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysLog.cs" />
+    <Compile Include="Text.cs" />
+    <Compile Include="UrlRewriter.cs" />
+    <Compile Include="Utility\PageValidate.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="ViewStateHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pager\PagerScrpit.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DateTimeBox\date.gif" />
+    <EmbeddedResource Include="DateTimeBox\date.js" />
+    <EmbeddedResource Include="DateTimeBox\DateTimeBox.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tz888.BLL\Tz888.BLL.csproj">
+      <Project>{E1887657-99AF-41D3-A597-95D96596D469}</Project>
+      <Name>Tz888.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.DALFactory\Tz888.DALFactory.csproj">
+      <Project>{79B3C1D5-872C-4303-AD69-5440A18FFB1B}</Project>
+      <Name>Tz888.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.DBUtility\Tz888.DBUtility.csproj">
+      <Project>{EE61DF29-35DB-408D-ACF8-1AC2E0A13090}</Project>
+      <Name>Tz888.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.IDAL\Tz888.IDAL.csproj">
+      <Project>{8EC654D9-ACA8-47E2-B201-59781959A5CD}</Project>
+      <Name>Tz888.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tz888.Model\Tz888.Model.csproj">
+      <Project>{059992ED-C5FF-4E37-A3F1-BC4FA6854304}</Project>
+      <Name>Tz888.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AjaxPro.2.dll" />
+    <Content Include="bin\Debug\Interop.DexterLib.dll" />
+    <Content Include="bin\Debug\RadUpload.Net2.dll" />
+    <Content Include="bin\PreProcessUtility.dll" />
+    <Content Include="bin\SharpICTCLAS.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

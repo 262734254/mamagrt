@@ -1,0 +1,63 @@
+@charset "utf-8";
+	
+/*账户信息*/
+	.account{ overflow:hidden; width:764px}
+     .account-1{ width:764px; height:82px; overflow:hidden; margin-bottom:20px}
+   .account-left{ width:330px; float:left; color:#2f87d2; margin-left:20px; height:82px}
+   .account-left li{ margin-bottom:4px}
+   .account-right{ width:355px; height:82px; background-image:url(../images/account_bj001.jpg); float:right}
+   .account-right a,.account-right a:link,.account-right a:visited{ color:#FF0000; text-decoration:underline}
+     .account-right ul{ margin-left:12px }
+   .account-right h3{ color:#FF0000; font-weight:bold; margin:6px 0 0 12px}
+   .account-2{ clear:both; margin:10px 0 0px 20px;  overflow:hidden; width:400px; overflow:hidden; line-height:20px}
+   .account-3{ width:500px; color:#2f87d2; margin-top:10px }
+   .account-3-td { height:16px}
+   .account-3-td-r { text-align:right; padding:2px}
+   .account-3-td-l { text-align:left; padding:2px}
+   .ketang { margin-top:16px; width:600px}
+   .ketang li{ float:left; margin-left:20px; width:200px; display:inline}
+   .account-xiug{width:184px; height:21px; background:url(../images/account_11.jpg); color:#0174d6; text-align:center; line-height:21px; margin-top:6px}
+   .account-xiug a,.account-xiug a:link,.account-xiug a:visited{ color:#0174d6;}
+   
+  /*我要充值*/ 
+  .chongzhi-con{width:960px; margin:0 auto}
+  .zfliucheng{ width:100%; margin:0 auto 20px  auto}
+  .recharge { margin-top:20px; width:764px; overflow:hidden}
+   .recharge  ul{ margin-left:20px}
+ .recharge li{ border-bottom:1px dashed #CCC; height:140px; overflow:hidden; margin-bottom:30px; width:724px}
+ .recharge-1{ float:left; margin-left:20px; width:377px; font-size:14px}
+  .recharge-1 h3{ color:#fb6507; margin-bottom:4px}
+  .recharge-1 p{ margin-bottom:4px}
+  .chongzhi01{ margin-left:20px; width:740px}
+	 .chongzhi01 h3{ color:#ff6705}
+	 .chongzhi01 li{ color:#ff6705}
+	 .chongzhi01 table{ margin-top:30px; overflow:hidden}
+	 .chongzhi01 td{ color:#000; font-size:14px; height:32px}
+	 .chongzhi01 a,.chongzhi01 a,.chongzhi01 a{color:#0c70df; text-decoration:underline}
+    /*设置支付密码*/
+	.change-password{ width:400px; margin-left:20px} 
+	.change-password p{ color:#f96607; line-height:20px; margin-bottom:20px}
+	.change-password td{ height:34px; color:#000; font-size:14px}
+	.pawwword-input{ width:200px; padding-left:2px; font-size:14px; height:18px; line-height:18px}
+	
+	 /*支付*/
+	 .zf-liuch{margin:20px 0 0 100px}
+	 .payment1 {width:100%; margin:10px auto 30px auto; overflow:hidden}
+	.payment1 h1{  background-image:url(../images/account_03.jpg); height:32px; line-height:32px; font-size:14px; font-weight:bold; color:#fb6507; padding-left:20px; margin-bottom:20px}
+	.payment1-1{ width:960px; height:58px; background-image:url(../images/payment_07.jpg); overflow:hidden; font-size:14px; color:#0066ff}
+	.payment1-1 ul{ margin:8px 0 0 20px}
+	.payment1-1-a{width:150px; text-align:right; float:left; margin-right:2px; display:block}
+	.payment2{ width:100%; margin:0 auto; padding-bottom:100px; color:#000; font-size:14px}
+	.payment2 h1{ font-weight:bold; font-size:14px; background-image:url(../images/payment_11.jpg); height:32px; line-height:32px; margin-bottom:30px}
+	.payment2 h1 a,.payment2 h1 a:link,.payment2 h1 a:hover{ color:#1e83df}
+	.payment2-a{width:200px; display:block; float:left; text-align:center; margin-right:10px}
+	.payment2 td{ height:32px}
+	.pagment2-liuc{ margin:0 0 30px 20px}
+	.pagment2-liuc li{ margin-bottom:6px}
+	.pagment-01{ width:100%; margin:10px auto}
+
+ .pagment-01 li{ border-bottom:1px dashed #CCC; height:140px; overflow:hidden;width:410px; float:left; display:inline; margin:0 30px 30px 30px; color:#000}
+ .pagment-01-1{ float:left; margin-left:10px; width:284px; font-size:14px}
+  .pagment-01 h3{ color:#fb6507; margin-bottom:4px}
+  .pagment-01 p{ margin-bottom:4px}
+  

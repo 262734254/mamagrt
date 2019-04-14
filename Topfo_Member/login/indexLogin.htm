@@ -1,0 +1,128 @@
+<style>
+		.login{ background:url(/web13/images/home/bg_login.gif) no-repeat 0 0;height:108px;font-size:12px;font-family:"宋体"}
+.login h3{font-size:14px;color:#ff6600;font-weight:bold; text-align:center;padding:10px 0px 6px 0px;}
+.login h3 span{margin:0px 6px;}
+.login h3 img{ position:relative;top:2px;}
+.login .inputbox{_height:0;zoom:1;margin:0 0 0 16px}
+.login .inputbox div{width:84px;float:left;text-align:center;line-height:32px;}
+.login .inputbox div img{margin-bottom:4px;}
+.login .inputbox div input{width:84px;}
+
+
+.login .inputbox ul{margin-top:8px;}
+.login .inputbox li.li01{width:50px;float:left;}
+.login .inputbox li.li01 img{ border:1px solid #cccccc;}
+.login .inputbox li.li02{float:left;width:;}
+.login .inputbox li.li02 a{margin-right:6px;}
+
+.login img a{border:0px;}
+.inpcss{ border:1px solid #000000; background: url(../images/load/inputbg1.gif) #fff fixed no-repeat 0 0;padding:3px 2px;width:150px; font-family:arial,simsun; }
+
+.oninpcss{border:1px solid #FF7725; background: url(../images/load/inputbg1.gif) #fff fixed no-repeat 0 0;padding:3px 2px;width:150px;font-family:arial,simsun; }
+		</style>
+<link href="http://www.topfo.com/web13/css/home.css" rel="stylesheet" type="text/css">
+	<form id="form_mini" method="post">
+		<div class="login" id="member_logout" style="display: none">
+			<h3>
+				<img src="http://www.topfo.com/web13/images/home/arrow_04.gif" /><span>网络招商投融资</span>成功由此起步</h3>
+			<div class="inputbox">
+				<div>
+					<input name="txtLoginName" id="txtLoginName" height="22px" class="oninpcss" value="请输入用户名"
+						onmouseout="this.className='inpcss'" onclick="change(this)" onmouseover="this.className='oninpcss'"
+						width="80px"><br />
+					<a href="http://www.topfo.com/Register/RetrieveMemberLoginName.aspx" target="_blank">
+						忘记用户名</a>
+				</div>
+				<div>
+					<input name="txtPassword" id="txtPassword" onkeydown="javascript:LoginSubmit_mini(event);" height="22px" class="oninpcss" onmouseout="this.className='inpcss'"
+						onmouseover="this.className='oninpcss'" type="password" width="80px"><br />
+					<a href="http://www.topfo.com/Register/RetrieveMemberPassword.aspx" target="_blank">
+						忘记密码</a>
+				</div>
+				<div>
+					<img src="http://www.topfo.com/web13/images/home/login.gif" id="btn_mini_submit" onclick="CheckLogin_mini();return false;"
+						style="cursor: hand" /> <a href="http://member.topfo.com/Register/Register.aspx" target="_blank">
+						<img src="http://www.topfo.com/web13/images/home/login_reg.gif"></a><br />
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="login" id="member_login" style="display: none">
+		<h3>
+			<img src="http://www.topfo.com/web13/images/home/arrow_04.gif"><span>网络招商投融资</span>成功由此起步</h3>
+		<div class="inputbox">
+			<p class="li01" style="line-height: 30px; position: relative; top: 3px">
+				欢迎您,<span class="bold"><a href="#" id="loginNickname" style="color: #ff720a">昵称</a>
+                ,您现在的身份是 <a href="#" style="color: #0349c7" id="loginClass"> 普通会员</a> </span>
+				<br>
+				<a href="http://member.topfo.com/" target="_blank"><strong>
+						<span style="color: #000000">
+                [进入拓富中心]</span></strong></a> <a href="http://bbs.tz888.cn/" target="_blank">
+					<span style="color: #000000">[进入拓富论坛]</span></a>&nbsp; <a href="javascript:void(0)" onclick="Logout();return false;">
+					退出</a></p>
+		</div>
+	</div>
+	<div class="rtop_wai" id="member_login_loading" style="display: block">
+		<div class="r_top">
+		</div>
+		<div class="r_c">
+			<table width="100" height="108" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="100%" align="center">
+						<img src="http://member.topfo.com/images/down.gif">
+						<span style="font-size: 9pt">加载中....</span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="r_b">
+		</div>
+	</div>
+	<script language="javascript">
+var serviceUrl = "http://www.topfo.com/WebService/UserData.asmx/GetUserData";
+function GetLoginInfo(transport)
+{
+    var nodes = transport.responseXML;
+   var str = "";
+   try
+   {
+		str =nodes.getElementsByTagName("string")[0].firstChild.data;
+   }
+   catch(e)
+   {
+       alert(e.name + ":" + e.message);
+	   str="";
+   }   
+   if(str&&str.trim()!="")
+   {
+		str = str.trim();
+   }
+   else
+   {		
+		$("member_logout").style.display = "block";
+		$("member_login").style.display = "none";
+		$("member_login_loading").style.display = "none";
+		return;
+   }
+   var arr = str.split('_');
+   if(arr[0]=="1001")
+   {
+        $("loginClass").innerHTML = "普通会员";
+   }
+   if(arr[0]=="1002")
+   {
+     $("loginClass").innerHTML = "拓富通会员";
+   }
+   $("loginNickname").innerHTML = arr[2];
+   $("member_login").style.display = "block";
+   $("member_login_loading").style.display = "none";
+}
+function change(obj)
+{
+    if(obj.value=="请输入用户名")
+    {
+        obj.value="";
+    }
+}
+	</script>
+	<script language="javascript" src="/login13/javascript/login_common.js">        
+	</script>

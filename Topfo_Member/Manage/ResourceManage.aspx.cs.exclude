@@ -1,0 +1,117 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class ResourceManage : System.Web.UI.Page
+{
+    protected string _manageType;
+    private string _remind ="您共有 <span class='hong'>{0}</span> 条{1}的需求";
+
+    protected string Remind
+    {
+        get { return _remind; }
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (this.ViewState["ManageType"] != null)
+            this._manageType = Convert.ToString(this.ViewState["ManageType"]);
+        else
+            if (this.Page.Request.QueryString["type"] != null)
+                this._manageType = this.Page.Request.QueryString["type"].ToString();
+        if (string.IsNullOrEmpty(this._manageType))
+            this._manageType = "pass";
+        if (this._manageType != "pass" && this._manageType != "audit" && this._manageType != "nopass" && this._manageType != "overdue")
+            this._manageType = "pass";
+        ViewState["ManageType"] = this._manageType;
+        if (!Page.IsPostBack)
+        {
+            bool bUI = Page.User.Identity.IsAuthenticated;
+            string sT = Page.User.Identity.Name;
+            bool bR = Page.User.IsInRole("1002");;  
+        }
+    }
+
+    protected DataSet GetList(Tz888.BLL.Common.AuditStatus Type)
+    {
+        DataSet ds;
+        switch ((int)Type)
+        {
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
+        return null;
+    }
+
+
+    protected int Count(Tz888.BLL.Common.AuditStatus Type)
+    {
+        string strWhere = "";
+        string loginName = "liyanlili";
+        //string loginName = Page.User.Identity.Name;
+        switch ((int)Type)
+        {
+            case 0:
+                strWhere = "LoginName = '" + loginName + "' And InfoOriginRoleName = '0' And AuditingStatus = " + ((int)Tz888.BLL.Common.AuditStatus.Auditing).ToString();
+                break;
+            case 1:
+                strWhere = "LoginName = '" + loginName + "' And InfoOriginRoleName = '0' And AuditingStatus = " + ((int)Tz888.BLL.Common.AuditStatus.Pass).ToString();
+                break;
+            case 2:
+                strWhere = "LoginName = '" + loginName + "' And InfoOriginRoleName = '0' And AuditingStatus = " + ((int)Tz888.BLL.Common.AuditStatus.NoPass).ToString();
+                break;
+            case 3:
+                strWhere = "LoginName = '" + loginName + "' And InfoOriginRoleName = '0' And InfoOverdueTime > '" + System.DateTime.Now.ToString() + "'";
+                break;
+            default:
+                break;
+        }
+        Tz888.BLL.Info.MainInfoBLL bll = new Tz888.BLL.Info.MainInfoBLL();
+        return bll.GetCount(strWhere);
+    }
+
+    protected string GetRemind()
+    {
+        this._manageType = ViewState["ManageType"].ToString();
+        string remindInfo = "";
+        Tz888.BLL.Common.AuditStatus type = Tz888.BLL.Common.AuditStatus.Pass;
+        switch (this._manageType.ToLower())
+        {
+            case "audit":
+                remindInfo = "审核中";
+                type = Tz888.BLL.Common.AuditStatus.Auditing;
+                break;
+            case "pass":
+                remindInfo = "通过审核";
+                type = Tz888.BLL.Common.AuditStatus.Pass;
+                break;
+            case "nopass":
+                remindInfo = "未通过审核";
+                type = Tz888.BLL.Common.AuditStatus.NoPass;
+                break;
+            case "overdue":
+                type = Tz888.BLL.Common.AuditStatus.Overdue;
+                remindInfo = "已过期";
+                break;
+            default:
+                break;
+        }
+        int count = this.Count(type);
+        this._remind = string.Format(this._remind, count.ToString(), remindInfo);
+        return this._remind;
+    }
+}

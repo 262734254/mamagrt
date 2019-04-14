@@ -1,0 +1,120 @@
+﻿/* CSS Document */
+body {padding:0; margin:0; font-size:12px; text-align:center; background:#fff;}
+* {padding:0; margin:0; }
+ul {padding:0; margin:0;}
+li {list-style:none; line-height:150%;}
+img {border:0;line-height:0;}
+span {padding:0; margin:0;}
+
+/* css-hack */
+.clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+.clearfix{display:inline-table;}
+* html .clearfix{height:1%;}
+*+html .clearfix{min-height:1px;}
+.clearfix{display:block;}
+.clear {clear:both;font-size:1px;visibility:hidden;width:1px;line-height:0px;}
+
+/*字体链接样式*/
+a:link,a:visited {color:#333;text-decoration:none;}
+a:hover {color:#f00;text-decoration:underline;}
+.strong {font-weight:bolder;}
+.mar_top {margin-top:10px;}
+.float_l{float:left;}
+.float_r{float:right;}
+.f_14px {font-size:14px;}
+.f_18px {font-size:18px;}
+.f_gray {color:#666;}
+.f_org {color:#f60;}
+.f_org a:link, .f_org a:visited{color:#f60;text-decoration:none;}
+.f_org a:hover{color:#f00;text-decoration:underline;}
+.f_white {color:#fff;}
+.f_white a:link, .f_white a:visited{color:#fff;text-decoration:none;}
+.f_white a:hover{color:#f00;text-decoration:underline;}
+.f_red {color:#f00;}
+.f_red a:link,.f_red a:visited{color:#f00;text-decoration:none;}
+.f_red a:hover{color:#f00;text-decoration:underline;}
+
+/*头尾文件样式*/
+.top_l {float:left; width:300px; height:155px; text-align:center; overflow:hidden;}
+.top_r {float:right; width:640px; height:155px; background:url(../img/inv_loo1.gif) right bottom no-repeat; overflow:hidden;}
+.top_r .tit {width:100%; height:21px; padding-top:5px; overflow:hidden;}
+.top_r .ad {width:640px;}
+.top_r .roll {width:620px; height:20px; padding-left:20px; margin-top:10px; background:url(../img/inv_icon1.gif) no-repeat; overflow:hidden;}
+.menu {width:905px; height:35px; padding:13px 0 0 43px; margin:0 auto; background:url(../img/inv_bg1.gif) no-repeat; clear:both; overflow:hidden;}
+.menu li {float:left; padding:0 15px; height:18px; line-height:18px; border-left:1px solid #999;}
+.seach {width:948px; height:94px; padding:0; margin:0 auto; text-align:left; background:url(../img/inv_bg2.gif) no-repeat; clear:both; overflow:hidden;}
+.seach .name {width:830px; height:32px; padding:5px 0 0 110px; overflow:hidden;}
+.seach .name li {float:left; border-right:1px solid #000; padding:0 7px; line-height:16px; cursor:pointer; text-align:center; position:relative; top:8px;}
+.seach .name li.on1 {width:74px; height:28px; border-right:0; padding:5px 0 0 0; line-height:18px; font-weight:bold; background: url(../img/inv_btnon1.gif) no-repeat; left:-1px; position:relative; top:0; color:#fff;}
+.seach .name li.on2 {width:105px; height:28px; border-right:0; padding:5px 0 0 0; line-height:18px; font-weight:bold; background: url(../img/inv_btnon2.gif) no-repeat; left:-1px; position:relative; top:0; color:#fff;}
+.seach .name li.nolast {border:0;}
+.sea .text {width:100%; overflow:hidden;}
+.sea_text {width:410px; padding:2px 0 0 125px; overflow:hidden;}
+.sea_ent {width:100px; overflow:hidden;}
+.sea_go {width:250px; overflow:hidden;}
+.btn1 {width:335px; padding:3px 0 0 5px; border:none;}
+.btn2 {width:93px; height:36px; border:none; cursor: pointer; background:url(../img/inv_search.gif) no-repeat;}
+.btn3 {width:59px; height:21px; border:none; cursor: pointer; background:url(../img/inv_btn3.gif) no-repeat;}
+.coo {width:948px; height:30px; padding-top:20px; margin:0 auto; background:url(../img/inv_bg17.gif) 20px 0 no-repeat; clear:both; overflow:hidden;}
+.coo li {float:left; padding:3px 5px; margin-right:7px; border:1px solid #FFBF20;}
+.link {width:926px; padding:10px 10px; line-height:20px; border:1px solid #D3D2D2; border-top:none; overflow:hidden;}
+.pub {height:20px; padding-top:7px; text-align:center; background:#EBEBEB;}
+.copy {float:right; width:600px; height:120px; padding-top:10px; line-height:20px; text-align:center;}
+.tel {float:right; width:160px; padding-top:50px; }
+
+/*主体部分样式*/
+.con {width:948px; padding:0px; margin:0 auto; text-align:left; clear:both; overflow:hidden;}
+.con_l {float:left; width:740px; overflow:hidden;}
+.con_r {float:right; width:196px; overflow:hidden;}
+.con1 {width:100%; height:90px; background:url(../img/res_serbg.jpg); overflow:hidden;}
+.con1_l {width:730px; height:90px; background:url(../img/res_ser_l.jpg) no-repeat; overflow:hidden}
+.con1_nav {height:41px; padding:2px 0 0 130px; overflow:hidden}
+.con1_nav li {float:left; height:41px; text-align:center; background:url(../img/res_serline.gif) 0 12px no-repeat; padding:10px 10px 0 10px; cursor:pointer; text-align:center;　overflow:hidden;}
+.con1_nav .on1 {width:61px; padding:10px 0 0 0; background:url(../img/res_seron1.jpg) no-repeat; color:#fff; font-weight:bold; overflow:hidden;}
+.con1_nav .on2 {width:91px; padding:10px 0 0 0; background:url(../img/res_seron2.jpg) no-repeat; color:#fff; font-weight:bold; overflow:hidden;}
+.con1_l .text {width:760px; padding-left:54px; overflow:hidden}
+.con1_l .text span {float:left; display:block;}
+.con1_r {width:5px; height:90px; background:url(../img/res_ser_r.jpg) 0 right no-repeat; overflow:hidden}
+.con2 {width:100%; height:361px; margin:10px 0 0 0; overflow:hidden;}
+.con3 {width:100%; height:139px; background:url(../img/res_pic5_2.jpg) no-repeat; overflow:hidden;}
+.con3_l {width:323px;}
+.con3_m {width:125px; padding-top:22px;}
+.con3_r {width:278px;}
+.con3_r .col { width:230px; height:20px; padding:19px 0 0 32px;}
+.con3_r .text li {float:left; width:250px; height:21px; padding-left:15px; line-height:21px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+.con4 {width:738px; height:150px; margin:10px 0; border:1px solid #D9D9D9; overflow:hidden}
+.con4_l {width:18px; height:100px; padding:50px 5px 0 7px; background:#FFDF00; overflow:hidden;}
+.con4_r {width:708px; padding-top:20px; overflow:hidden;}
+.con4_r .flow {margin-bottom:10px; height:49px; overflow:hidden;}
+.con4_r .flow li {float:left; line-height:18px;}
+.con4_r .name {width:110px; padding-top:15px; text-align:right;}
+.con4_r .icon {width:35px; height:25px; margin-top:11px; background:url(../img/res_icon1.gif) 8px 0 no-repeat;}
+.con4_r .c1 {width:100px; height:33px; padding-top:16px; text-align:center; background:url(../img/res_btnbg1.gif) no-repeat;}
+.con4_r .c2 {width:140px; height:41px; padding-top:8px; text-align:center; background:url(../img/res_btnbg2.gif) no-repeat;}
+.con5 {width:240px; height:170px; border:1px solid #FFAB20; overflow:hidden;}
+.con5 .col {width:100%; height:27px; background:#FFCC00;}
+.con5 .tit {padding:7px 0 0 10px;}
+.con5 .more {padding:8px 10px 0 0;}
+.con6_col {width:171px; height:19px; padding:7px 0 0 25px; background:url(../img/res_colbg.gif) no-repeat;}
+.con6 {width:186px; height:220px; padding:12px 0 0 8px; margin-bottom:10px; border:1px solid #FFAB20; border-top:none; overflow:hidden;}
+.con6 li {float:left; width:62px; height:21px; line-height:21px; overflow:hidden;}
+.con7 {width:186px; height:150px; padding:12px 0 0 8px; margin-bottom:10px; border:1px solid #FFAB20; border-top:none; overflow:hidden;}
+.con7 li {float:left; width:175px; height:21px; line-height:21px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.con8 {padding:10px; margin-bottom:10px; background:#fc0; line-height:18px;}
+.con9 {padding-top:10px; text-align:center; background:#F5F5F5;}
+.con9 li {height:110px; overflow:hidden;}
+.con9 img {width:196px; height:80px; margin-bottom:5px;}
+.con10 {width:295px; height:141px; overflow:hidden;}
+.con10 li {height:20px; line-height:20px;}
+.con10 .icon_l {float:left; width:20px; height:141px; background: url(../img/res_pic6_l.gif) no-repeat; overflow:hidden;}
+.con10 .icon_r {float:left; width:20px; height:141px; background: url(../img/res_pic6_r.gif) no-repeat; overflow:hidden;}
+.con10 .text_l {float:left; width:250px; height:141px; padding:10px 0 0 20px; border:1px solid #fc0; border-left:none; background:#fff; text-align:left; overflow:hidden;}
+.con10 .text_r {float:left; width:250px; height:129px; padding:10px 0 0 20px; border:1px solid #fc0; border-right:none; background:#fff; text-align:left; overflow:hidden;}
+.inp_inv {width:350px; height:18px; padding:5px 0 0 3px; border:1px solid #f60; background:#fff; color:#333;}
+.inp_btn1 {width:90px; height:25px; border:none; background:url(../img/res_serbtn.gif) no-repeat; cursor:pointer; overflow:hidden;}
+
+
+
+
+

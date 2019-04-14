@@ -1,0 +1,62 @@
+/*by yanweiping*/
+
+/*会员中心首页*/
+.topbgc{
+	background-image: url(/TopfoCenter/images/Color/Buletopbg.jpg);
+	background-repeat: no-repeat;
+}
+.leftc{
+	background-color: #9DDCFD;
+}
+.leftbg{
+	background-image: url(/TopfoCenter/images/Color/Buleleftbg.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+.ztopbg{
+	background-image: url(/TopfoCenter/images/Color/Buletopxk.gif);
+	background-repeat: no-repeat;
+}
+.ztitlec{background-color: #DBF2FE;}
+.ztitlebk{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #2BB8FD;
+}
+.zhelpbox ul{
+	background-image: url(/TopfoCenter/images/Color/Bulelibg.gif);
+}
+.zhelpbox li{
+	background-image: url(/TopfoCenter/images/Color/Bulelibuttombg.gif);
+	background-repeat: no-repeat;
+
+}
+.zhelpbox .liwai{
+	background-image: url(/TopfoCenter/images/Color/Buleliwaibuttombg.gif);
+	background-repeat: no-repeat;
+}
+.zhelpsanb{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #1AB3FD;
+	border-bottom-color: #1AB3FD;
+	border-left-color: #1AB3FD;
+}
+.rtitlebg{
+	background-image: url(/TopfoCenter/images/Color/Bulejbbg_t.gif);
+}
+.rsibiank{
+	border: 1px solid #1AB3FD;
+}
+.rsuggestbg{
+	background-image: url(/TopfoCenter/images/Color/Bulejbbg_c.gif);
+}
+.rxuxianb{
+	background-image: url(/TopfoCenter/images/Color/Bulexuxinab.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}

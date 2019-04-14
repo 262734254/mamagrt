@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>无标题页</title>
+</head>
+ <script language="javascript" type="text/javascript">   
+function getCookie()//读取cookies函数        
+{ 
+    var loginnameStr="";
+    var ckdataStr="";
+    
+    if(document.cookie!=""&&document.cookie.indexOf(";")!=-1)
+    {   
+        var cookies = document.cookie.split(';');
+        for(var i=0;i<cookies.length;i++)
+       {
+       //alert(cookies[i]);
+            var co = cookies[i];
+            if(co.indexOf("topfo.com")!=-1)
+            {
+                if(co.indexOf("topfo.com.LoginName")!=-1)
+                {
+                    loginnameStr=co.split('=')[1];
+                }
+                if(co.indexOf("topfo.com_CKData")!=-1)
+                {
+                    ckdataStr=co.split('=')[1];
+                }
+            } 
+        }
+    }
+    alert(loginnameStr);
+    if(loginnameStr =="" || loginnameStr ==null)
+    {
+        loginnameStr = ckdataStr;
+    }
+//    alert(loginnameStr);
+//    alert(ckdataStr);
+    if(loginnameStr!=null&&loginnameStr!="")
+    {
+//         alert("SADSADSAD");
+        document.getElementById("divLogin").innerHTML =" <span class='name' style='height:20px;line-height:20px;text-indent:10px;'>尊敬的用户会员 " + loginnameStr + ",您已经登陆..</span><span class='ser' style='height:20px;line-height:20px;'><a href='http://member.topfo.com/Publish/publishNavigate.aspx' target='_blank'>[进入拓富中心]</a>&nbsp;&nbsp;<a href='http://member.topfo.com/Logout.aspx' target='_self'>[退出]</a></span>";
+       
+        
+    }
+}
+   var str ="";
+    var messageIndex = 0;
+    window.onload = function()
+    {     
+        getCookie();
+    }
+function CheckLogin_mini()
+{  
+	if (document.getElementById("txtLoginName").value.length ==0)
+	{
+		alert("请输入用户名!");
+		document.getElementById("txtLoginName").focus();
+		return;
+	}
+	if(document.getElementById("txtPassword").value.length ==0)
+	{
+		alert("请输入密码!");
+		document.getElementById("txtPassword").focus();
+		return;
+	}
+	else
+	{	
+			
+var actionUrl ="http://member.topfo.com/LoginR.aspx?";
+		//if(document.getElementById('isAutoLogin').checked)
+			actionUrl +='isAuto=False&';
+		actionUrl += 'url='+window.location.href;
+	   alert(actionUrl);
+		document.forms["form_mini"].action = actionUrl;
+		document.forms["form_mini"].submit();
+			
+		
+	}
+}
+</script>
+<body runat="server">
+            <div id="divLogin" class="login_02" style="float: left;">
+                  <form id="form_mini" method="post" target="_self" action="" defaultbutton="btLogin" runat="server">
+                    <div style="float: left;">
+                        用户名
+                        <input id="txtLoginName" name="txtLoginName" type="text" class="inp1"" />
+                        密码:
+                        <input id="txtPassword" name="txtPassword" type="password" class="inp1" maxlength="20" />
+           <select name="select" class="sel1">
+          <option>选择您的去向</option>
+          <option>拓富会员中心</option>
+          <option>资源联盟</option>
+          <option>分站中心</option>
+		</select>
+                    </div>
+                    <div style="float: left; padding-left: 8px;">
+                        <input id="btLogin" name="" type="submit" class="btn1" onclick="CheckLogin_mini();return false;"
+                            value="登录" />
+                    </div>
+                   
+                </form>
+      
+            </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<style type="text/css">
+<!--
+#Layeraa { position:absolute; width:160px; height:64px; z-index:100; visibility: hidden;}
+.input {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	background-image: url(/web1.1/img/CapitalImg/top_mbg.gif);
+	background-repeat: no-repeat;
+	width: 948px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.greyzi {
+	line-height: 200%;
+	width:890px;
+	color: #666666;
+}
+
+div#SysIntro A:link    {
+	text-decoration:none;
+}
+div#SysIntro A:visited {
+	text-decoration: none;
+}
+div#SysIntro A:active  {
+	text-decoration: none;
+}
+div#SysIntro A:hover   {
+	text-decoration: none;
+}
+
+
+.greyzi A:link    {
+	color:#595959;
+	text-decoration: underline;
+}
+.greyzi A:visited {
+	color:#595959;
+	text-decoration: underline;
+}
+.greyzi A:active  {
+	color:#ff0000;
+	text-decoration: underline;
+}
+.greyzi A:hover   {
+	color:#ff0000;
+	text-decoration: underline;
+}
+.input .kuang {
+	width: 820px;
+	text-align: left;
+	margin-top: 0px;
+	padding-top: 7px;
+	padding-left: 0px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<script type="text/javascript" src="/web1.1/javascript/SysIntro.js" language="javascript"></script>
+				<script type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+    if(document.getElementById("RoleName"))
+    {
+		if(v=='visible')
+		{
+			document.getElementById("RoleName").style.visibility="hidden";
+		}
+		else
+		{
+			document.getElementById("RoleName").style.visibility="visible";
+		}
+	}
+}
+//-->
+
+	function doSubmitSearch()
+	{
+		FormIniInsertInfoToContent();
+		document.forms["Form1"].submit();
+	}		
+	
+	function FormIniInsertInfoToContent()
+		{
+			//区域代号
+			var theCountryListCN = document.forms["Form1"].CountryListCN;
+			var theprovinceCN = document.forms["Form1"].provinceCN;
+			var thecapitalCN = document.forms["Form1"].capitalCN;
+			var thecityCN = document.forms["Form1"].cityCN;
+			
+			var theCountryListHot = document.forms["Form1"].CountryListHot;
+			var theCountryList = document.forms["Form1"].CountryList;
+				document.forms["Form1"].hideCountyCode.value = theCountryListCN.value;
+				document.forms["Form1"].hideProvince.value = theprovinceCN.value;
+				document.forms["Form1"].hideCapitalCity.value = thecapitalCN.value;
+				document.forms["Form1"].hideCounty.value = thecityCN.value;					
+			insertIntoFrom(); //获取行业信息
+			return false;			
+		}
+					</script>
+<div class="input">
+			<div></div>
+			<div class="kuang">
+				<form method="post" id="Form1" name="Form1" action="/Capital/CapitalSearchResult.aspx?origin=Index">
+					<table width="819" height="26" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="41">关键字</td>
+							<td width="249"><input type="text" class="cur" style="HEIGHT:18px" name="txtKeyWord" id="txtKeyWord" size="35"></td>
+							<td width="101"><select name="ddlCapital" id="ddlCapital" style="WIDTH:100px">
+									<option value="" selected>投资金额</option>
+									<option value="1">500万以下</option>
+									<option value="2">500-2000万</option>
+									<option value="3">2000万-1亿</option>
+									<option value="4">1-10亿</option>
+									<option value="5">10亿以上</option>
+								</select></td>
+							<td width="101"><SELECT id="topCatFormKey" size="1" name="topCatFormKey" style="WIDTH: 100px">
+									<OPTION value="" selected>行业</OPTION>
+								</SELECT></td>
+							<td width="101"><SELECT id="provinceCN" name="provinceCN" style="WIDTH: 100px">
+									<OPTION selected>省份</OPTION>
+								</SELECT></td>
+							<td width="90"><img src="/web1.1/img/search_ailiu.gif" width="80" onClick="doSubmitSearch();return false;"
+									height="26" align="absMiddle" style="CURSOR:pointer"></td>
+							<td width="110" align="right"><table id="Tabother" onMouseOver="MM_showHideLayers('Layeraa','','show')" onMouseOut="MM_showHideLayers('Layeraa','','hide')"
+									cellspacing="0" cellpadding="0" width="20%" align="right" border="0" style="FLOAT:left">
+									<tr>
+										<td width="10" height="20"></td>
+										<td width="10" align="left"><div id="Layeraa" onMouseOver="MM_showHideLayers('Layeraa','','show')" onMouseOut="MM_showHideLayers('Layeraa','','hide')">
+												<table width="95%" border="0" align="left" cellpadding="4" cellspacing="1" bgcolor="#fed653" style="margin:13px 0 0 0px;">
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishMerchantResource.aspx" target="_blank">发布政府招商需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishMerchant.aspx" target="_blank">发布政府招商机构</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCapital.aspx" target="_blank">发布投资需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishProject.aspx" target="_blank">发布融资需求</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCarveOutFindFund.aspx" target="_blank">发布创业信息（找资金）</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishCarveOutFindProject.aspx" target="_blank">发布创业信息（找项目）</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishOppor.aspx" target="_blank">发布商机信息</a></td>
+                        </tr>
+                        <tr>
+                          <td onmouseover="style.background='#FFBC41';style.cursor='pointer'" onmouseout="style.background='#ffffff'"
+																								align="left" bgcolor="#ffffff"><a href="/Member/Info/PublishExhibition.aspx" target="_blank">发布会展信息</a></td>
+                        </tr>
+                      </table>
+											</div>
+										</td>
+										<td align="right"><a href="/Member/Info/PublishCapital.aspx" target="_blank"><img src="/web1.1/img/pulishpic.gif" width="108" height="26" align="absMiddle"></a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<div style="DISPLAY:none"><div id="div1" name="div1"></div>
+						<div id="div2" name="div2"></div>
+						<div id="div3" name="div3"></div>
+						<div id="div4" name="div4"></div>
+						<div id="div5" name="div5"></div>
+						<div id="div6" name="div6"></div>
+						<INPUT type="hidden" value="m" name="_fom_grp_" ID="Hidden1"> <INPUT type="hidden" value="_z_Z_" name="m" ID="Hidden2">
+						<INPUT type="hidden" name="SelectCapitalId" ID="Hidden3"> <input name="hideCountyCode" id="hideCountyCode" type="hidden" value="CN">
+						<input name="hideProvince" id="hideProvince" type="hidden"> <input name="hideCapitalCity" id="hideCapitalCity" type="hidden">
+						<input name="hideCounty" id="hideCounty" type="hidden"><input name="hideIndustryB" id="hideIndustryB" type="hidden">
+						<input name="hideIndustryM" id="hideIndustryM" type="hidden">
+						<SELECT name="CountryListHot" ID="Select1">
+							<OPTION selected></OPTION>
+						</SELECT><SELECT name="CountryList" ID="CountryList">
+							<OPTION selected></OPTION>
+						</SELECT><SELECT name="province1" ID="province1">
+							<OPTION selected></OPTION>
+						</SELECT><SELECT id="capitalCN" style="DISPLAY: none; WIDTH: 90px" name="capitalCN">
+							<OPTION selected>地级市</OPTION>
+						</SELECT>
+						<SELECT id="cityCN" style="DISPLAY: none" name="cityCN">
+							<OPTION selected>县级地区</OPTION>
+						</SELECT>
+						<SELECT id="secondCatFormKey" size="1" name="secondCatFormKey" style="DISPLAY: none; WIDTH: 100px">
+							<OPTION value="" selected>小行业</OPTION>
+						</SELECT>
+						<SELECT id="CountryListCN" onchange='javascript:changeCountry(this,"cn");' name="CountryListCN"
+							style="DISPLAY: none">
+							<OPTION selected></OPTION>
+						</SELECT></div>
+					<script src="../JavaScript/ZoneSelect.js"></script>
+					<script src="../JavaScript/IndustrySelect.js"></script>
+				</form>
+				<div class="greyzi">
+					<strong class="chengshe">热门关键字：</strong> <a href="/Capital/CapitalSearchResult.aspx?Title=房地产" target="_blank">
+						房地产</a> <a href="/Capital/CapitalSearchResult.aspx?Title=电子" target="_blank">电子</a>
+					<a href="/Capital/CapitalSearchResult.aspx?Title=节电" target="_blank">节电</a> <a href="/Capital/CapitalSearchResult.aspx?Title=木制玩具" target="_blank">
+						木制玩具</a> <a href="/Capital/CapitalSearchResult.aspx?Title=旅游" target="_blank">旅游</a>
+					<a href="/Capital/CapitalSearchResult.aspx?Title=东港区" target="_blank">东港区</a> <a href="/Capital/CapitalSearchResult.aspx?Title=采矿业" target="_blank">
+						采矿业</a> <a href="/Capital/CapitalSearchResult.aspx?Title=林业" target="_blank">林业</a>
+					<a href="/Capital/CapitalSearchResult.aspx?Title=纺织" target="_blank">纺织</a> <a href="/Capital/CapitalSearchResult.aspx?Title=民营" target="_blank">
+						民营</a> <a href="/Capital/CapitalSearchResult.aspx?Title=建材" target="_blank">建材</a>
+					<div style="DISPLAY:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					<div style="DISPLAY:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+					<div id="SysIntro" style="PADDING-RIGHT:0px;DISPLAY:inline;PADDING-LEFT:0px;PADDING-BOTTOM:3px;PADDING-TOP:3px"></div>
+				</div>
+				<script language="javascript">RefreshIntroLink()</script>
+			</div>
+		</div>

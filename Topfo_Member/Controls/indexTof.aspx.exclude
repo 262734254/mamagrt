@@ -1,0 +1,291 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/indexTof.master" AutoEventWireup="true"
+    ResponseEncoding="GB2312" CodeFile="indexTof.aspx.cs" Inherits="indexTof" Title="Untitled Page" %>
+
+<%@ Register Src="Controls/IndexTFZS.ascx" TagName="IndexTFZS" TagPrefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <script language="javascript" src="JavaScript/TodayCommand.js" type="text/javascript"></script>
+
+    <script language="javascript" src="JavaScript/UserCenter.js" type="text/javascript"></script>
+
+    <div class="lrbox_cont mainconbox">
+        <!--主体中间部份 -->
+        <div class="zhongbox">
+            <div class="ztopbox ztopbg">
+			<div><img src="http://member.topfo.com/images/vipline_01.gif" / ></div>
+                <dl>
+				<dt>尊敬的<asp:Label runat="server" ID="lblUserName"></asp:Label></dt><dd>您好！您购买的是<asp:Label ID="lblStatus" runat="server"></asp:Label><asp:Label ID="lblMemberType" runat="server"></asp:Label>，服务期限为<span class="cheng"><asp:Label runat="server" ID="lblBegin"></asp:Label>-<asp:Label runat="server" ID="lblEnd"></asp:Label>，</span>我们已经为您的帐户存入<span class="chengcu"><asp:Label runat="server" ID="lblAccoutAll"></asp:Label></span>元（<a href="/PayManage/account_info.aspx" class="blue">查看帐户详情</a>），赶紧去寻找您想要的资源吧，成功的机会正在等着您！ <a href="http://www.topfo.com/help/search.shtml#11" class="blue" target="_blank">&gt;&gt;如何寻找对口的资源</a>
+				</dd>
+				
+				<dd>如果您满意我们的服务，请将 <span class="chengcu">topfo.com</span> 推荐给您的朋友。现在，您每成功推荐一位好友注册，便能得到<span class="chengcu"> 500 </span>积分（100积分=1元人民币），积分兑换后可以购买网站高质量的收费资源哦！<a href="http://member.topfo.com/Register/InviteFriend.aspx" class="blue" target="_blank">立即邀请我的朋友</a>
+				</dd>
+				
+                </dl>
+				<div><img src="http://member.topfo.com/images/vipline_03.gif" / ></div>
+            </div>
+            <!--重要操作提示 -->
+            <div class="ztitle ztitlebk2  up_blank8">
+                <img src="images/icon_yb.gif" align="absmiddle" />
+                重要操作提示</div>
+            <div class="ztishicon">
+                <h1>
+                    想让更多对口的客户找到您吗？赶紧发布需求吧！<a href="/Publish/publishNavigate.aspx" class="Spaces"><img
+                        src="images/buttom_publish.gif" width="142" height="61" border="0" align="absmiddle" /></a></h1>
+                <asp:Panel runat="server" ID="pForOrg" ><p>
+                    <asp:Panel runat="Server" ID="pUserZT">
+                        贵公司的网上展厅地址为：<a href="#" class="blue"><asp:Label runat="server" ID="lblURLAddress" ></asp:Label></a>
+                       <A href="javascript:document.body.style.behavior='url(#default#homepage)';document.body.setHomePage('<%=orgURL%>');">点此设置成首页</A>
+                    </asp:Panel>
+                    <asp:Panel runat="server" ID="pNoUserZT" Visible="false">
+                        <b>网上展厅：</b>您还没有申请网上展厅，无法全面地展示自己！<span><a href="http://co.topfo.com/manager/intro.aspx" class="blue">立即创建</a></span>
+                    </asp:Panel> 
+                    
+                    <br />
+                    您还有很多公司资料没有添加，无法让客户完全信任您！<a href="http://member.topfo.com/Register/EnterpriseRegister.aspx"
+                        class="blue">&gt;&gt;点此完善公司资料</a>
+                        
+                        </p> </asp:Panel>   
+                      
+            </div>
+            <!--拓富助手提示您< -->
+            <div class="ztitle ztitlebk2">
+                <img src="images/icon_yb.gif" align="absmiddle" />
+                拓富助手提示您</div>
+            <div class="zhelpbox">
+                <ul>
+                    <li class="liwai" id="TodyTab" onmouseover="JavaScript:ChangeTodayTab(0);" name="TodyTab">
+                        <img src="images/icon_mail.gif" width="16" height="10" /><a href="http://member.topfo.com/InnerInfo/inbox2.aspx">我的短信息</a><span><asp:Label
+                            runat="server" ID="lblMsgCount"></asp:Label></span></li><li id="TodyTab" onmouseover="JavaScript:ChangeTodayTab(1);"
+                                name="TodyTab">
+                                <img src="images/icon_ly.gif" width="15" height="13" /><a href="http://member.topfo.com/helper/InfoComment/commentReceive.aspx">给我的留言</a><span><asp:Label
+                                    runat="server" ID="lblMsgForMeCount"></asp:Label></span></li><li class="linone" id="TodyTab"
+                                        onmouseover="JavaScript:ChangeTodayTab(2);" name="TodyTab">
+                                        <img src="images/icon_ty.gif" width="21" height="16" align="absmiddle" /><a href="http://member.topfo.com/helper/MatchingInfo.aspx">我的订阅</a><span><asp:Label
+                                            runat="server" ID="lblMyDingYueCount"></asp:Label></span></li></ul>
+                <div class="con zhelpsanb" id="DispUp" name="DispUp">
+                    <div class="msglistable llmsgbg01" id="TodayDetailTab" style="display: block" name="TodayDetailTab">
+                        <div id="dgInner">
+                        </div>
+                        <div class="rtop_wai" id="UserCenter_Inner" style="display: block">
+                            <div class="r_top">
+                            </div>
+                            <div class="r_c">
+                                <table width="262" height="164" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="262" align="center">
+                                            <img src="images/down.gif">
+                                            加载中....</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="r_b">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="msglistable llmsgbg02" id="TodayDetailTab" style="display: none" name="TodayDetailTab">
+                        <div id="dgMsgToMe">
+                        </div>
+                        <div class="rtop_wai" id="UserCenter_divMsgToMe" style="display: block">
+                            <div class="r_top">
+                            </div>
+                            <div class="r_c">
+                                <table width="262" height="164" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="262" align="center">
+                                            <img src="images/down.gif">
+                                            加载中....</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="r_b">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="msglistable llmsgbg03" id="TodayDetailTab" style="display: none" name="TodayDetailTab">
+                        <div id="dgMyDingYue">
+                        </div>
+                        <div class="rtop_wai" id="UserCenter_DingYue" style="display: block">
+                            <div class="r_top">
+                            </div>
+                            <div class="r_c">
+                                <table width="262" height="164" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="262" align="center">
+                                            <img src="images/down.gif">
+                                            加载中....</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="r_b">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <ul>
+                    <li id="TodyTab" onmouseover="JavaScript:ChangeTodayTab(3);" name="TodyTab">
+                        <img src="images/icon_li04.gif" width="19" height="17" align="absmiddle" /><a href="http://member.topfo.com/helper/FriendManager/FriendAttention.aspx">谁在关注我</a><span><asp:Label
+                            ID="lblFocusMeCount" runat="server"></asp:Label></span></li><li id="TodyTab" onmouseover="JavaScript:ChangeTodayTab(4);"
+                                name="TodyTab">
+                                <img src="images/icon_li05.gif" width="21" height="16" align="absmiddle" /><a href="#">好友的更新</a><span><asp:Label
+                                    ID="lblFriendUpdateCount" runat="server"></asp:Label></span></li><li id="TodyTab"
+                                        onmouseover="JavaScript:ChangeTodayTab(5);" name="TodyTab">
+                                        <img src="images/icon_li06.gif" width="21" height="16" align="absmiddle" /><a href="http://member.topfo.com/PayManage/trade_info_wait.aspx">我的购物车</a><span><asp:Label
+                                            ID="lblCartCount" runat="server"></asp:Label></span></li></ul>
+                <div class="con zhelpsanb" id="DispDown" name="DispDown" style="display: none">
+                    <div class="msglistable llmsgbg04" id="TodayDetailTab" style="display: none" name="TodayDetailTab">
+                        <div id="dgFocuseMe">
+                        </div>
+                        <div class="rtop_wai" id="UserCenter_FocuseMe" style="display: block">
+                            <div class="r_top">
+                            </div>
+                            <div class="r_c">
+                                <table width="262" height="164" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="262" align="center">
+                                            <img src="images/down.gif">
+                                            加载中....</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="r_b">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="msglistable llmsgbg05" id="TodayDetailTab" style="display: none" name="TodayDetailTab">
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div class="msglistable llmsgbg06" id="TodayDetailTab" style="display: none" name="TodayDetailTab">
+                        <div id="dgCart">
+                        </div>
+                        <div class="rtop_wai" id="UserCenter_Cart" style="display: block">
+                            <div class="r_top">
+                            </div>
+                            <div class="r_c">
+                                <table width="262" height="164" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="262" align="center">
+                                            <img src="images/down.gif">
+                                            加载中....</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="r_b">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <div style="display: none">
+                <div class="ztitle ztitlebk2">
+                    <img src="images/icon_yb.gif" align="absmiddle" />
+                    邀请好友加入拓富通</div>
+                <div class="ztishicon">
+                    如果您满意我们的服务，别忘了告诉您的朋友哦，邀请他（她）一起加入拓富通，分享成功。您每成功推荐一位朋友成为拓富通会员，便可获赠100元（充入您的账户）！
+                    <p class="rinterv">
+                        <a href="#" class="blue">&gt;&gt;现在就去邀请我的朋友</a></p>
+                </div>
+            </div>
+            <!--广告 -->
+            <div class="blank8">
+            </div>
+        </div>
+        <!-- 主部右部份-->
+        <div class="rightbox">
+            <div class="rtopbox">
+                <div class="ztitlebk">
+                    <div class="up_line">
+                        <div class="fb ll_title">
+                            公告栏</div>
+                        <div class="rr_more">
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <ul class="list_news">
+                      <asp:Label ID="lblBulletin"
+                    runat="server"></asp:Label>
+            </div>
+            <div class="rtopbox  bgren">
+                <div class="ztitlebk">
+                    <div class="up_line">
+                        <div class="fb ll_title">
+                            新手向导</div>
+                        <div class="rr_more">
+                            <a href="http://www.topfo.com/help/index.shtml" target="_blank">更多&gt;&gt;</a></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <ul class="list_news">
+                    <li>·<a href="http://www.topfo.com/help/releasedemand.shtml" target="_blank">如何发布需求？</a></li><li>
+                        ·<a href="http://www.topfo.com/help/releasecriterion.shtml" target="_blank" class="red">需求发布规范？</a></li><li>·<a href="http://www.topfo.com/help/setupexhibit.shtml" target="_blank">为什么要创建我的展厅？</a></li><li>
+                        ·<a href="http://www.topfo.com/help/searchres.shtml" target="_blank">如何寻找资源？</a></li><li>
+                            ·<a href="http://www.topfo.com/help/buyres.shtml" target="_blank">如何购买收费资源？</a></li></ul>
+            </div>
+            <!--广告 -->
+            <div style="margin-bottom: 16px;">
+                <a href="http://www.topfo.com/TopfoCenter/exponent/index.shtml" target="_blank">
+                    <img src="images/rightgg.gif" /></a></div>
+            <!--  资源拓富指数排行 -->
+            <div class="rtopbox">
+                <div class="ztitlebk">
+                    <div class="up_line">
+                        <div class="fb ll_title">
+                            资源拓富指数排行</div>
+                        <div class="rr_more">
+                        </div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <div class=" clear">
+                </div>
+                <uc1:IndexTFZS ID="IndexTFZS1" runat="server" />
+            </div>
+            <!-- 拓富通专享服务推荐 -->
+            <div class="rtopbox">
+                <div class="ztitlebk3">
+                    <div class="up_line">
+                        <div class="fb ll_title2">
+                            拓富通专享服务推荐</div>
+                        <div class="rr_more">
+                            <span><a href="http://www.topfo.com/TopfoCenter/Application/superiorityApp.shtml">更多&gt;&gt;</a></span></div>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+                <ul class="rsuggestbox">
+                    <li class="rxuxianb"><strong>刷新设置</strong><br />
+                        您可以刷新需求，让需求一直排在普通会员的前面！</li><li class="rxuxianb"><strong>网上展厅</strong><br />
+                            获得方便好记的域名网址，全面展示自己， 突显优势！</li><li class="rxuxianb"><strong>消费享受VIP特价优惠</strong><br />
+                                购买资源、广告发布等所有收费服务均享受VIP折扣价格，超值大优惠！ </li>
+                    <li><strong>专业服务</strong><br />
+                        拓富通会员可申请中国招商投资联盟的专业服务，成功更有保障！ </li>
+                </ul>
+            </div>
+            <!--广告 -->
+            <div>
+                &nbsp;</div>
+            <div class="blank8 ">
+            </div>
+        </div>
+    </div>
+
+    <script language="javascript">
+        ChangeTodayTab(0)
+    </script>
+
+</asp:Content>

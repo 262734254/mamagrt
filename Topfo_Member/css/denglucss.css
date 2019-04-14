@@ -1,0 +1,36 @@
+/*µÇÂ½*/
+.huibg{
+	padding: 8px;
+	background-color: #F3F3F1;
+	margin: 10px 0 10px 0;
+}
+#contentbox{
+	background-color: #FFFFE1;
+	height: 350px;
+	padding-top: 15px;
+	border: 1px solid #FFAF4B;
+}
+#contentbox table{
+	font-size: 14px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: 40px;
+	margin-left: auto;
+	width: 447px;
+}
+#contentbox h1{
+	border: 1px dashed #AAAAAA;
+	margin: 0 15px 15px 15px;
+	padding: 3px 0 3px 10px;
+	display: block;
+}
+#contentbox h1 img{
+	padding-right: 5px;
+}
+#contentbox h2{
+	color: #F75F03;
+	font-size: 12px;
+	font-weight: normal;
+	width: 400px;
+	margin: 0 auto;
+}

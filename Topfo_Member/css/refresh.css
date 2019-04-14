@@ -1,0 +1,119 @@
+/*by yanweiping*/
+/*提醒页面*/
+.waibox {
+	width: 432px;
+	margin: 0 auto;
+	border: 4px double #FFAF4B;
+	padding: 15px 30px 20px 30px;
+}
+.waibox h1{
+	font-weight: normal;
+	padding: 8px 8px 8px 15px;
+	line-height: 22px;
+}
+.waibox h1 b{
+	color: #F75F03;
+	font-size: 14px;
+}
+.remindtop{height: 29px;}
+.remindtop ul{
+
+}
+.remindtop .liwai{background-image: url(../images/PayManage/lichengbg.gif);	border: 1px solid #FFAF4B;
+	height: 24px;
+	margin-top: 0px;
+	padding-top: 3px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.remindtop li{background-image: url(../images/PayManage/lihuibg.gif);border: 1px solid #CCCCCC;	
+	width: 70px;
+	float: left;
+	color: #563B1D;
+	font-size: 12px;
+	text-align: center;
+	background-position: bottom;
+	height: 24px;
+	margin-top: 3px;
+	line-height: 200%;
+	}
+.remindtop li a{
+	color: #563B1D;
+	}
+.remindcon{
+	padding: 10px 10px 5px 10px;
+	background-color: #F3F3F3;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: dashed;
+	border-left-style: solid;
+	border-top-color: #FFAF4B;
+	border-right-color: #FFAF4B;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #FFAF4B;
+}
+.remindcon p{
+	text-align: right;
+	padding: 10px 0 0 0;
+}
+.selectall{
+	padding: 10px;
+		background-color: #F3F3F3;
+		background-color: #F3F3F3;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFAF4B;
+	border-bottom-color: #FFAF4B;
+	border-left-color: #FFAF4B;
+}
+.waibox .bottom{
+	padding: 20px 0 30px;
+	text-align: center;
+}
+/*刷新设置*/
+.titled {
+	padding-bottom: 10px;
+}
+.titled .left{
+	width: 200px;
+	float: left;
+	font-size: 14px;
+	color: #000081;
+	font-weight: bold;
+}
+.titled .right{
+	width: 300px;
+	float: right;
+	text-align: right;
+}
+.setubcon{
+	margin: 5px;
+	padding: 40px 0 40px 0;
+	text-align: center;
+	border: 1px dashed #CCCCCC;
+}
+.setubcon img{margin:0 0 10px 0;}
+.setubcon p{
+	text-align: left;
+	width: 280px;
+	padding: 30px 0 35px 0;
+}
+.setubcon p span{
+	display: block;
+	padding-top: 10px;
+}
+/*资源刷新*/
+.setubcon .resources{
+	padding: 35px 0 15px 0;
+}
+.setubcon .resources span{
+	padding: 0 0 0 25px;
+}

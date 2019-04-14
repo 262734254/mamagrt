@@ -1,0 +1,139 @@
+<style type="text/css">
+	<!--
+.right_tbox {
+	background-image: url(/web1.1/img/CapitalImg/right_topbg.gif);
+	background-repeat: no-repeat;
+	float: right;
+	width: 199px;
+	height: 199px;
+}
+
+body,td,th {
+	font-size: 12px;
+}
+.logincheng {
+	color: #FF720A;
+}
+.loginlan {
+	color: #0349C7;
+}
+--></style>
+<div class="right_tbox" id="member_logout" style="display:none">
+	<form id="form_mini" method="post">
+		<table width="181" height="171" border="0" align="center" cellpadding="2" cellspacing="0">
+			<tr>
+				<td height="36" colspan="2"></td>
+			</tr>
+			<tr>
+				<td width="40%"  height="30" align="right" >登陆选择：</td>
+				<td>
+					<select name="RoleName" id="RoleName">
+						<option value="0">会员登陆</option>
+						<option value="2">会员卡登陆</option>
+					</select></td>
+			</tr>
+			<tr>
+				<td  height="23" align="right">用户名：</td>
+				<td width="60%"><input name="txtLoginName" id="txtLoginName" type="text" value="" size="12" />
+					
+			  </td>
+			</tr>
+			<tr>
+				<td height="25" align="right">密 码：</td>
+				<td><input name="txtPassword" id="txtPassword" onkeydown="javascript:LoginSubmit_mini(event);"
+						type="password" value="" size="12" /> 
+				
+				</td>
+			</tr>
+			<tr>
+				<td height="25" colspan="2" align="center"><input type="checkbox" id="isAutoLogin" name="checkbox" value="checkbox"  checked />
+					自动登录&nbsp; <a href="/Rookie/RookieGuide.aspx" target="_blank" style="color:#3505D0">新手入门</a></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><img src="/web1.1/img/CapitalImg/denglu.gif" id="btn_mini_submit" onclick="CheckLogin_mini();return false;"
+						width="61" height="26" />&nbsp; <a href="/Register/MemberRegister.aspx" target="_blank"><img src="/web1.1/img/CapitalImg/zhuche.gif" width="78" height="26" /></a></td>
+			</tr>
+	  </table>
+	</form>
+	<div class="clear"></div>
+</div>
+<div class="right_tbox" id="member_login" style="display:none">
+	<table width="90%" height="171" border="0" align="center" cellpadding="2" cellspacing="0">
+		<tr>
+			<td height="36" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="30" colspan="2">欢迎您，<a href="#" id="loginNickname" style="color:#FF720A">昵称</a>！ 
+				[<a href="javascript:void(0)" onclick="Logout();return false;">退出</a>]</td>
+		</tr>
+		<tr>
+			<td width="37%" height="23">会员类别：</td>
+			<td width="63%" class="loginlan"><a href="/Service/VIPproject.shtml" style="color:#0349C7" id="loginClass">普通会员</a></td>
+		</tr>
+		<tr>
+			<td height="23">我的短信：</td>
+			<td>(<a href="/Member/InnerInfo/inbox.aspx" style="color:#FF720A" id="loginRecieved">新0/0</a>)
+				<a href="/Member/InnerInfo/inbox.aspx" style="color:#FF720A" id="A1"><img src="/web1.1/img/email.gif" width="17" height="11" align="absmiddle" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td height="25">累积积分：</td>
+			<td><a href="/Member/Manage/IntegralInquiries.aspx" class="logincheng" id="loginIntegral">0</a>分</a></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><a href="/Member/Manage/index.aspx" target="_blank" class="Spaces"><img src="/web1.1/img/bottom_hyzx.gif" width="81" height="26" /></a>
+				<a href="/Member/MyCallingCard/shoppingCar.aspx" target="_blank" class="Spaces"><img src="/web1.1/img/bottom_gwc2.gif" width="80" height="25" hspace="3" /></a></td>
+		</tr>
+	</table>
+	<div class="clear"></div>
+</div>
+<div class="rtop_wai" id="member_login_loading" style="DISPLAY:block">
+	<div class="r_top"></div>
+	<div class="r_c">
+		<table width="181" height="160" border="0" align="center" cellpadding="0" cellspacing="0" ID="Table1">
+			<tr>
+				<td width="262" align="center"><img src="/web1.1/img/down.gif"> 加载中....</td>
+			</tr>
+	  </table>
+	</div>
+	<div class="r_b"></div>
+</div>
+<script language="javascript">
+
+var serviceUrl = "/WebService/userData.asmx/GetUserData";
+//绑定用户登陆后的信息
+function GetLoginInfo(transport)
+{
+	 
+   var nodes = transport.responseXML;
+    var str = "";
+   try
+   {
+		str = nodes.getElementsByTagName("string")[0].firstChild.data;
+   }
+   catch(e)
+   {
+		str="";
+   }
+   if(str&&str.trim()!="")
+   {
+		str = str.trim();
+   }
+   else
+   {
+		
+		$("member_logout").style.display = "block";
+		$("member_login").style.display = "none";
+		$("member_login_loading").style.display = "none";
+		return;
+   }
+   var arr = str.split('_');
+   $("loginClass").innerHTML = getUserClass(arr[1]);
+   $("loginRecieved").innerHTML = arr[3]+"/"+arr[4];
+   $("loginRecieved").title = "您有"+arr[3]+"条新短信";
+   $("loginIntegral").innerHTML = arr[5];
+	$("member_login").style.display = "block";
+	$("member_login_loading").style.display = "none";
+}
+</script>
+<script language="javascript" src="/web1.1/Javascript/login_common.js"></script>

@@ -1,0 +1,55 @@
+/* CSS Document */
+
+.wrap{width:948px; margin:0 auto;}
+
+.NavTitle{_height:0;zoom:1;clear:both; display:block;font-size:14px; }
+.NavTitle h3{color:#ff6600;margin-left:22px;font-weight:normal;font-size:14px; }
+.NavTitle h3 span{font-weight:bold;margin-right:5px;}
+
+.NavTitle .rightfloat{margin-right:49px;  text-align:right; display:none;}
+
+.mainbox{margin:45px auto 60px auto;font-size:14px; text-align:center;}
+
+.bg1{width:540px; margin:0 auto; text-align:left;line-height:30px;font-weight:bold;}
+.bg2{width:230px; margin:0 auto; text-align:left;line-height:50px;margin-top:20px;}
+
+
+.bgimg01{background:url(../images/icon_01.gif) no-repeat;padding-left:90px;}
+.bgimg02{background:url(../images/icon_05.gif) no-repeat 0 -50px;padding-left:56px;}
+.bgimg03{background:url(../images/icon_04.gif) no-repeat 90px 0;padding-left:260px;}
+.bgimg04{background:url(../images/icon_05.gif) no-repeat -8px 0px;padding-left:54px; display:block;line-height:50px;}
+.bgimg05{background:#F5F5F5 url(../images/icon_03.gif) no-repeat;display:block; background-position:77px 10px;}
+.bgimg06{background:#F5F5F5 url(../images/icon_06.gif) no-repeat;display:block; background-position:77px 34px;}
+.bgimg07{background:#F5F5F5 url(../images/icon_07.gif) no-repeat;display:block; background-position:77px 20px;}
+.bgimg08{background:#F5F5F5 url(../images/icon_07.gif) no-repeat;display:block; background-position:77px 35px;}
+.bgimg09{background:url(../images/icon_08.gif) no-repeat 150px 0px;padding-left:260px;}
+.bgimg10{background:url(../images/icon_09.gif) no-repeat -8px 0px;padding-left:54px;height:108px; display:block;line-height:50px;}
+.bgimg11{background:#F5F5F5 url(../images/icon_10.gif) no-repeat;display:block; background-position:110px 20px;}
+.bgimg12{background:url(../images/icon_01.gif) no-repeat 90px 0px;padding-left:180px;}
+.bgimg13{background:#F5F5F5 url(../images/icon_11.gif) no-repeat;display:block; background-position:97px 10px;}
+
+
+.inforbox{ text-align:left;margin:0 auto;}
+
+
+.hid97{height:97px;}
+
+
+
+.wi628{padding:10px 40px 30px 10px;margin:0 50px; }
+.wi800{margin:0 40px}
+
+
+
+.inforbox .pL180{margin-left:180px;}
+.pTop{margin-top:30px;}
+
+.marbottom12{width:630px;}
+.marbottom12 td{padding-bottom:12px;}
+
+.marbottom18{width:630px;}
+.marbottom18 td{padding-bottom:18px;}
+
+
+
+.inputbtn{padding:1px 6px 0px 6px;font-size:13px;font-weight:bold;}

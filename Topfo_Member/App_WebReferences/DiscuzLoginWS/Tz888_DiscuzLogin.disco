@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://bbs.topfo.com/services/Tz888_DiscuzLogin.asmx?wsdl" docRef="http://bbs.topfo.com/services/Tz888_DiscuzLogin.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://bbs.topfo.com/services/Tz888_DiscuzLogin.asmx" xmlns:q1="http://topfo.com/" binding="q1:Tz888_DiscuzLoginSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://bbs.topfo.com/services/Tz888_DiscuzLogin.asmx" xmlns:q2="http://topfo.com/" binding="q2:Tz888_DiscuzLoginSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

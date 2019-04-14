@@ -1,0 +1,122 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+    CodeFile="ResourceManage.aspx.cs" Inherits="ResourceManage" Title="Untitled Page" %>
+
+<%@ Register Assembly="Tz888.Common" Namespace="Tz888.Common.Pager" TagPrefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div id="mainconbox">
+        <div class="titled">
+            <div class="left">
+                需求管理</div>
+            <div class="right">
+                <a href="#">发布新的需求</a></div>
+            <div class="clear">
+            </div>
+        </div>
+        <div>
+            <ul class="handtop">
+                <li class="<%=(this._manageType == "pass")?"liwai":"" %>"><a href="ResourceManage.aspx?type=pass">
+                    通过审核(<%=this.Count(Tz888.BLL.Common.AuditStatus.Pass) %>)</a></li>
+                <li class="<%=(this._manageType == "audit")?"liwai":"" %>"><a href="ResourceManage.aspx?type=audit">
+                    审核中(<%=this.Count(Tz888.BLL.Common.AuditStatus.Auditing)%>)</a></li>
+                <li class="<%=(this._manageType == "nopass")?"liwai":"" %>"><a href="ResourceManage.aspx?type=nopass">
+                    未通过审核(<%=this.Count(Tz888.BLL.Common.AuditStatus.NoPass)%>)</a></li>
+                <li class="<%=(this._manageType == "overdue")?"liwai":"" %>"><a href="ResourceManage.aspx?type=overdue">
+                    已过期(<%=this.Count(Tz888.BLL.Common.AuditStatus.Overdue)%>)</a></li>
+            </ul>
+        </div>
+        <div class=" cshibiank">
+            <div class="search">
+                <div class="leight30 ">
+                   <%=this.GetRemind()%>
+                </div>
+                <div class="lefts">
+                    需求筛选：
+                    <select name="select">
+                        <option value="所有信息" selected="selected">所有信息 </option>
+                    </select>
+                    <label>
+                        <input type="submit" name="Submit" value="查 询" />
+                    </label>
+                </div>
+                <div class="rights">
+                    每页显示：<a href="#" class="lanlink">10</a> 条 <a href="#" class="lanlink">20</a> 条 <a
+                        href="#" class="lanlink">30</a> 条</div>
+                <div class="clear">
+                </div>
+            </div>
+            <asp:Repeater ID="RfList" runat="server">
+                <HeaderTemplate>
+                    <table width="100%" height="167" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="13%" align="center" class="tabtitle">
+                                全选/反选</td>
+                            <td width="10%" align="center" class="tabtitle">
+                                类别
+                            </td>
+                            <td width="26%" align="center" class="tabtitle">
+                                标题
+                            </td>
+                            <td width="15%" align="center" class="tabtitle">
+                                发布时间</td>
+                            <td width="22%" align="center" class="tabtitle">
+                                未通过原因
+                            </td>
+                            <td width="14%" align="center" class="tabtitle">
+                                状态
+                            </td>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr>
+                        <td align="center" class="taba" style="height: 5px">
+                            <label>
+                                <input type="checkbox" name="checkbox" id="checkbox" />
+                            </label>
+                        </td>
+                        <td align="center" class="taba" style="height: 5px">
+                            融资
+                        </td>
+                        <td align="center" class="taba" style="height: 5px">
+                            <a href="http://www.tz888.cn/Capital/200703/CECN200703216_96231.aspx" target="_blank">
+                                上市公司寻各大城市房地产项目</a><a href="#"></a>
+                        </td>
+                        <td align="center" class="taba" style="height: 5px">
+                            2007-10-01
+                        </td>
+                        <td align="center" class="taba" style="height: 5px">
+                            填写的内容太过简单
+                        </td>
+                        <td align="center" class="taba" style="height: 5px">
+                            <a href="#">可修改</a></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table></FooterTemplate>
+            </asp:Repeater>
+        </div>
+        <div class="pagebox">
+            <div class="left">
+                <img src="../images/MessageManage/biao_01.gif" width="14" height="16" />将选中的需求
+                <label>
+                    <input type="reset" name="button2" id="button2" value="彻底删除" />
+                </label>
+                <label>
+                </label>
+            </div>
+            <div class="right">
+                <cc1:Pager ID="Pager1" runat="server" BackColor="Transparent" BorderStyle="None"
+                    PagerStyle="CustomAndNumeric" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="helpbox">
+            <h1>
+                <img src="../images/icon_yb.gif" width="17" height="17" />
+                注意事项</h1>
+            <p>
+                ·状态为“可修改”的需求请您在<span class="hong"> 15 </span>天内进行修改，15天后仍未修改系统将自动删除！<br />
+                ·状态为“即将删除”的需求系统将在<span class="hong"> 7 </span>天后自动删除！</p>
+        </div>
+    </div>
+</asp:Content>

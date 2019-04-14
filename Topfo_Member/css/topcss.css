@@ -1,0 +1,132 @@
+/*头部及共用链接文字等属性*/
+BODY {
+	FONT-SIZE: 12px;
+	COLOR: #555555;
+	LINE-HEIGHT: 180%;
+	FONT-FAMILY: "宋体";
+	padding: 5px 0 5px 0;
+	margin: 0 ;
+	text-align: center;
+}
+div{ text-align:left}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A:active {
+	COLOR: #ff0000;
+	text-decoration: underline;
+}
+A.Spaces:link    {
+}
+A.Spaces:visited {
+}
+A.Spaces:active  {
+}
+A.Spaces:hover   {
+	left: 1px;
+	top: 1px;
+	position: relative;
+}
+A.bule:link,A.bule:visited     {
+	color:#003399;
+	text-decoration: underline;
+}
+
+A.bule:active,A.bule:hover   {	COLOR: #ff0000;
+	text-decoration: underline;
+}
+
+
+DIV,FORM,IMG,ul,ol,li,p,h1,h2,h3,h4,h5,h6,dl,dd,dt{
+	 PADDING: 0px; MARGIN: 0px; 
+}
+
+.clear {
+	CLEAR: both
+}
+.blank8 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 8px
+}
+.blank6 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 6px
+}
+.blank0 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 10px
+}
+.blank20 {
+	CLEAR: both; FONT-SIZE: 1px; OVERFLOW: hidden; HEIGHT: 20px
+}
+#header {
+	width: 948px;
+	margin: 0 auto;
+	background-image: url(/PaymentSystem/images/bankimg/topbg.gif);
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #FF7200;
+}
+#header img {
+}
+#header .ka {
+	width: 380px;
+	display: block;
+	float: left;
+	background-image: url(/PaymentSystem/images/bankimg/topka.gif);
+	background-repeat: no-repeat;
+	background-position: 150px bottom;
+	height: 92px;
+}
+#header .left {
+	width: 220px;
+	float: left;
+	margin: 15px 0 0 0;
+	text-align: right;
+}
+#header .right {
+	width: 300px;
+	float: right;
+	text-align: right;
+	line-height: 250%;
+	padding: 10px 10px 0 0;
+}
+#header .right h1 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #FF7200;
+	margin: 22px 0 0 0;
+}
+.clear{ clear:both}
+.padleft{ padding-left:10px;}
+.font12{ font-size:12px;}
+.font14{ font-size:14px;}
+.chengcu{
+	color:#F75F03;
+	font-weight: bold;
+}
+.cheng{
+	color:#F75F03;
+}
+.hui{ color:#9C9C9C}
+.cu{
+	font-weight: bold;
+}
+.lansen{ color:#061E9C}
+/*框架*/
+#main{
+	width: 948px;
+	margin: 0 auto;
+}
+#main .topyj{
+	background-image: url(/PaymentSystem/images/bankimg/kuang_left.gif);
+	height: 12px;
+}
+#main .bottomyj{
+	background-image: url(/PaymentSystem/images/bankimg/kuang_right.gif);
+	height: 12px;
+}

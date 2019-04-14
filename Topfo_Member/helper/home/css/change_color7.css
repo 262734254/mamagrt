@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.page_top{ background:#3FB2FA;}
+
+.lefttop{color:#ffffff;}
+.lefttop a{color:#F75F03;}
+
+.wrapper_left{background-color: #9DDCFD;border-color:#5B5F6E;}
+
+.rtopbox,.ztitlebk,.ztitlebk2,.ztitlebk3,.rxuxianb,.conzhelpsanb{border-color: #1AB3FD;}
+
+.ztitle{color: #563B1D;}
+
+.ztitlebk,.ztitlebk3{background:#DBF2FE;}
+
+.btn_1,.btn_2,.btn_list li{
+border:1px solid #2AB8FD;
+border-right-color:#5C737E;
+border-bottom-color:#5C737E;
+border-width:1px 2px 2px 1px;
+}
+.btn_1{
+border-bottom-width:0;
+}
+
+.zhelpbox ul{
+	background-image: url(../images/Yellowlibg7.gif);
+}
+.zhelpbox li{
+	background-image: url(../images/Yellowlibuttombg7.gif);
+	background-repeat: no-repeat;
+
+}
+.zhelpbox .liwai{
+	background-image: url(../images/Yellowliwaibuttombg7.gif);
+	background-repeat: no-repeat;
+}
+.zhelpsanb{
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-color: #2AB8FD;
+}
